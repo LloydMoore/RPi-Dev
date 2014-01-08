@@ -15,6 +15,7 @@ Root Directory Map:
 =======
 BotMonitor : Sample code for the Raspberry Pi GUI demo application
 BotPsoc : Sample code for the PSoC5LP demo application
+Common : Sample code which is common to multiple applications
 doc : Documentation for the project
 pcb : Schematics and PCB files for the project
 LICENSE : License file for the sample code
