@@ -1,0 +1,37 @@
+# BotPsoc
+# 2014-01-06 20:15:31Z
+
+# IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 0
+# IO_1@[IOP=(1)][IoId=(1)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 1
+# IO_3@[IOP=(1)][IoId=(3)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 3
+set_io "Debug0(0)" iocell 12 2
+set_io "Debug1(0)" iocell 12 3
+set_io "Debug2(0)" iocell 4 4
+set_io "Debug3(0)" iocell 4 5
+set_io "Debug4(0)" iocell 4 6
+set_io "Debug5(0)" iocell 4 7
+set_io "Debug6(0)" iocell 6 0
+set_io "Debug7(0)" iocell 6 1
+set_io "LDG1(0)" iocell 5 4
+set_io "LDG2(0)" iocell 5 5
+set_io "LDV1(0)" iocell 5 0
+set_io "LDV2(0)" iocell 5 1
+set_io "PiSPI_MISO(0)" iocell 3 3
+set_io "PiSPI_MOSI(0)" iocell 3 2
+set_io "PiSPI_SCLK(0)" iocell 3 5
+set_io "PiSPI_SS(0)" iocell 3 4
+set_io "PiUART_RXD(0)" iocell 3 1
+set_io "PiUART_TXD(0)" iocell 3 0
+set_io "RDG1(0)" iocell 5 6
+set_io "RDG2(0)" iocell 5 7
+set_io "RDV1(0)" iocell 5 2
+set_io "RDV2(0)" iocell 5 3
+set_io "SerDrv_485Sel(0)" iocell 15 5
+set_io "SerDrv_DY(0)" iocell 6 6
+set_io "SerDrv_DZ(0)" iocell 6 7
+set_io "SerDrv_Enable(0)" iocell 15 4
+set_io "SerDrv_RA(0)" iocell 6 4
+set_io "SerDrv_RB(0)" iocell 6 5
