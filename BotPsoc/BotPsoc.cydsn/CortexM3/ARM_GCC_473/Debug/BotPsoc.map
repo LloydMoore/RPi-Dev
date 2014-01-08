@@ -979,7 +979,7 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x4318
+.debug_info     0x00000000     0x4310
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x2f4 .\CortexM3\ARM_GCC_473\Debug\main.o
  .debug_info    0x000002f4      0x3c5 .\CortexM3\ARM_GCC_473\Debug\spi_ring.o
@@ -987,19 +987,19 @@ END GROUP
  .debug_info    0x00000865      0x13f .\CortexM3\ARM_GCC_473\Debug\cymetadata.o
  .debug_info    0x000009a4      0x2ea .\CortexM3\ARM_GCC_473\Debug\Cm3Start.o
  .debug_info    0x00000c8e      0x3c0 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(cyfitter_cfg.o)
- .debug_info    0x0000104e       0x80 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CyBootAsmGnu.o)
- .debug_info    0x000010ce      0x93a .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CyDmac.o)
- .debug_info    0x00001a08      0xcd7 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CyLib.o)
- .debug_info    0x000026df      0x5c3 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(cyPm.o)
- .debug_info    0x00002ca2      0x496 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(PiComs.o)
- .debug_info    0x00003138      0x121 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(SpiXmitDma_dma.o)
- .debug_info    0x00003259      0x121 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(SpiRcvDma_dma.o)
- .debug_info    0x0000337a      0x290 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(SpiXferDone.o)
- .debug_info    0x0000360a      0x27f .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(LMotorPwm.o)
- .debug_info    0x00003889      0x27f .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(RMotorPwm.o)
- .debug_info    0x00003b08       0xe3 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(MotorControlReg.o)
- .debug_info    0x00003beb      0x354 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CyFlash.o)
- .debug_info    0x00003f3f      0x3d9 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CySpc.o)
+ .debug_info    0x0000104e       0x78 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CyBootAsmGnu.o)
+ .debug_info    0x000010c6      0x93a .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CyDmac.o)
+ .debug_info    0x00001a00      0xcd7 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CyLib.o)
+ .debug_info    0x000026d7      0x5c3 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(cyPm.o)
+ .debug_info    0x00002c9a      0x496 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(PiComs.o)
+ .debug_info    0x00003130      0x121 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(SpiXmitDma_dma.o)
+ .debug_info    0x00003251      0x121 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(SpiRcvDma_dma.o)
+ .debug_info    0x00003372      0x290 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(SpiXferDone.o)
+ .debug_info    0x00003602      0x27f .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(LMotorPwm.o)
+ .debug_info    0x00003881      0x27f .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(RMotorPwm.o)
+ .debug_info    0x00003b00       0xe3 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(MotorControlReg.o)
+ .debug_info    0x00003be3      0x354 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CyFlash.o)
+ .debug_info    0x00003f37      0x3d9 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CySpc.o)
 
 .debug_abbrev   0x00000000     0x13f4
  *(.debug_abbrev)
@@ -1023,27 +1023,27 @@ END GROUP
  .debug_abbrev  0x00001123      0x172 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CyFlash.o)
  .debug_abbrev  0x00001295      0x15f .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CySpc.o)
 
-.debug_line     0x00000000     0x21ac
+.debug_line     0x00000000     0x21a3
  *(.debug_line)
- .debug_line    0x00000000      0x143 .\CortexM3\ARM_GCC_473\Debug\main.o
- .debug_line    0x00000143      0x187 .\CortexM3\ARM_GCC_473\Debug\spi_ring.o
- .debug_line    0x000002ca      0x16b .\CortexM3\ARM_GCC_473\Debug\base_motion.o
- .debug_line    0x00000435       0x53 .\CortexM3\ARM_GCC_473\Debug\cymetadata.o
- .debug_line    0x00000488      0x1af .\CortexM3\ARM_GCC_473\Debug\Cm3Start.o
- .debug_line    0x00000637      0x1fb .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(cyfitter_cfg.o)
- .debug_line    0x00000832       0x68 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CyBootAsmGnu.o)
- .debug_line    0x0000089a      0x2bc .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CyDmac.o)
- .debug_line    0x00000b56      0x73b .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CyLib.o)
- .debug_line    0x00001291      0x347 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(cyPm.o)
- .debug_line    0x000015d8      0x282 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(PiComs.o)
- .debug_line    0x0000185a       0x80 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(SpiXmitDma_dma.o)
- .debug_line    0x000018da       0x7f .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(SpiRcvDma_dma.o)
- .debug_line    0x00001959      0x1fd .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(SpiXferDone.o)
- .debug_line    0x00001b56      0x147 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(LMotorPwm.o)
- .debug_line    0x00001c9d      0x147 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(RMotorPwm.o)
- .debug_line    0x00001de4       0x7a .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(MotorControlReg.o)
- .debug_line    0x00001e5e      0x1a7 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CyFlash.o)
- .debug_line    0x00002005      0x1a7 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CySpc.o)
+ .debug_line    0x00000000      0x140 .\CortexM3\ARM_GCC_473\Debug\main.o
+ .debug_line    0x00000140      0x184 .\CortexM3\ARM_GCC_473\Debug\spi_ring.o
+ .debug_line    0x000002c4      0x168 .\CortexM3\ARM_GCC_473\Debug\base_motion.o
+ .debug_line    0x0000042c       0x53 .\CortexM3\ARM_GCC_473\Debug\cymetadata.o
+ .debug_line    0x0000047f      0x1af .\CortexM3\ARM_GCC_473\Debug\Cm3Start.o
+ .debug_line    0x0000062e      0x1fb .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(cyfitter_cfg.o)
+ .debug_line    0x00000829       0x68 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CyBootAsmGnu.o)
+ .debug_line    0x00000891      0x2bc .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CyDmac.o)
+ .debug_line    0x00000b4d      0x73b .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CyLib.o)
+ .debug_line    0x00001288      0x347 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(cyPm.o)
+ .debug_line    0x000015cf      0x282 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(PiComs.o)
+ .debug_line    0x00001851       0x80 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(SpiXmitDma_dma.o)
+ .debug_line    0x000018d1       0x7f .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(SpiRcvDma_dma.o)
+ .debug_line    0x00001950      0x1fd .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(SpiXferDone.o)
+ .debug_line    0x00001b4d      0x147 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(LMotorPwm.o)
+ .debug_line    0x00001c94      0x147 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(RMotorPwm.o)
+ .debug_line    0x00001ddb       0x7a .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(MotorControlReg.o)
+ .debug_line    0x00001e55      0x1a7 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CyFlash.o)
+ .debug_line    0x00001ffc      0x1a7 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CySpc.o)
 
 .debug_frame    0x00000000     0x1a7c
  *(.debug_frame)
@@ -1071,44 +1071,44 @@ END GROUP
  .debug_frame   0x00001a34       0x28 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-memcpy.o)
  .debug_frame   0x00001a5c       0x20 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-memset.o)
 
-.debug_str      0x00000000     0x1e6b
+.debug_str      0x00000000     0x1e63
  *(.debug_str)
- .debug_str     0x00000000      0x2e2 .\CortexM3\ARM_GCC_473\Debug\main.o
-                                0x323 (size before relaxing)
- .debug_str     0x000002e2       0xcc .\CortexM3\ARM_GCC_473\Debug\spi_ring.o
-                                0x3e1 (size before relaxing)
- .debug_str     0x000003ae       0xe4 .\CortexM3\ARM_GCC_473\Debug\base_motion.o
-                                0x228 (size before relaxing)
- .debug_str     0x00000492       0x77 .\CortexM3\ARM_GCC_473\Debug\cymetadata.o
-                                0x195 (size before relaxing)
- .debug_str     0x00000509      0x10d .\CortexM3\ARM_GCC_473\Debug\Cm3Start.o
-                                0x251 (size before relaxing)
- .debug_str     0x00000616      0x157 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(cyfitter_cfg.o)
-                                0x2a2 (size before relaxing)
- .debug_str     0x0000076d      0x377 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CyDmac.o)
-                                0x4bc (size before relaxing)
- .debug_str     0x00000ae4      0x614 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CyLib.o)
-                                0x7b7 (size before relaxing)
- .debug_str     0x000010f8      0x371 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(cyPm.o)
-                                0x4c6 (size before relaxing)
- .debug_str     0x00001469      0x27f .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(PiComs.o)
-                                0x3b1 (size before relaxing)
- .debug_str     0x000016e8       0xa9 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(SpiXmitDma_dma.o)
-                                0x1ce (size before relaxing)
- .debug_str     0x00001791       0x6a .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(SpiRcvDma_dma.o)
-                                0x1ca (size before relaxing)
- .debug_str     0x000017fb      0x13c .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(SpiXferDone.o)
-                                0x2ac (size before relaxing)
- .debug_str     0x00001937      0x174 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(LMotorPwm.o)
+ .debug_str     0x00000000      0x2da .\CortexM3\ARM_GCC_473\Debug\main.o
+                                0x31b (size before relaxing)
+ .debug_str     0x000002da       0xcc .\CortexM3\ARM_GCC_473\Debug\spi_ring.o
+                                0x3d9 (size before relaxing)
+ .debug_str     0x000003a6       0xe4 .\CortexM3\ARM_GCC_473\Debug\base_motion.o
+                                0x220 (size before relaxing)
+ .debug_str     0x0000048a       0x77 .\CortexM3\ARM_GCC_473\Debug\cymetadata.o
+                                0x18d (size before relaxing)
+ .debug_str     0x00000501      0x10d .\CortexM3\ARM_GCC_473\Debug\Cm3Start.o
+                                0x249 (size before relaxing)
+ .debug_str     0x0000060e      0x157 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(cyfitter_cfg.o)
+                                0x29a (size before relaxing)
+ .debug_str     0x00000765      0x377 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CyDmac.o)
+                                0x4b4 (size before relaxing)
+ .debug_str     0x00000adc      0x614 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CyLib.o)
+                                0x7af (size before relaxing)
+ .debug_str     0x000010f0      0x371 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(cyPm.o)
+                                0x4be (size before relaxing)
+ .debug_str     0x00001461      0x27f .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(PiComs.o)
+                                0x3a9 (size before relaxing)
+ .debug_str     0x000016e0       0xa9 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(SpiXmitDma_dma.o)
+                                0x1c6 (size before relaxing)
+ .debug_str     0x00001789       0x6a .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(SpiRcvDma_dma.o)
+                                0x1c2 (size before relaxing)
+ .debug_str     0x000017f3      0x13c .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(SpiXferDone.o)
                                 0x2a4 (size before relaxing)
- .debug_str     0x00001aab      0x143 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(RMotorPwm.o)
-                                0x2a4 (size before relaxing)
- .debug_str     0x00001bee       0x56 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(MotorControlReg.o)
-                                0x178 (size before relaxing)
- .debug_str     0x00001c44      0x129 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CyFlash.o)
-                                0x28c (size before relaxing)
- .debug_str     0x00001d6d       0xfe .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CySpc.o)
-                                0x268 (size before relaxing)
+ .debug_str     0x0000192f      0x174 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(LMotorPwm.o)
+                                0x29c (size before relaxing)
+ .debug_str     0x00001aa3      0x143 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(RMotorPwm.o)
+                                0x29c (size before relaxing)
+ .debug_str     0x00001be6       0x56 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(MotorControlReg.o)
+                                0x170 (size before relaxing)
+ .debug_str     0x00001c3c      0x129 .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CyFlash.o)
+                                0x284 (size before relaxing)
+ .debug_str     0x00001d65       0xfe .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a(CySpc.o)
+                                0x260 (size before relaxing)
 
 .debug_loc      0x00000000     0x2b40
  *(.debug_loc)

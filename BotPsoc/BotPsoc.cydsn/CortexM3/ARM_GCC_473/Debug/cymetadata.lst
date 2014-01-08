@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
   55 001f 40       		.byte	64
   56 0020 38       		.byte	56
   57 0021 09       		.byte	9
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 2
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 2
 
 
   58 0022 01       		.byte	1
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  112 0058 04       		.byte	4
  113 0059 44       		.byte	68
  114 005a 01       		.byte	1
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 3
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 3
 
 
  115 005b 40       		.byte	64
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  169 0091 40       		.byte	64
  170 0092 34       		.byte	52
  171 0093 20       		.byte	32
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 4
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 4
 
 
  172 0094 78       		.byte	120
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  226 00ca D8       		.byte	-40
  227 00cb 38       		.byte	56
  228 00cc E2       		.byte	-30
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 5
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 5
 
 
  229 00cd 10       		.byte	16
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  283 0103 ED       		.byte	-19
  284 0104 48       		.byte	72
  285 0105 3E       		.byte	62
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 6
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 6
 
 
  286 0106 49       		.byte	73
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  340 013c D9       		.byte	-39
  341 013d 04       		.byte	4
  342 013e DB       		.byte	-37
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 7
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 7
 
 
  343 013f 04       		.byte	4
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  397 0175 85       		.byte	-123
  398 0176 62       		.byte	98
  399 0177 08       		.byte	8
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 8
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 8
 
 
  400 0178 66       		.byte	102
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  454 01ae E2       		.byte	-30
  455 01af 10       		.byte	16
  456 01b0 E4       		.byte	-28
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 9
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 9
 
 
  457 01b1 A0       		.byte	-96
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  511 01e7 01       		.byte	1
  512 01e8 00       		.byte	0
  513 01e9 08       		.byte	8
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 10
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 10
 
 
  514 01ea 0F       		.byte	15
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  568 0220 1D       		.byte	29
  569 0221 01       		.byte	1
  570 0222 1F       		.byte	31
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 11
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 11
 
 
  571 0223 40       		.byte	64
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  625 0259 41       		.byte	65
  626 025a 56       		.byte	86
  627 025b 04       		.byte	4
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 12
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 12
 
 
  628 025c 58       		.byte	88
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  682 0292 DB       		.byte	-37
  683 0293 04       		.byte	4
  684 0294 DF       		.byte	-33
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 13
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 13
 
 
  685 0295 01       		.byte	1
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  739 02cb 01       		.byte	1
  740 02cc 7A       		.byte	122
  741 02cd 08       		.byte	8
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 14
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 14
 
 
  742 02ce 7B       		.byte	123
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  796 0304 A8       		.byte	-88
  797 0305 40       		.byte	64
  798 0306 A9       		.byte	-87
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 15
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 15
 
 
  799 0307 01       		.byte	1
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  853 033d 40       		.byte	64
  854 033e 65       		.byte	101
  855 033f 20       		.byte	32
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 16
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 16
 
 
  856 0340 C2       		.byte	-62
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  910 0376 0F       		.byte	15
  911 0377 10       		.byte	16
  912 0378 51       		.byte	81
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 17
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 17
 
 
  913 0379 01       		.byte	1
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  967 03af 02       		.byte	2
  968 03b0 5E       		.byte	94
  969 03b1 02       		.byte	2
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 18
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 18
 
 
  970 03b2 61       		.byte	97
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  1024 03e8 10       		.byte	16
  1025 03e9 01       		.byte	1
  1026 03ea 1C       		.byte	28
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 19
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 19
 
 
  1027 03eb 01       		.byte	1
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  1081              		.section	.cycustnvl,"a",%progbits
  1082              		.align	2
  1083              		.type	cy_meta_custnvl, %object
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 20
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 20
 
 
  1084              		.size	cy_meta_custnvl, 4
@@ -1197,46 +1197,46 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  1133 0006 00000000 		.4byte	.Ldebug_abbrev0
  1134 000a 04       		.byte	0x4
  1135 000b 01       		.uleb128 0x1
- 1136 000c 37010000 		.4byte	.LASF18
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 21
+ 1136 000c 2F010000 		.4byte	.LASF18
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 21
 
 
  1137 0010 01       		.byte	0x1
- 1138 0011 30000000 		.4byte	.LASF19
+ 1138 0011 28000000 		.4byte	.LASF19
  1139 0015 00000000 		.4byte	.LASF20
  1140 0019 00000000 		.4byte	.Ldebug_line0
  1141 001d 02       		.uleb128 0x2
  1142 001e 01       		.byte	0x1
  1143 001f 06       		.byte	0x6
- 1144 0020 89010000 		.4byte	.LASF0
+ 1144 0020 81010000 		.4byte	.LASF0
  1145 0024 02       		.uleb128 0x2
  1146 0025 01       		.byte	0x1
  1147 0026 08       		.byte	0x8
- 1148 0027 68000000 		.4byte	.LASF1
+ 1148 0027 60000000 		.4byte	.LASF1
  1149 002b 02       		.uleb128 0x2
  1150 002c 02       		.byte	0x2
  1151 002d 05       		.byte	0x5
- 1152 002e 27010000 		.4byte	.LASF2
+ 1152 002e 1F010000 		.4byte	.LASF2
  1153 0032 02       		.uleb128 0x2
  1154 0033 02       		.byte	0x2
  1155 0034 07       		.byte	0x7
- 1156 0035 88000000 		.4byte	.LASF3
+ 1156 0035 80000000 		.4byte	.LASF3
  1157 0039 02       		.uleb128 0x2
  1158 003a 04       		.byte	0x4
  1159 003b 05       		.byte	0x5
- 1160 003c 80010000 		.4byte	.LASF4
+ 1160 003c 78010000 		.4byte	.LASF4
  1161 0040 02       		.uleb128 0x2
  1162 0041 04       		.byte	0x4
  1163 0042 07       		.byte	0x7
- 1164 0043 76000000 		.4byte	.LASF5
+ 1164 0043 6E000000 		.4byte	.LASF5
  1165 0047 02       		.uleb128 0x2
  1166 0048 08       		.byte	0x8
  1167 0049 05       		.byte	0x5
- 1168 004a 14010000 		.4byte	.LASF6
+ 1168 004a 0C010000 		.4byte	.LASF6
  1169 004e 02       		.uleb128 0x2
  1170 004f 08       		.byte	0x8
  1171 0050 07       		.byte	0x7
- 1172 0051 D1000000 		.4byte	.LASF7
+ 1172 0051 C9000000 		.4byte	.LASF7
  1173 0055 03       		.uleb128 0x3
  1174 0056 04       		.byte	0x4
  1175 0057 05       		.byte	0x5
@@ -1244,27 +1244,27 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  1177 005c 02       		.uleb128 0x2
  1178 005d 04       		.byte	0x4
  1179 005e 07       		.byte	0x7
- 1180 005f C4000000 		.4byte	.LASF8
+ 1180 005f BC000000 		.4byte	.LASF8
  1181 0063 04       		.uleb128 0x4
- 1182 0064 31010000 		.4byte	.LASF21
+ 1182 0064 29010000 		.4byte	.LASF21
  1183 0068 02       		.byte	0x2
  1184 0069 5B       		.byte	0x5b
  1185 006a 24000000 		.4byte	0x24
  1186 006e 02       		.uleb128 0x2
  1187 006f 04       		.byte	0x4
  1188 0070 04       		.byte	0x4
- 1189 0071 62000000 		.4byte	.LASF9
+ 1189 0071 5A000000 		.4byte	.LASF9
  1190 0075 02       		.uleb128 0x2
  1191 0076 08       		.byte	0x8
  1192 0077 04       		.byte	0x4
- 1193 0078 9B000000 		.4byte	.LASF10
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 22
+ 1193 0078 93000000 		.4byte	.LASF10
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 22
 
 
  1194 007c 02       		.uleb128 0x2
  1195 007d 01       		.byte	0x1
  1196 007e 08       		.byte	0x8
- 1197 007f 22010000 		.4byte	.LASF11
+ 1197 007f 1A010000 		.4byte	.LASF11
  1198 0083 05       		.uleb128 0x5
  1199 0084 63000000 		.4byte	0x63
  1200 0088 94000000 		.4byte	0x94
@@ -1275,9 +1275,9 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  1205 0094 02       		.uleb128 0x2
  1206 0095 04       		.byte	0x4
  1207 0096 07       		.byte	0x7
- 1208 0097 0B010000 		.4byte	.LASF12
+ 1208 0097 03010000 		.4byte	.LASF12
  1209 009b 07       		.uleb128 0x7
- 1210 009c B2000000 		.4byte	.LASF13
+ 1210 009c AA000000 		.4byte	.LASF13
  1211 00a0 01       		.byte	0x1
  1212 00a1 1C       		.byte	0x1c
  1213 00a2 AD000000 		.4byte	0xad
@@ -1295,7 +1295,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  1225 00c0 03       		.byte	0x3
  1226 00c1 00       		.byte	0
  1227 00c2 07       		.uleb128 0x7
- 1228 00c3 A2000000 		.4byte	.LASF14
+ 1228 00c3 9A000000 		.4byte	.LASF14
  1229 00c7 01       		.byte	0x1
  1230 00c8 AA       		.byte	0xaa
  1231 00c9 D4000000 		.4byte	0xd4
@@ -1306,7 +1306,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  1236 00d4 08       		.uleb128 0x8
  1237 00d5 B2000000 		.4byte	0xb2
  1238 00d9 07       		.uleb128 0x7
- 1239 00da FD000000 		.4byte	.LASF15
+ 1239 00da F5000000 		.4byte	.LASF15
  1240 00de 01       		.byte	0x1
  1241 00df B5       		.byte	0xb5
  1242 00e0 EB000000 		.4byte	0xeb
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  1248 00ec B2000000 		.4byte	0xb2
  1249 00f0 05       		.uleb128 0x5
  1250 00f1 63000000 		.4byte	0x63
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 23
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 23
 
 
  1251 00f5 00010000 		.4byte	0x100
@@ -1327,7 +1327,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  1254 00fe FF       		.byte	0xff
  1255 00ff 00       		.byte	0
  1256 0100 07       		.uleb128 0x7
- 1257 0101 E8000000 		.4byte	.LASF16
+ 1257 0101 E0000000 		.4byte	.LASF16
  1258 0105 01       		.byte	0x1
  1259 0106 C0       		.byte	0xc0
  1260 0107 12010000 		.4byte	0x112
@@ -1345,7 +1345,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  1272 0125 0B       		.byte	0xb
  1273 0126 00       		.byte	0
  1274 0127 07       		.uleb128 0x7
- 1275 0128 56000000 		.4byte	.LASF17
+ 1275 0128 4E000000 		.4byte	.LASF17
  1276 012c 01       		.byte	0x1
  1277 012d EA       		.byte	0xea
  1278 012e 39010000 		.4byte	0x139
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  1305 0011 00       		.byte	0
  1306 0012 0B       		.uleb128 0xb
  1307 0013 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 24
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 24
 
 
  1308 0014 3E       		.uleb128 0x3e
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  1362 004a 0B       		.uleb128 0xb
  1363 004b 3B       		.uleb128 0x3b
  1364 004c 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 25
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 25
 
 
  1365 004d 49       		.uleb128 0x49
@@ -1484,120 +1484,119 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 1
  1402      FB0E0D00 
  1402      01010101 
  1403              	.LASF20:
- 1404 0000 433A5C4B 		.ascii	"C:\\Kiln\\SRSPiBot\\PSoCCode\\BotPsoc\\BotPsoc.cyds"
- 1404      696C6E5C 
- 1404      53525350 
- 1404      69426F74 
- 1404      5C50536F 
- 1405 002e 6E00     		.ascii	"n\000"
- 1406              	.LASF19:
- 1407 0030 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\cymetadata.c\000"
- 1407      6E657261 
- 1407      7465645F 
- 1407      536F7572 
- 1407      63655C50 
- 1408              	.LASF17:
- 1409 0056 63795F6D 		.ascii	"cy_metadata\000"
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 26
+ 1404 0000 433A5C47 		.ascii	"C:\\GitHub\\RPi-Dev\\BotPsoc\\BotPsoc.cydsn\000"
+ 1404      69744875 
+ 1404      625C5250 
+ 1404      692D4465 
+ 1404      765C426F 
+ 1405              	.LASF19:
+ 1406 0028 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\cymetadata.c\000"
+ 1406      6E657261 
+ 1406      7465645F 
+ 1406      536F7572 
+ 1406      63655C50 
+ 1407              	.LASF17:
+ 1408 004e 63795F6D 		.ascii	"cy_metadata\000"
+ 1408      65746164 
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 26
 
 
- 1409      65746164 
- 1409      61746100 
- 1410              	.LASF9:
- 1411 0062 666C6F61 		.ascii	"float\000"
- 1411      7400
- 1412              	.LASF1:
- 1413 0068 756E7369 		.ascii	"unsigned char\000"
- 1413      676E6564 
- 1413      20636861 
- 1413      7200
- 1414              	.LASF5:
- 1415 0076 6C6F6E67 		.ascii	"long unsigned int\000"
- 1415      20756E73 
- 1415      69676E65 
- 1415      6420696E 
- 1415      7400
- 1416              	.LASF3:
- 1417 0088 73686F72 		.ascii	"short unsigned int\000"
- 1417      7420756E 
- 1417      7369676E 
- 1417      65642069 
- 1417      6E7400
- 1418              	.LASF10:
- 1419 009b 646F7562 		.ascii	"double\000"
- 1419      6C6500
- 1420              	.LASF14:
- 1421 00a2 63795F6D 		.ascii	"cy_meta_custnvl\000"
- 1421      6574615F 
- 1421      63757374 
- 1421      6E766C00 
- 1422              	.LASF13:
- 1423 00b2 63795F6D 		.ascii	"cy_meta_configecc\000"
- 1423      6574615F 
- 1423      636F6E66 
- 1423      69676563 
- 1423      6300
- 1424              	.LASF8:
- 1425 00c4 756E7369 		.ascii	"unsigned int\000"
- 1425      676E6564 
- 1425      20696E74 
- 1425      00
- 1426              	.LASF7:
- 1427 00d1 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1427      206C6F6E 
- 1427      6720756E 
- 1427      7369676E 
- 1427      65642069 
- 1428              	.LASF16:
- 1429 00e8 63795F6D 		.ascii	"cy_meta_flashprotect\000"
- 1429      6574615F 
- 1429      666C6173 
- 1429      6870726F 
- 1429      74656374 
- 1430              	.LASF15:
- 1431 00fd 63795F6D 		.ascii	"cy_meta_wonvl\000"
- 1431      6574615F 
- 1431      776F6E76 
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccA5BwWz.s 			page 27
+ 1408      61746100 
+ 1409              	.LASF9:
+ 1410 005a 666C6F61 		.ascii	"float\000"
+ 1410      7400
+ 1411              	.LASF1:
+ 1412 0060 756E7369 		.ascii	"unsigned char\000"
+ 1412      676E6564 
+ 1412      20636861 
+ 1412      7200
+ 1413              	.LASF5:
+ 1414 006e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1414      20756E73 
+ 1414      69676E65 
+ 1414      6420696E 
+ 1414      7400
+ 1415              	.LASF3:
+ 1416 0080 73686F72 		.ascii	"short unsigned int\000"
+ 1416      7420756E 
+ 1416      7369676E 
+ 1416      65642069 
+ 1416      6E7400
+ 1417              	.LASF10:
+ 1418 0093 646F7562 		.ascii	"double\000"
+ 1418      6C6500
+ 1419              	.LASF14:
+ 1420 009a 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 1420      6574615F 
+ 1420      63757374 
+ 1420      6E766C00 
+ 1421              	.LASF13:
+ 1422 00aa 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 1422      6574615F 
+ 1422      636F6E66 
+ 1422      69676563 
+ 1422      6300
+ 1423              	.LASF8:
+ 1424 00bc 756E7369 		.ascii	"unsigned int\000"
+ 1424      676E6564 
+ 1424      20696E74 
+ 1424      00
+ 1425              	.LASF7:
+ 1426 00c9 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1426      206C6F6E 
+ 1426      6720756E 
+ 1426      7369676E 
+ 1426      65642069 
+ 1427              	.LASF16:
+ 1428 00e0 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 1428      6574615F 
+ 1428      666C6173 
+ 1428      6870726F 
+ 1428      74656374 
+ 1429              	.LASF15:
+ 1430 00f5 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 1430      6574615F 
+ 1430      776F6E76 
+ 1430      6C00
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccpEnm9M.s 			page 27
 
 
- 1431      6C00
- 1432              	.LASF12:
- 1433 010b 73697A65 		.ascii	"sizetype\000"
- 1433      74797065 
- 1433      00
- 1434              	.LASF6:
- 1435 0114 6C6F6E67 		.ascii	"long long int\000"
- 1435      206C6F6E 
- 1435      6720696E 
- 1435      7400
- 1436              	.LASF11:
- 1437 0122 63686172 		.ascii	"char\000"
- 1437      00
- 1438              	.LASF2:
- 1439 0127 73686F72 		.ascii	"short int\000"
- 1439      7420696E 
- 1439      7400
- 1440              	.LASF21:
- 1441 0131 75696E74 		.ascii	"uint8\000"
- 1441      3800
- 1442              	.LASF18:
- 1443 0137 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
- 1443      4320342E 
- 1443      372E3320 
- 1443      32303133 
- 1443      30333132 
- 1444 016a 616E6368 		.ascii	"anch revision 196615]\000"
- 1444      20726576 
- 1444      6973696F 
- 1444      6E203139 
- 1444      36363135 
- 1445              	.LASF4:
- 1446 0180 6C6F6E67 		.ascii	"long int\000"
- 1446      20696E74 
- 1446      00
- 1447              	.LASF0:
- 1448 0189 7369676E 		.ascii	"signed char\000"
- 1448      65642063 
- 1448      68617200 
- 1449              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br
+ 1431              	.LASF12:
+ 1432 0103 73697A65 		.ascii	"sizetype\000"
+ 1432      74797065 
+ 1432      00
+ 1433              	.LASF6:
+ 1434 010c 6C6F6E67 		.ascii	"long long int\000"
+ 1434      206C6F6E 
+ 1434      6720696E 
+ 1434      7400
+ 1435              	.LASF11:
+ 1436 011a 63686172 		.ascii	"char\000"
+ 1436      00
+ 1437              	.LASF2:
+ 1438 011f 73686F72 		.ascii	"short int\000"
+ 1438      7420696E 
+ 1438      7400
+ 1439              	.LASF21:
+ 1440 0129 75696E74 		.ascii	"uint8\000"
+ 1440      3800
+ 1441              	.LASF18:
+ 1442 012f 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 1442      4320342E 
+ 1442      372E3320 
+ 1442      32303133 
+ 1442      30333132 
+ 1443 0162 616E6368 		.ascii	"anch revision 196615]\000"
+ 1443      20726576 
+ 1443      6973696F 
+ 1443      6E203139 
+ 1443      36363135 
+ 1444              	.LASF4:
+ 1445 0178 6C6F6E67 		.ascii	"long int\000"
+ 1445      20696E74 
+ 1445      00
+ 1446              	.LASF0:
+ 1447 0181 7369676E 		.ascii	"signed char\000"
+ 1447      65642063 
+ 1447      68617200 
+ 1448              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br

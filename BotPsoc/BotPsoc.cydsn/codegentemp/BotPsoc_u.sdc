@@ -1,3 +1,3 @@
-# Component constraints for C:\Kiln\SRSPiBot\PSoCCode\BotPsoc\BotPsoc.cydsn\TopDesign\TopDesign.cysch
-# Project: C:\Kiln\SRSPiBot\PSoCCode\BotPsoc\BotPsoc.cydsn\BotPsoc.cyprj
-# Date: Mon, 06 Jan 2014 20:15:30 GMT
+# Component constraints for C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn\TopDesign\TopDesign.cysch
+# Project: C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn\BotPsoc.cyprj
+# Date: Wed, 08 Jan 2014 23:56:05 GMT

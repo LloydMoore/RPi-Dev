@@ -1,4 +1,4 @@
---------------- Rebuild Started: 01/06/2014 12:15:26 Project: BotPsoc, Configuration: ARM GCC 4.7.3 Debug ---------------
+--------------- Rebuild Started: 01/08/2014 15:55:58 Project: BotPsoc, Configuration: ARM GCC 4.7.3 Debug ---------------
 Deleting file ".\CortexM3\ARM_GCC_473\Debug\main.o"
 Deleting file ".\CortexM3\ARM_GCC_473\Debug\spi_ring.o"
 Deleting file ".\CortexM3\ARM_GCC_473\Debug\base_motion.o"
@@ -64,7 +64,7 @@ Deleting file ".\BotPsoc_timing.html"
 Deleting file ".\CortexM3\ARM_GCC_473\Debug\.deps\C_FILE.P"
 Deleting file ".\CortexM3\ARM_GCC_473\Debug\.deps\ARM_C_FILE.P"
 Deleting file ".\CortexM3\ARM_GCC_473\Debug\.deps\GNU_ARM_ASM_FILE.P"
-cydsfit.exe "-.appdatapath" "C:\Users\Lloyd\AppData\Local\Cypress Semiconductor\PSoC Creator\3.0" "-.fdsnotice" "-.fdswarpdepfile=warp_dependencies.txt" "-.fdselabdepfile=elab_dependencies.txt" "-.fdsbldfile=generated_files.txt" "-p" "C:\Kiln\SRSPiBot\PSoCCode\BotPsoc\BotPsoc.cydsn\BotPsoc.cyprj" "-d" "CY8C5868AXI-LP032" "-s" "C:\Kiln\SRSPiBot\PSoCCode\BotPsoc\BotPsoc.cydsn\Generated_Source\PSoC5" "--" "-yv2" "-v3" "-ygs" "-q10" "-o2" "-.fftcfgtype=LE"
+cydsfit.exe "-.appdatapath" "C:\Users\lloyd\AppData\Local\Cypress Semiconductor\PSoC Creator\3.0" "-.fdsnotice" "-.fdswarpdepfile=warp_dependencies.txt" "-.fdselabdepfile=elab_dependencies.txt" "-.fdsbldfile=generated_files.txt" "-p" "C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn\BotPsoc.cyprj" "-d" "CY8C5868AXI-LP032" "-s" "C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn\Generated_Source\PSoC5" "--" "-yv2" "-v3" "-ygs" "-q10" "-o2" "-.fftcfgtype=LE"
 Elaborating Design...
 HDL Generation ...
 Synthesis ...
@@ -139,8 +139,8 @@ arm-none-eabi-gcc.exe -I. -I./Generated_Source/PSoC5 -Wno-main -mcpu=cortex-m3 -
 arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a .\CortexM3\ARM_GCC_473\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_473\Debug\Debug0.o .\CortexM3\ARM_GCC_473\Debug\Debug1.o .\CortexM3\ARM_GCC_473\Debug\CyBootAsmGnu.o .\CortexM3\ARM_GCC_473\Debug\CyDmac.o .\CortexM3\ARM_GCC_473\Debug\CyFlash.o .\CortexM3\ARM_GCC_473\Debug\CyLib.o .\CortexM3\ARM_GCC_473\Debug\cyPm.o .\CortexM3\ARM_GCC_473\Debug\CySpc.o .\CortexM3\ARM_GCC_473\Debug\cyutils.o .\CortexM3\ARM_GCC_473\Debug\PiComs.o .\CortexM3\ARM_GCC_473\Debug\PiComs_PM.o .\CortexM3\ARM_GCC_473\Debug\PiComs_INT.o .\CortexM3\ARM_GCC_473\Debug\PiComs_BOOT.o .\CortexM3\ARM_GCC_473\Debug\PiSPI_MOSI.o .\CortexM3\ARM_GCC_473\Debug\PiSPI_SCLK.o .\CortexM3\ARM_GCC_473\Debug\PiSPI_SS.o .\CortexM3\ARM_GCC_473\Debug\PiSPI_MISO.o .\CortexM3\ARM_GCC_473\Debug\PiSPI_CLK.o .\CortexM3\ARM_GCC_473\Debug\Debug2.o .\CortexM3\ARM_GCC_473\Debug\Debug3.o .\CortexM3\ARM_GCC_473\Debug\Debug4.o .\CortexM3\ARM_GCC_473\Debug\Debug5.o .\CortexM3\ARM_GCC_473\Debug\Debug6.o .\CortexM3\ARM_GCC_473\Debug\Debug7.o .\CortexM3\ARM_GCC_473\Debug\SpiXmitDma_dma.o .\CortexM3\ARM_GCC_473\Debug\SpiRcvDma_dma.o .\CortexM3\ARM_GCC_473\Debug\SpiXferDone.o .\CortexM3\ARM_GCC_473\Debug\RDV2.o .\CortexM3\ARM_GCC_473\Debug\RDG2.o .\CortexM3\ARM_GCC_473\Debug\RDV1.o .\CortexM3\ARM_GCC_473\Debug\RDG1.o .\CortexM3\ARM_GCC_473\Debug\LDV2.o .\CortexM3\ARM_GCC_473\Debug\LDV1.o .\CortexM3\ARM_GCC_473\Debug\LDG2.o .\CortexM3\ARM_GCC_473\Debug\LDG1.o .\CortexM3\ARM_GCC_473\Debug\LMotorPwm.o .\CortexM3\ARM_GCC_473\Debug\LMotorPwm_PM.o .\CortexM3\ARM_GCC_473\Debug\MotorPwmClock.o .\CortexM3\ARM_GCC_473\Debug\RMotorPwm.o .\CortexM3\ARM_GCC_473\Debug\RMotorPwm_PM.o .\CortexM3\ARM_GCC_473\Debug\MotorControlReg.o .\CortexM3\ARM_GCC_473\Debug\SerDrv_485Sel.o .\CortexM3\ARM_GCC_473\Debug\SerDrv_Enable.o .\CortexM3\ARM_GCC_473\Debug\SerDrv_RA.o .\CortexM3\ARM_GCC_473\Debug\SerDrv_RB.o .\CortexM3\ARM_GCC_473\Debug\SerDrv_DY.o .\CortexM3\ARM_GCC_473\Debug\SerDrv_DZ.o .\CortexM3\ARM_GCC_473\Debug\PiUART_RXD.o .\CortexM3\ARM_GCC_473\Debug\PiUART_TXD.o
 arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a
 arm-none-eabi-gcc.exe -mthumb -march=armv7-m -mfix-cortex-m3-ldrd -T .\Generated_Source\PSoC5\cm3gcc.ld -g -Wl,-Map,.\CortexM3\ARM_GCC_473\Debug\BotPsoc.map -specs=nano.specs -Wl,--gc-sections -Wl,--start-group -o .\CortexM3\ARM_GCC_473\Debug\BotPsoc.elf .\CortexM3\ARM_GCC_473\Debug\main.o .\CortexM3\ARM_GCC_473\Debug\spi_ring.o .\CortexM3\ARM_GCC_473\Debug\base_motion.o .\CortexM3\ARM_GCC_473\Debug\cymetadata.o .\CortexM3\ARM_GCC_473\Debug\Cm3Start.o .\CortexM3\ARM_GCC_473\Debug\BotPsoc.a "C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_473\Debug\CyComponentLibrary.a" -Wl,--end-group
-cyelftool.exe -C C:\Kiln\SRSPiBot\PSoCCode\BotPsoc\BotPsoc.cydsn\CortexM3\ARM_GCC_473\Debug\BotPsoc.elf --flash_size 262144 --flash_row_size 256
-cyelftool.exe -S C:\Kiln\SRSPiBot\PSoCCode\BotPsoc\BotPsoc.cydsn\CortexM3\ARM_GCC_473\Debug\BotPsoc.elf
+cyelftool.exe -C C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn\CortexM3\ARM_GCC_473\Debug\BotPsoc.elf --flash_size 262144 --flash_row_size 256
+cyelftool.exe -S C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn\CortexM3\ARM_GCC_473\Debug\BotPsoc.elf
 Flash used: 5766 of 262144 bytes (2.2 %).
 SRAM used: 20877 of 65536 bytes (31.9 %).
---------------- Rebuild Succeeded: 01/06/2014 12:15:42 ---------------
+--------------- Rebuild Succeeded: 01/08/2014 15:56:26 ---------------

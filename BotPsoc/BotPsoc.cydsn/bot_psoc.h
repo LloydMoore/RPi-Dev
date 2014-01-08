@@ -28,7 +28,7 @@ Web site: http://www.CyberData-Robotics.com
     #define EXTERN extern
 #endif
 
-#include "../../../Common/ringcoms.h"
+#include "../../Common/ringcoms.h"
 
 #define true 1                                              //Boolean alias to be "nice"
 #define false 0                                             //Boolean alias to be "nice"

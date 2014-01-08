@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
   23:.\Generated_Source\PSoC5/LMotorPwm.c **** 
   24:.\Generated_Source\PSoC5/LMotorPwm.c **** #include "cytypes.h"
   25:.\Generated_Source\PSoC5/LMotorPwm.c **** #include "LMotorPwm.h"
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 2
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 2
 
 
   26:.\Generated_Source\PSoC5/LMotorPwm.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
   56 001e 4FF00102 		mov	r2, #1
   57 0022 1A70     		strb	r2, [r3, #0]
   58              	.L2:
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 3
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 3
 
 
   57:.\Generated_Source\PSoC5/LMotorPwm.c ****     }
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
   81:.\Generated_Source\PSoC5/LMotorPwm.c ****     #if (LMotorPwm_UsingFixedFunction || LMotorPwm_UseControl)
   82:.\Generated_Source\PSoC5/LMotorPwm.c ****         uint8 ctrl;
   83:.\Generated_Source\PSoC5/LMotorPwm.c ****     #endif /* (LMotorPwm_UsingFixedFunction || LMotorPwm_UseControl) */
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 4
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 4
 
 
   84:.\Generated_Source\PSoC5/LMotorPwm.c ****     
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  104:.\Generated_Source\PSoC5/LMotorPwm.c ****         LMotorPwm_RT1 |= LMotorPwm_SYNC;     
  123              		.loc 1 104 0
  124 0062 44F60B73 		movw	r3, #20235
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 5
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 5
 
 
  125 0066 C4F20003 		movt	r3, 16384
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  153              		.loc 1 130 0
  154 00b6 4FF6FF70 		movw	r0, #65535
  155 00ba FFF7FEFF 		bl	LMotorPwm_WritePeriod
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 6
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 6
 
 
  131:.\Generated_Source\PSoC5/LMotorPwm.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  159:.\Generated_Source\PSoC5/LMotorPwm.c ****             /* CyEnterCriticalRegion and CyExitCriticalRegion are used to mark following region cri
  160:.\Generated_Source\PSoC5/LMotorPwm.c ****             /* Enter Critical Region*/
  161:.\Generated_Source\PSoC5/LMotorPwm.c ****             LMotorPwm_interruptState = CyEnterCriticalSection();
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 7
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 7
 
 
  162:.\Generated_Source\PSoC5/LMotorPwm.c ****             /* Use the interrupt output of the status register for IRQ output */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  203              	.LCFI5:
  204              		.cfi_def_cfa_offset 4
  205              		.cfi_offset 7, -4
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 8
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 8
 
 
  206 0002 00AF     		add	r7, sp, #0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  249              		.thumb
  250              		.thumb_func
  251              		.type	LMotorPwm_Stop, %function
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 9
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 9
 
 
  252              	LMotorPwm_Stop:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  276              		.loc 1 235 0
  277 0020 44F2A333 		movw	r3, #17315
  278 0024 C4F20003 		movt	r3, 16384
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 10
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 10
 
 
  279 0028 44F2A332 		movw	r2, #17315
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  258:.\Generated_Source\PSoC5/LMotorPwm.c **** 		*  None
  259:.\Generated_Source\PSoC5/LMotorPwm.c **** 		*
  260:.\Generated_Source\PSoC5/LMotorPwm.c **** 		*******************************************************************************/
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 11
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 11
 
 
  261:.\Generated_Source\PSoC5/LMotorPwm.c **** 		void LMotorPwm_SetCompareMode(uint8 comparemode) 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  315:.\Generated_Source\PSoC5/LMotorPwm.c **** 		*
  316:.\Generated_Source\PSoC5/LMotorPwm.c **** 		* Return: 
  317:.\Generated_Source\PSoC5/LMotorPwm.c **** 		*  None
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 12
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 12
 
 
  318:.\Generated_Source\PSoC5/LMotorPwm.c **** 		*
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  372:.\Generated_Source\PSoC5/LMotorPwm.c **** 
  373:.\Generated_Source\PSoC5/LMotorPwm.c **** 
  374:.\Generated_Source\PSoC5/LMotorPwm.c **** #if (!LMotorPwm_UsingFixedFunction)
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 13
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 13
 
 
  375:.\Generated_Source\PSoC5/LMotorPwm.c **** 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  429:.\Generated_Source\PSoC5/LMotorPwm.c **** 
  430:.\Generated_Source\PSoC5/LMotorPwm.c ****         #if (LMotorPwm_UseStatus)
  431:.\Generated_Source\PSoC5/LMotorPwm.c **** 
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 14
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 14
 
 
  432:.\Generated_Source\PSoC5/LMotorPwm.c **** 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  319              		.cfi_offset 7, -4
  320 0002 83B0     		sub	sp, sp, #12
  321              	.LCFI10:
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 15
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 15
 
 
  322              		.cfi_def_cfa_offset 16
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  505:.\Generated_Source\PSoC5/LMotorPwm.c ****     * Side Effects:
  506:.\Generated_Source\PSoC5/LMotorPwm.c ****     *  This function is only available if the PWM mode parameter is set to
  507:.\Generated_Source\PSoC5/LMotorPwm.c ****     *  Dither Mode, Center Aligned Mode or One Output Mode
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 16
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 16
 
 
  508:.\Generated_Source\PSoC5/LMotorPwm.c ****     *
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  384              		.type	LMotorPwm_SetInterruptMode, %function
  385              	LMotorPwm_SetInterruptMode:
  386              	.LFB6:
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 17
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 17
 
 
  527:.\Generated_Source\PSoC5/LMotorPwm.c **** 
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  581:.\Generated_Source\PSoC5/LMotorPwm.c ****         #if(LMotorPwm_UsingFixedFunction)
  582:.\Generated_Source\PSoC5/LMotorPwm.c ****             CY_SET_REG16(LMotorPwm_COMPARE2_LSB_PTR, compare);
  583:.\Generated_Source\PSoC5/LMotorPwm.c ****         #else
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 18
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 18
 
 
  584:.\Generated_Source\PSoC5/LMotorPwm.c ****             CY_SET_REG16(LMotorPwm_COMPARE2_LSB_PTR, compare);
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  638:.\Generated_Source\PSoC5/LMotorPwm.c ****     * Return: 
  639:.\Generated_Source\PSoC5/LMotorPwm.c ****     *  Dead Band Counts
  640:.\Generated_Source\PSoC5/LMotorPwm.c ****     *
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 19
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 19
 
 
  641:.\Generated_Source\PSoC5/LMotorPwm.c ****     *******************************************************************************/
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  402 0006 0346     		mov	r3, r0
  403 0008 FB71     		strb	r3, [r7, #7]
  680:.\Generated_Source\PSoC5/LMotorPwm.c ****     	CY_SET_REG8(LMotorPwm_STATUS_MASK_PTR, interruptMode);
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 20
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 20
 
 
  404              		.loc 1 680 0
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  432              		.cfi_def_cfa_offset 4
  433              		.cfi_offset 7, -4
  434 0002 83B0     		sub	sp, sp, #12
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 21
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 21
 
 
  435              	.LCFI19:
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  732:.\Generated_Source\PSoC5/LMotorPwm.c ****     *
  733:.\Generated_Source\PSoC5/LMotorPwm.c ****     *******************************************************************************/    
  734:.\Generated_Source\PSoC5/LMotorPwm.c ****     uint8 LMotorPwm_ReadControlRegister(void) 
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 22
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 22
 
 
  735:.\Generated_Source\PSoC5/LMotorPwm.c ****     {
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  750:.\Generated_Source\PSoC5/LMotorPwm.c ****     *
  751:.\Generated_Source\PSoC5/LMotorPwm.c ****     * Parameters:  
  752:.\Generated_Source\PSoC5/LMotorPwm.c ****     *  uint8 control: Control register bit field, The status register bits are:
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 23
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 23
 
 
  753:.\Generated_Source\PSoC5/LMotorPwm.c ****     *  [7]   : PWM Enable
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  769:.\Generated_Source\PSoC5/LMotorPwm.c **** 
  770:.\Generated_Source\PSoC5/LMotorPwm.c **** #if (!LMotorPwm_UsingFixedFunction)
  771:.\Generated_Source\PSoC5/LMotorPwm.c **** 
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 24
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 24
 
 
  772:.\Generated_Source\PSoC5/LMotorPwm.c **** 
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  552              		.cfi_def_cfa_register 7
  815:.\Generated_Source\PSoC5/LMotorPwm.c **** 		#if(LMotorPwm_UsingFixedFunction)
  816:.\Generated_Source\PSoC5/LMotorPwm.c ****             return ((uint16)CY_GET_REG16(LMotorPwm_COMPARE1_LSB_PTR));
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 25
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 25
 
 
  553              		.loc 1 816 0
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  850:.\Generated_Source\PSoC5/LMotorPwm.c ****     *  Reads the compare value for the compare2 output.
  851:.\Generated_Source\PSoC5/LMotorPwm.c ****     *
  852:.\Generated_Source\PSoC5/LMotorPwm.c ****     * Parameters:  
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 26
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 26
 
 
  853:.\Generated_Source\PSoC5/LMotorPwm.c ****     *  None
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  592 0010 1846     		mov	r0, r3
  593 0012 BD46     		mov	sp, r7
  594 0014 80BC     		pop	{r7}
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 27
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 27
 
 
  595 0016 7047     		bx	lr
@@ -1575,10 +1575,10 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  606 0006 00000000 		.4byte	.Ldebug_abbrev0
  607 000a 04       		.byte	0x4
  608 000b 01       		.uleb128 0x1
- 609 000c 45020000 		.4byte	.LASF35
+ 609 000c ED010000 		.4byte	.LASF35
  610 0010 01       		.byte	0x1
- 611 0011 A2000000 		.4byte	.LASF36
- 612 0015 C5010000 		.4byte	.LASF37
+ 611 0011 CA000000 		.4byte	.LASF36
+ 612 0015 06000000 		.4byte	.LASF37
  613 0019 00000000 		.4byte	.Ldebug_ranges0+0
  614 001d 00000000 		.4byte	0
  615 0021 00000000 		.4byte	0
@@ -1586,70 +1586,70 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  617 0029 02       		.uleb128 0x2
  618 002a 01       		.byte	0x1
  619 002b 06       		.byte	0x6
- 620 002c 12020000 		.4byte	.LASF0
+ 620 002c 53020000 		.4byte	.LASF0
  621 0030 02       		.uleb128 0x2
  622 0031 01       		.byte	0x1
  623 0032 08       		.byte	0x8
- 624 0033 C7000000 		.4byte	.LASF1
+ 624 0033 EF000000 		.4byte	.LASF1
  625 0037 02       		.uleb128 0x2
  626 0038 02       		.byte	0x2
  627 0039 05       		.byte	0x5
- 628 003a BB010000 		.4byte	.LASF2
+ 628 003a E3010000 		.4byte	.LASF2
  629 003e 02       		.uleb128 0x2
  630 003f 02       		.byte	0x2
  631 0040 07       		.byte	0x7
- 632 0041 33000000 		.4byte	.LASF3
+ 632 0041 5B000000 		.4byte	.LASF3
  633 0045 02       		.uleb128 0x2
  634 0046 04       		.byte	0x4
  635 0047 05       		.byte	0x5
- 636 0048 F5010000 		.4byte	.LASF4
+ 636 0048 36020000 		.4byte	.LASF4
  637 004c 02       		.uleb128 0x2
  638 004d 04       		.byte	0x4
  639 004e 07       		.byte	0x7
- 640 004f DA000000 		.4byte	.LASF5
+ 640 004f 02010000 		.4byte	.LASF5
  641 0053 02       		.uleb128 0x2
  642 0054 08       		.byte	0x8
  643 0055 05       		.byte	0x5
- 644 0056 9F010000 		.4byte	.LASF6
+ 644 0056 C7010000 		.4byte	.LASF6
  645 005a 02       		.uleb128 0x2
  646 005b 08       		.byte	0x8
  647 005c 07       		.byte	0x7
- 648 005d 5D010000 		.4byte	.LASF7
+ 648 005d 85010000 		.4byte	.LASF7
  649 0061 03       		.uleb128 0x3
  650 0062 04       		.byte	0x4
  651 0063 05       		.byte	0x5
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 28
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 28
 
 
  652 0064 696E7400 		.ascii	"int\000"
  653 0068 02       		.uleb128 0x2
  654 0069 04       		.byte	0x4
  655 006a 07       		.byte	0x7
- 656 006b 33010000 		.4byte	.LASF8
+ 656 006b 5B010000 		.4byte	.LASF8
  657 006f 04       		.uleb128 0x4
- 658 0070 07010000 		.4byte	.LASF9
+ 658 0070 2F010000 		.4byte	.LASF9
  659 0074 02       		.byte	0x2
  660 0075 5B       		.byte	0x5b
  661 0076 30000000 		.4byte	0x30
  662 007a 04       		.uleb128 0x4
- 663 007b 1C010000 		.4byte	.LASF10
+ 663 007b 44010000 		.4byte	.LASF10
  664 007f 02       		.byte	0x2
  665 0080 5C       		.byte	0x5c
  666 0081 3E000000 		.4byte	0x3e
  667 0085 02       		.uleb128 0x2
  668 0086 04       		.byte	0x4
  669 0087 04       		.byte	0x4
- 670 0088 8A000000 		.4byte	.LASF11
+ 670 0088 B2000000 		.4byte	.LASF11
  671 008c 02       		.uleb128 0x2
  672 008d 08       		.byte	0x8
  673 008e 04       		.byte	0x4
- 674 008f 15010000 		.4byte	.LASF12
+ 674 008f 3D010000 		.4byte	.LASF12
  675 0093 02       		.uleb128 0x2
  676 0094 01       		.byte	0x1
  677 0095 08       		.byte	0x8
- 678 0096 FE010000 		.4byte	.LASF13
+ 678 0096 3F020000 		.4byte	.LASF13
  679 009a 04       		.uleb128 0x4
- 680 009b D5000000 		.4byte	.LASF14
+ 680 009b FD000000 		.4byte	.LASF14
  681 009f 02       		.byte	0x2
  682 00a0 F0       		.byte	0xf0
  683 00a1 A5000000 		.4byte	0xa5
@@ -1665,10 +1665,10 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  693 00ba 02       		.uleb128 0x2
  694 00bb 04       		.byte	0x4
  695 00bc 07       		.byte	0x7
- 696 00bd 96010000 		.4byte	.LASF16
+ 696 00bd BE010000 		.4byte	.LASF16
  697 00c1 06       		.uleb128 0x6
  698 00c2 01       		.byte	0x1
- 699 00c3 23010000 		.4byte	.LASF17
+ 699 00c3 4B010000 		.4byte	.LASF17
  700 00c7 01       		.byte	0x1
  701 00c8 32       		.byte	0x32
  702 00c9 01       		.byte	0x1
@@ -1678,10 +1678,10 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  706 00d6 01       		.byte	0x1
  707 00d7 07       		.uleb128 0x7
  708 00d8 01       		.byte	0x1
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 29
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 29
 
 
- 709 00d9 03020000 		.4byte	.LASF20
+ 709 00d9 44020000 		.4byte	.LASF20
  710 00dd 01       		.byte	0x1
  711 00de 4F       		.byte	0x4f
  712 00df 01       		.byte	0x1
@@ -1691,7 +1691,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  716 00ec 01       		.byte	0x1
  717 00ed 00010000 		.4byte	0x100
  718 00f1 08       		.uleb128 0x8
- 719 00f2 91010000 		.4byte	.LASF27
+ 719 00f2 B9010000 		.4byte	.LASF27
  720 00f6 01       		.byte	0x1
  721 00f7 52       		.byte	0x52
  722 00f8 6F000000 		.4byte	0x6f
@@ -1701,7 +1701,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  726 00ff 00       		.byte	0
  727 0100 09       		.uleb128 0x9
  728 0101 01       		.byte	0x1
- 729 0102 1B000000 		.4byte	.LASF18
+ 729 0102 43000000 		.4byte	.LASF18
  730 0106 01       		.byte	0x1
  731 0107 C1       		.byte	0xc1
  732 0108 01       		.byte	0x1
@@ -1711,7 +1711,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  736 0115 01       		.byte	0x1
  737 0116 09       		.uleb128 0x9
  738 0117 01       		.byte	0x1
- 739 0118 64000000 		.4byte	.LASF19
+ 739 0118 8C000000 		.4byte	.LASF19
  740 011c 01       		.byte	0x1
  741 011d E3       		.byte	0xe3
  742 011e 01       		.byte	0x1
@@ -1721,7 +1721,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  746 012b 01       		.byte	0x1
  747 012c 0A       		.uleb128 0xa
  748 012d 01       		.byte	0x1
- 749 012e 7B010000 		.4byte	.LASF21
+ 749 012e A3010000 		.4byte	.LASF21
  750 0132 01       		.byte	0x1
  751 0133 DC01     		.2byte	0x1dc
  752 0135 01       		.byte	0x1
@@ -1731,20 +1731,20 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  756 0142 01       		.byte	0x1
  757 0143 57010000 		.4byte	0x157
  758 0147 0B       		.uleb128 0xb
- 759 0148 2C000000 		.4byte	.LASF23
+ 759 0148 54000000 		.4byte	.LASF23
  760 014c 01       		.byte	0x1
  761 014d DC01     		.2byte	0x1dc
  762 014f 7A000000 		.4byte	0x7a
  763 0153 02       		.byte	0x2
  764 0154 91       		.byte	0x91
  765 0155 76       		.sleb128 -10
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 30
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 30
 
 
  766 0156 00       		.byte	0
  767 0157 0A       		.uleb128 0xa
  768 0158 01       		.byte	0x1
- 769 0159 73000000 		.4byte	.LASF22
+ 769 0159 9B000000 		.4byte	.LASF22
  770 015d 01       		.byte	0x1
  771 015e FE01     		.2byte	0x1fe
  772 0160 01       		.byte	0x1
@@ -1754,7 +1754,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  776 016d 01       		.byte	0x1
  777 016e 82010000 		.4byte	0x182
  778 0172 0B       		.uleb128 0xb
- 779 0173 1E020000 		.4byte	.LASF24
+ 779 0173 5F020000 		.4byte	.LASF24
  780 0177 01       		.byte	0x1
  781 0178 FE01     		.2byte	0x1fe
  782 017a 7A000000 		.4byte	0x7a
@@ -1764,7 +1764,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  786 0181 00       		.byte	0
  787 0182 0A       		.uleb128 0xa
  788 0183 01       		.byte	0x1
- 789 0184 EC000000 		.4byte	.LASF25
+ 789 0184 14010000 		.4byte	.LASF25
  790 0188 01       		.byte	0x1
  791 0189 A602     		.2byte	0x2a6
  792 018b 01       		.byte	0x1
@@ -1774,7 +1774,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  796 0198 01       		.byte	0x1
  797 0199 AD010000 		.4byte	0x1ad
  798 019d 0B       		.uleb128 0xb
- 799 019e AD010000 		.4byte	.LASF26
+ 799 019e D5010000 		.4byte	.LASF26
  800 01a2 01       		.byte	0x1
  801 01a3 A602     		.2byte	0x2a6
  802 01a5 6F000000 		.4byte	0x6f
@@ -1784,7 +1784,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  806 01ac 00       		.byte	0
  807 01ad 0C       		.uleb128 0xc
  808 01ae 01       		.byte	0x1
- 809 01af 40010000 		.4byte	.LASF29
+ 809 01af 68010000 		.4byte	.LASF29
  810 01b3 01       		.byte	0x1
  811 01b4 C102     		.2byte	0x2c1
  812 01b6 01       		.byte	0x1
@@ -1795,10 +1795,10 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  817 01c7 01       		.byte	0x1
  818 01c8 DC010000 		.4byte	0x1dc
  819 01cc 0D       		.uleb128 0xd
- 820 01cd 74010000 		.4byte	.LASF28
+ 820 01cd 9C010000 		.4byte	.LASF28
  821 01d1 01       		.byte	0x1
  822 01d2 C302     		.2byte	0x2c3
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 31
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 31
 
 
  823 01d4 6F000000 		.4byte	0x6f
@@ -1808,7 +1808,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  827 01db 00       		.byte	0
  828 01dc 0C       		.uleb128 0xc
  829 01dd 01       		.byte	0x1
- 830 01de 46000000 		.4byte	.LASF30
+ 830 01de 6E000000 		.4byte	.LASF30
  831 01e2 01       		.byte	0x1
  832 01e3 DE02     		.2byte	0x2de
  833 01e5 01       		.byte	0x1
@@ -1819,7 +1819,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  838 01f6 01       		.byte	0x1
  839 01f7 0B020000 		.4byte	0x20b
  840 01fb 0D       		.uleb128 0xd
- 841 01fc 74010000 		.4byte	.LASF28
+ 841 01fc 9C010000 		.4byte	.LASF28
  842 0200 01       		.byte	0x1
  843 0201 E002     		.2byte	0x2e0
  844 0203 6F000000 		.4byte	0x6f
@@ -1829,7 +1829,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  848 020a 00       		.byte	0
  849 020b 0A       		.uleb128 0xa
  850 020c 01       		.byte	0x1
- 851 020d 26020000 		.4byte	.LASF31
+ 851 020d 67020000 		.4byte	.LASF31
  852 0211 01       		.byte	0x1
  853 0212 FA02     		.2byte	0x2fa
  854 0214 01       		.byte	0x1
@@ -1839,7 +1839,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  858 0221 01       		.byte	0x1
  859 0222 36020000 		.4byte	0x236
  860 0226 0B       		.uleb128 0xb
- 861 0227 0D010000 		.4byte	.LASF32
+ 861 0227 35010000 		.4byte	.LASF32
  862 022b 01       		.byte	0x1
  863 022c FA02     		.2byte	0x2fa
  864 022e 6F000000 		.4byte	0x6f
@@ -1849,7 +1849,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  868 0235 00       		.byte	0
  869 0236 0E       		.uleb128 0xe
  870 0237 01       		.byte	0x1
- 871 0238 8E020000 		.4byte	.LASF33
+ 871 0238 86020000 		.4byte	.LASF33
  872 023c 01       		.byte	0x1
  873 023d 2D03     		.2byte	0x32d
  874 023f 01       		.byte	0x1
@@ -1858,12 +1858,12 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  877 0248 18000000 		.4byte	.LFE10
  878 024c 0C020000 		.4byte	.LLST10
  879 0250 01       		.byte	0x1
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 32
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 32
 
 
  880 0251 0E       		.uleb128 0xe
  881 0252 01       		.byte	0x1
- 882 0253 06000000 		.4byte	.LASF34
+ 882 0253 2E000000 		.4byte	.LASF34
  883 0257 01       		.byte	0x1
  884 0258 7103     		.2byte	0x371
  885 025a 01       		.byte	0x1
@@ -1873,7 +1873,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  889 0267 38020000 		.4byte	.LLST11
  890 026b 01       		.byte	0x1
  891 026c 0F       		.uleb128 0xf
- 892 026d 90000000 		.4byte	.LASF38
+ 892 026d B8000000 		.4byte	.LASF38
  893 0271 01       		.byte	0x1
  894 0272 1B       		.byte	0x1b
  895 0273 6F000000 		.4byte	0x6f
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  934 001f 00       		.byte	0
  935 0020 03       		.uleb128 0x3
  936 0021 24       		.uleb128 0x24
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 33
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 33
 
 
  937 0022 00       		.byte	0
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  991 0059 01       		.byte	0x1
  992 005a 3F       		.uleb128 0x3f
  993 005b 0C       		.uleb128 0xc
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 34
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 34
 
 
  994 005c 03       		.uleb128 0x3
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  1048 0093 9742     		.uleb128 0x2117
  1049 0095 0C       		.uleb128 0xc
  1050 0096 00       		.byte	0
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 35
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 35
 
 
  1051 0097 00       		.byte	0
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  1105 00ce 49       		.uleb128 0x49
  1106 00cf 13       		.uleb128 0x13
  1107 00d0 11       		.uleb128 0x11
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 36
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 36
 
 
  1108 00d1 01       		.uleb128 0x1
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  1162 0109 03       		.uleb128 0x3
  1163 010a 0E       		.uleb128 0xe
  1164 010b 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 37
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 37
 
 
  1165 010c 0B       		.uleb128 0xb
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  1219 0060 00000000 		.4byte	0
  1220              	.LLST2:
  1221 0064 00000000 		.4byte	.LFB2
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 38
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 38
 
 
  1222 0068 02000000 		.4byte	.LCFI5
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  1276 00eb 10       		.sleb128 16
  1277 00ec 00000000 		.4byte	0
  1278 00f0 00000000 		.4byte	0
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 39
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 39
 
 
  1279              	.LLST5:
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  1333 0178 0200     		.2byte	0x2
  1334 017a 7D       		.byte	0x7d
  1335 017b 04       		.sleb128 4
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 40
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 40
 
 
  1336 017c 04000000 		.4byte	.LCFI19
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  1390 0202 77       		.byte	0x77
  1391 0203 10       		.sleb128 16
  1392 0204 00000000 		.4byte	0
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 41
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 41
 
 
  1393 0208 00000000 		.4byte	0
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  1447 0034 20000000 		.4byte	.LFE4-.LFB4
  1448 0038 00000000 		.4byte	.LFB5
  1449 003c 20000000 		.4byte	.LFE5-.LFB5
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 42
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 42
 
 
  1450 0040 00000000 		.4byte	.LFB6
@@ -2513,202 +2513,201 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 1
  1495              	.LASF15:
  1496 0000 72656731 		.ascii	"reg16\000"
  1496      3600
- 1497              	.LASF34:
- 1498 0006 4C4D6F74 		.ascii	"LMotorPwm_ReadPeriod\000"
- 1498      6F725077 
- 1498      6D5F5265 
- 1498      61645065 
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 43
+ 1497              	.LASF37:
+ 1498 0006 433A5C47 		.ascii	"C:\\GitHub\\RPi-Dev\\BotPsoc\\BotPsoc.cydsn\000"
+ 1498      69744875 
+ 1498      625C5250 
+ 1498      692D4465 
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 43
 
 
- 1498      72696F64 
- 1499              	.LASF18:
- 1500 001b 4C4D6F74 		.ascii	"LMotorPwm_Enable\000"
+ 1498      765C426F 
+ 1499              	.LASF34:
+ 1500 002e 4C4D6F74 		.ascii	"LMotorPwm_ReadPeriod\000"
  1500      6F725077 
- 1500      6D5F456E 
- 1500      61626C65 
- 1500      00
- 1501              	.LASF23:
- 1502 002c 70657269 		.ascii	"period\000"
- 1502      6F6400
- 1503              	.LASF3:
- 1504 0033 73686F72 		.ascii	"short unsigned int\000"
- 1504      7420756E 
- 1504      7369676E 
- 1504      65642069 
- 1504      6E7400
- 1505              	.LASF30:
- 1506 0046 4C4D6F74 		.ascii	"LMotorPwm_ReadControlRegister\000"
- 1506      6F725077 
- 1506      6D5F5265 
- 1506      6164436F 
- 1506      6E74726F 
- 1507              	.LASF19:
- 1508 0064 4C4D6F74 		.ascii	"LMotorPwm_Stop\000"
+ 1500      6D5F5265 
+ 1500      61645065 
+ 1500      72696F64 
+ 1501              	.LASF18:
+ 1502 0043 4C4D6F74 		.ascii	"LMotorPwm_Enable\000"
+ 1502      6F725077 
+ 1502      6D5F456E 
+ 1502      61626C65 
+ 1502      00
+ 1503              	.LASF23:
+ 1504 0054 70657269 		.ascii	"period\000"
+ 1504      6F6400
+ 1505              	.LASF3:
+ 1506 005b 73686F72 		.ascii	"short unsigned int\000"
+ 1506      7420756E 
+ 1506      7369676E 
+ 1506      65642069 
+ 1506      6E7400
+ 1507              	.LASF30:
+ 1508 006e 4C4D6F74 		.ascii	"LMotorPwm_ReadControlRegister\000"
  1508      6F725077 
- 1508      6D5F5374 
- 1508      6F7000
- 1509              	.LASF22:
- 1510 0073 4C4D6F74 		.ascii	"LMotorPwm_WriteCompare\000"
+ 1508      6D5F5265 
+ 1508      6164436F 
+ 1508      6E74726F 
+ 1509              	.LASF19:
+ 1510 008c 4C4D6F74 		.ascii	"LMotorPwm_Stop\000"
  1510      6F725077 
- 1510      6D5F5772 
- 1510      69746543 
- 1510      6F6D7061 
- 1511              	.LASF11:
- 1512 008a 666C6F61 		.ascii	"float\000"
- 1512      7400
- 1513              	.LASF38:
- 1514 0090 4C4D6F74 		.ascii	"LMotorPwm_initVar\000"
- 1514      6F725077 
- 1514      6D5F696E 
- 1514      69745661 
- 1514      7200
- 1515              	.LASF36:
- 1516 00a2 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\LMotorPwm.c\000"
- 1516      6E657261 
- 1516      7465645F 
- 1516      536F7572 
- 1516      63655C50 
- 1517              	.LASF1:
- 1518 00c7 756E7369 		.ascii	"unsigned char\000"
- 1518      676E6564 
- 1518      20636861 
- 1518      7200
- 1519              	.LASF14:
- 1520 00d5 72656738 		.ascii	"reg8\000"
- 1520      00
- 1521              	.LASF5:
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 44
+ 1510      6D5F5374 
+ 1510      6F7000
+ 1511              	.LASF22:
+ 1512 009b 4C4D6F74 		.ascii	"LMotorPwm_WriteCompare\000"
+ 1512      6F725077 
+ 1512      6D5F5772 
+ 1512      69746543 
+ 1512      6F6D7061 
+ 1513              	.LASF11:
+ 1514 00b2 666C6F61 		.ascii	"float\000"
+ 1514      7400
+ 1515              	.LASF38:
+ 1516 00b8 4C4D6F74 		.ascii	"LMotorPwm_initVar\000"
+ 1516      6F725077 
+ 1516      6D5F696E 
+ 1516      69745661 
+ 1516      7200
+ 1517              	.LASF36:
+ 1518 00ca 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\LMotorPwm.c\000"
+ 1518      6E657261 
+ 1518      7465645F 
+ 1518      536F7572 
+ 1518      63655C50 
+ 1519              	.LASF1:
+ 1520 00ef 756E7369 		.ascii	"unsigned char\000"
+ 1520      676E6564 
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 44
 
 
- 1522 00da 6C6F6E67 		.ascii	"long unsigned int\000"
- 1522      20756E73 
- 1522      69676E65 
- 1522      6420696E 
- 1522      7400
- 1523              	.LASF25:
- 1524 00ec 4C4D6F74 		.ascii	"LMotorPwm_SetInterruptMode\000"
- 1524      6F725077 
- 1524      6D5F5365 
- 1524      74496E74 
- 1524      65727275 
- 1525              	.LASF9:
- 1526 0107 75696E74 		.ascii	"uint8\000"
- 1526      3800
- 1527              	.LASF32:
- 1528 010d 636F6E74 		.ascii	"control\000"
- 1528      726F6C00 
- 1529              	.LASF12:
- 1530 0115 646F7562 		.ascii	"double\000"
- 1530      6C6500
- 1531              	.LASF10:
- 1532 011c 75696E74 		.ascii	"uint16\000"
- 1532      313600
- 1533              	.LASF17:
- 1534 0123 4C4D6F74 		.ascii	"LMotorPwm_Start\000"
- 1534      6F725077 
- 1534      6D5F5374 
- 1534      61727400 
- 1535              	.LASF8:
- 1536 0133 756E7369 		.ascii	"unsigned int\000"
- 1536      676E6564 
- 1536      20696E74 
- 1536      00
- 1537              	.LASF29:
- 1538 0140 4C4D6F74 		.ascii	"LMotorPwm_ReadStatusRegister\000"
- 1538      6F725077 
- 1538      6D5F5265 
- 1538      61645374 
- 1538      61747573 
- 1539              	.LASF7:
- 1540 015d 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1540      206C6F6E 
- 1540      6720756E 
- 1540      7369676E 
- 1540      65642069 
- 1541              	.LASF28:
- 1542 0174 72657375 		.ascii	"result\000"
- 1542      6C7400
- 1543              	.LASF21:
- 1544 017b 4C4D6F74 		.ascii	"LMotorPwm_WritePeriod\000"
- 1544      6F725077 
- 1544      6D5F5772 
- 1544      69746550 
- 1544      6572696F 
- 1545              	.LASF27:
- 1546 0191 6374726C 		.ascii	"ctrl\000"
- 1546      00
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 45
+ 1520      20636861 
+ 1520      7200
+ 1521              	.LASF14:
+ 1522 00fd 72656738 		.ascii	"reg8\000"
+ 1522      00
+ 1523              	.LASF5:
+ 1524 0102 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1524      20756E73 
+ 1524      69676E65 
+ 1524      6420696E 
+ 1524      7400
+ 1525              	.LASF25:
+ 1526 0114 4C4D6F74 		.ascii	"LMotorPwm_SetInterruptMode\000"
+ 1526      6F725077 
+ 1526      6D5F5365 
+ 1526      74496E74 
+ 1526      65727275 
+ 1527              	.LASF9:
+ 1528 012f 75696E74 		.ascii	"uint8\000"
+ 1528      3800
+ 1529              	.LASF32:
+ 1530 0135 636F6E74 		.ascii	"control\000"
+ 1530      726F6C00 
+ 1531              	.LASF12:
+ 1532 013d 646F7562 		.ascii	"double\000"
+ 1532      6C6500
+ 1533              	.LASF10:
+ 1534 0144 75696E74 		.ascii	"uint16\000"
+ 1534      313600
+ 1535              	.LASF17:
+ 1536 014b 4C4D6F74 		.ascii	"LMotorPwm_Start\000"
+ 1536      6F725077 
+ 1536      6D5F5374 
+ 1536      61727400 
+ 1537              	.LASF8:
+ 1538 015b 756E7369 		.ascii	"unsigned int\000"
+ 1538      676E6564 
+ 1538      20696E74 
+ 1538      00
+ 1539              	.LASF29:
+ 1540 0168 4C4D6F74 		.ascii	"LMotorPwm_ReadStatusRegister\000"
+ 1540      6F725077 
+ 1540      6D5F5265 
+ 1540      61645374 
+ 1540      61747573 
+ 1541              	.LASF7:
+ 1542 0185 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1542      206C6F6E 
+ 1542      6720756E 
+ 1542      7369676E 
+ 1542      65642069 
+ 1543              	.LASF28:
+ 1544 019c 72657375 		.ascii	"result\000"
+ 1544      6C7400
+ 1545              	.LASF21:
+ 1546 01a3 4C4D6F74 		.ascii	"LMotorPwm_WritePeriod\000"
+ 1546      6F725077 
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 45
 
 
- 1547              	.LASF16:
- 1548 0196 73697A65 		.ascii	"sizetype\000"
- 1548      74797065 
+ 1546      6D5F5772 
+ 1546      69746550 
+ 1546      6572696F 
+ 1547              	.LASF27:
+ 1548 01b9 6374726C 		.ascii	"ctrl\000"
  1548      00
- 1549              	.LASF6:
- 1550 019f 6C6F6E67 		.ascii	"long long int\000"
- 1550      206C6F6E 
- 1550      6720696E 
- 1550      7400
- 1551              	.LASF26:
- 1552 01ad 696E7465 		.ascii	"interruptMode\000"
- 1552      72727570 
- 1552      744D6F64 
- 1552      6500
- 1553              	.LASF2:
- 1554 01bb 73686F72 		.ascii	"short int\000"
- 1554      7420696E 
- 1554      7400
- 1555              	.LASF37:
- 1556 01c5 433A5C4B 		.ascii	"C:\\Kiln\\SRSPiBot\\PSoCCode\\BotPsoc\\BotPsoc.cyds"
- 1556      696C6E5C 
- 1556      53525350 
- 1556      69426F74 
- 1556      5C50536F 
- 1557 01f3 6E00     		.ascii	"n\000"
- 1558              	.LASF4:
- 1559 01f5 6C6F6E67 		.ascii	"long int\000"
- 1559      20696E74 
- 1559      00
- 1560              	.LASF13:
- 1561 01fe 63686172 		.ascii	"char\000"
+ 1549              	.LASF16:
+ 1550 01be 73697A65 		.ascii	"sizetype\000"
+ 1550      74797065 
+ 1550      00
+ 1551              	.LASF6:
+ 1552 01c7 6C6F6E67 		.ascii	"long long int\000"
+ 1552      206C6F6E 
+ 1552      6720696E 
+ 1552      7400
+ 1553              	.LASF26:
+ 1554 01d5 696E7465 		.ascii	"interruptMode\000"
+ 1554      72727570 
+ 1554      744D6F64 
+ 1554      6500
+ 1555              	.LASF2:
+ 1556 01e3 73686F72 		.ascii	"short int\000"
+ 1556      7420696E 
+ 1556      7400
+ 1557              	.LASF35:
+ 1558 01ed 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 1558      4320342E 
+ 1558      372E3320 
+ 1558      32303133 
+ 1558      30333132 
+ 1559 0220 616E6368 		.ascii	"anch revision 196615]\000"
+ 1559      20726576 
+ 1559      6973696F 
+ 1559      6E203139 
+ 1559      36363135 
+ 1560              	.LASF4:
+ 1561 0236 6C6F6E67 		.ascii	"long int\000"
+ 1561      20696E74 
  1561      00
- 1562              	.LASF20:
- 1563 0203 4C4D6F74 		.ascii	"LMotorPwm_Init\000"
- 1563      6F725077 
- 1563      6D5F496E 
- 1563      697400
- 1564              	.LASF0:
- 1565 0212 7369676E 		.ascii	"signed char\000"
- 1565      65642063 
- 1565      68617200 
- 1566              	.LASF24:
- 1567 021e 636F6D70 		.ascii	"compare\000"
- 1567      61726500 
- 1568              	.LASF31:
- 1569 0226 4C4D6F74 		.ascii	"LMotorPwm_WriteControlRegister\000"
- 1569      6F725077 
- 1569      6D5F5772 
- 1569      69746543 
- 1569      6F6E7472 
- 1570              	.LASF35:
- 1571 0245 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
- 1571      4320342E 
- 1571      372E3320 
- 1571      32303133 
- 1571      30333132 
- 1572 0278 616E6368 		.ascii	"anch revision 196615]\000"
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\cciUsgQg.s 			page 46
+ 1562              	.LASF13:
+ 1563 023f 63686172 		.ascii	"char\000"
+ 1563      00
+ 1564              	.LASF20:
+ 1565 0244 4C4D6F74 		.ascii	"LMotorPwm_Init\000"
+ 1565      6F725077 
+ 1565      6D5F496E 
+ 1565      697400
+ 1566              	.LASF0:
+ 1567 0253 7369676E 		.ascii	"signed char\000"
+ 1567      65642063 
+ 1567      68617200 
+ 1568              	.LASF24:
+ 1569 025f 636F6D70 		.ascii	"compare\000"
+ 1569      61726500 
+ 1570              	.LASF31:
+ 1571 0267 4C4D6F74 		.ascii	"LMotorPwm_WriteControlRegister\000"
+ 1571      6F725077 
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccsYvFGl.s 			page 46
 
 
- 1572      20726576 
- 1572      6973696F 
- 1572      6E203139 
- 1572      36363135 
- 1573              	.LASF33:
- 1574 028e 4C4D6F74 		.ascii	"LMotorPwm_ReadCompare\000"
- 1574      6F725077 
- 1574      6D5F5265 
- 1574      6164436F 
- 1574      6D706172 
- 1575              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br
+ 1571      6D5F5772 
+ 1571      69746543 
+ 1571      6F6E7472 
+ 1572              	.LASF33:
+ 1573 0286 4C4D6F74 		.ascii	"LMotorPwm_ReadCompare\000"
+ 1573      6F725077 
+ 1573      6D5F5265 
+ 1573      6164436F 
+ 1573      6D706172 
+ 1574              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br

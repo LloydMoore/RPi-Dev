@@ -98,10 +98,10 @@
 <dep name=".\Generated_Source\PSoC5\cypins.h" />
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
 <dep name=".\Generated_Source\PSoC5\project.h" />
-<dep name="..\..\..\Common\ringcoms.h" />
 <dep name=".\base_motion.c" />
 <dep name=".\base_motion.h" />
 <dep name=".\bot_psoc.h" />
+<dep name="..\..\Common\ringcoms.h" />
 </file>
 <file name=".\Generated_Source\PSoC5\CYDMAC.H" />
 <file name=".\Generated_Source\PSoC5\CYFITTER.H" />
@@ -186,10 +186,10 @@
 <file name=".\Generated_Source\PSoC5\cypins.h" />
 <file name=".\Generated_Source\PSoC5\cytypes.h" />
 <file name=".\Generated_Source\PSoC5\project.h" />
-<file name="..\..\..\Common\ringcoms.h" />
 <file name=".\base_motion.c" />
 <file name=".\base_motion.h" />
 <file name=".\bot_psoc.h" />
+<file name="..\..\Common\ringcoms.h" />
 <file name=".\CortexM3\ARM_GCC_473\Debug\main.o">
 <dep name=".\Generated_Source\PSoC5\CYDMAC.H" />
 <dep name=".\Generated_Source\PSoC5\CYFITTER.H" />
@@ -276,11 +276,11 @@
 <dep name=".\Generated_Source\PSoC5\cypins.h" />
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
 <dep name=".\Generated_Source\PSoC5\project.h" />
-<dep name="..\..\..\Common\ringcoms.h" />
 <dep name=".\base_motion.h" />
 <dep name=".\bot_psoc.h" />
 <dep name=".\main.c" />
 <dep name=".\spi_ring.h" />
+<dep name="..\..\Common\ringcoms.h" />
 </file>
 <file name=".\main.c" />
 <file name=".\spi_ring.h" />
@@ -370,10 +370,10 @@
 <dep name=".\Generated_Source\PSoC5\cypins.h" />
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
 <dep name=".\Generated_Source\PSoC5\project.h" />
-<dep name="..\..\..\Common\ringcoms.h" />
 <dep name=".\bot_psoc.h" />
 <dep name=".\spi_ring.c" />
 <dep name=".\spi_ring.h" />
+<dep name="..\..\Common\ringcoms.h" />
 </file>
 <file name=".\spi_ring.c" />
 <file name=".\CortexM3\ARM_GCC_473\Debug\Cm3Start.o">
@@ -910,9 +910,9 @@
 <dep name=".\Generated_Source\PSoC5\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC5\cypins.h" />
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
-<dep name="..\..\..\Common\ringcoms.h" />
 <dep name=".\Generated_Source\PSoC5\SpiXferDone.c" />
 <dep name=".\bot_psoc.h" />
+<dep name="..\..\Common\ringcoms.h" />
 </file>
 <file name=".\Generated_Source\PSoC5\SpiXferDone.c" />
 <file name=".\CortexM3\ARM_GCC_473\Debug\SpiXmitDma_dma.o">
@@ -982,6 +982,7 @@
 <file name=".\Generated_Source\PSoC5\cydevicegnu_trm.inc" />
 <file name=".\Generated_Source\PSoC5\cyfittergnu.inc" />
 <file name=".\Generated_Source\PSoC5\CyBootAsmGnu.s" />
+<file name="C:\GitHub\Common\ringcoms.h" />
 <file name=".\Generated_Source\PSoC5\Debug.h" />
 <file name=".\CortexM3\ARM_GCC_473\Debug\Debug.o">
 <dep name=".\Generated_Source\PSoC5\Debug.h" />
@@ -1137,9 +1138,10 @@
 <name_val_pair name=".\Generated_Source\PSoC5\SerDrv_DZ.c" v="&quot;-I. &quot;&quot;-I./Generated_Source/PSoC5 &quot;&quot;-Wno-main &quot;&quot;-mcpu=cortex-m3 &quot;&quot;-mthumb &quot;&quot;-Wall &quot;&quot;-g &quot;&quot;-D &quot;&quot;DEBUG &quot;&quot;-Wa,-alh=${OutputDir}\${CompileFile}.lst &quot;&quot;-ffunction-sections &quot;" />
 <name_val_pair name=".\Generated_Source\PSoC5\PiUART_RXD.c" v="&quot;-I. &quot;&quot;-I./Generated_Source/PSoC5 &quot;&quot;-Wno-main &quot;&quot;-mcpu=cortex-m3 &quot;&quot;-mthumb &quot;&quot;-Wall &quot;&quot;-g &quot;&quot;-D &quot;&quot;DEBUG &quot;&quot;-Wa,-alh=${OutputDir}\${CompileFile}.lst &quot;&quot;-ffunction-sections &quot;" />
 <name_val_pair name=".\Generated_Source\PSoC5\PiUART_TXD.c" v="&quot;-I. &quot;&quot;-I./Generated_Source/PSoC5 &quot;&quot;-Wno-main &quot;&quot;-mcpu=cortex-m3 &quot;&quot;-mthumb &quot;&quot;-Wall &quot;&quot;-g &quot;&quot;-D &quot;&quot;DEBUG &quot;&quot;-Wa,-alh=${OutputDir}\${CompileFile}.lst &quot;&quot;-ffunction-sections &quot;" />
+<name_val_pair name="C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn\CortexM3\ARM_GCC_473\Debug\BotPsoc.hex" v="&quot;-mthumb &quot;&quot;-march=armv7-m &quot;&quot;-mfix-cortex-m3-ldrd &quot;&quot;-T &quot;&quot;.\Generated_Source\PSoC5\cm3gcc.ld &quot;&quot;-g &quot;&quot;-Wl,-Map,${OutputDir}\${ProjectShortName}.map &quot;&quot;-specs=nano.specs &quot;&quot;-Wl,--gc-sections &quot;" />
 </name>
 </genericCmdLineData>
-<codeGenCmdLineTag v="&quot;-.appdatapath&quot; &quot;C:\Users\Lloyd\AppData\Local\Cypress Semiconductor\PSoC Creator\3.0&quot; &quot;-.fdsnotice&quot; &quot;-.fdswarpdepfile=warp_dependencies.txt&quot; &quot;-.fdselabdepfile=elab_dependencies.txt&quot; &quot;-.fdsbldfile=generated_files.txt&quot; &quot;-p&quot; &quot;C:\Kiln\SRSPiBot\PSoCCode\BotPsoc\BotPsoc.cydsn\BotPsoc.cyprj&quot; &quot;-d&quot; &quot;CY8C5868AXI-LP032&quot; &quot;-s&quot; &quot;C:\Kiln\SRSPiBot\PSoCCode\BotPsoc\BotPsoc.cydsn\Generated_Source\PSoC5&quot; &quot;--&quot; &quot;-yv2&quot; &quot;-v3&quot; &quot;-ygs&quot; &quot;-q10&quot; &quot;-o2&quot; &quot;-.fftcfgtype=LE&quot; " />
+<codeGenCmdLineTag v="&quot;-.appdatapath&quot; &quot;C:\Users\lloyd\AppData\Local\Cypress Semiconductor\PSoC Creator\3.0&quot; &quot;-.fdsnotice&quot; &quot;-.fdswarpdepfile=warp_dependencies.txt&quot; &quot;-.fdselabdepfile=elab_dependencies.txt&quot; &quot;-.fdsbldfile=generated_files.txt&quot; &quot;-p&quot; &quot;C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn\BotPsoc.cyprj&quot; &quot;-d&quot; &quot;CY8C5868AXI-LP032&quot; &quot;-s&quot; &quot;C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn\Generated_Source\PSoC5&quot; &quot;--&quot; &quot;-yv2&quot; &quot;-v3&quot; &quot;-ygs&quot; &quot;-q10&quot; &quot;-o2&quot; &quot;-.fftcfgtype=LE&quot; " />
 </CyGuid_b0374e30-ce3a-47f2-ad85-821643292c68>
 </dataGuid>
 <dataGuid v="597c5b74-0c46-4204-8b7f-96f3570671dc">
@@ -2827,14 +2829,14 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 </warp_dep>
-<deps_time v="130335129358042878" />
+<deps_time v="130336989746198260" />
 <top_block v="TopDesign" />
 <last_generation v="0" />
 </CyGuid_925cc1e1-309e-4e08-b0a1-09a83c35b157>
 </dataGuid>
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
-<deps_time v="130335129418336326" />
+<deps_time v="130336989852112386" />
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>
 <dataGuid v="bf610382-39c6-441f-80b8-b04622ea7845">

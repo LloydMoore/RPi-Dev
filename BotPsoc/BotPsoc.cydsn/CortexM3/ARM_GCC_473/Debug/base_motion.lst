@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 1
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccHpWuzj.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 1
   29:.\base_motion.c **** 
   30:.\base_motion.c **** void baseMotion_Start()
   31:.\base_motion.c **** {
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 2
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccHpWuzj.s 			page 2
 
 
   27              		.loc 1 31 0
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 1
   73              		.cfi_def_cfa_register 7
   74 0006 1346     		mov	r3, r2
   75 0008 0246     		mov	r2, r0
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 3
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccHpWuzj.s 			page 3
 
 
   76 000a FA71     		strb	r2, [r7, #7]
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 1
  122 0006 0346     		mov	r3, r0
  123 0008 FB71     		strb	r3, [r7, #7]
   48:.\base_motion.c ****     static uint8 motorControlBits[MC_END] = 
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 4
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccHpWuzj.s 			page 4
 
 
   49:.\base_motion.c ****     {
@@ -232,22 +232,22 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 1
  159              	.Letext0:
  160              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.0\\psoc creator\\import\\gnu_cs\\arm\\4
  161              		.file 3 "./Generated_Source/PSoC5/cytypes.h"
- 162              		.file 4 ".\\../../../Common/ringcoms.h"
+ 162              		.file 4 ".\\../../Common/ringcoms.h"
  163              		.file 5 "./Generated_Source/PSoC5/core_cm3.h"
  164              		.section	.debug_info,"",%progbits
  165              	.Ldebug_info0:
  166 0000 A8010000 		.4byte	0x1a8
  167 0004 0200     		.2byte	0x2
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 5
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccHpWuzj.s 			page 5
 
 
  168 0006 00000000 		.4byte	.Ldebug_abbrev0
  169 000a 04       		.byte	0x4
  170 000b 01       		.uleb128 0x1
- 171 000c D1010000 		.4byte	.LASF30
+ 171 000c C9010000 		.4byte	.LASF30
  172 0010 01       		.byte	0x1
- 173 0011 38000000 		.4byte	.LASF31
- 174 0015 08000000 		.4byte	.LASF32
+ 173 0011 08000000 		.4byte	.LASF31
+ 174 0015 18000000 		.4byte	.LASF32
  175 0019 00000000 		.4byte	.Ldebug_ranges0+0
  176 001d 00000000 		.4byte	0
  177 0021 00000000 		.4byte	0
@@ -255,53 +255,53 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 1
  179 0029 02       		.uleb128 0x2
  180 002a 01       		.byte	0x1
  181 002b 06       		.byte	0x6
- 182 002c BE010000 		.4byte	.LASF0
+ 182 002c B6010000 		.4byte	.LASF0
  183 0030 03       		.uleb128 0x3
- 184 0031 37010000 		.4byte	.LASF3
+ 184 0031 2F010000 		.4byte	.LASF3
  185 0035 02       		.byte	0x2
  186 0036 2A       		.byte	0x2a
  187 0037 3B000000 		.4byte	0x3b
  188 003b 02       		.uleb128 0x2
  189 003c 01       		.byte	0x1
  190 003d 08       		.byte	0x8
- 191 003e 94000000 		.4byte	.LASF1
+ 191 003e 8C000000 		.4byte	.LASF1
  192 0042 02       		.uleb128 0x2
  193 0043 02       		.byte	0x2
  194 0044 05       		.byte	0x5
- 195 0045 7F010000 		.4byte	.LASF2
+ 195 0045 77010000 		.4byte	.LASF2
  196 0049 03       		.uleb128 0x3
- 197 004a 89010000 		.4byte	.LASF4
+ 197 004a 81010000 		.4byte	.LASF4
  198 004e 02       		.byte	0x2
  199 004f 36       		.byte	0x36
  200 0050 54000000 		.4byte	0x54
  201 0054 02       		.uleb128 0x2
  202 0055 02       		.byte	0x2
  203 0056 07       		.byte	0x7
- 204 0057 C5000000 		.4byte	.LASF5
+ 204 0057 BD000000 		.4byte	.LASF5
  205 005b 03       		.uleb128 0x3
- 206 005c 5B010000 		.4byte	.LASF6
+ 206 005c 53010000 		.4byte	.LASF6
  207 0060 02       		.byte	0x2
  208 0061 4F       		.byte	0x4f
  209 0062 66000000 		.4byte	0x66
  210 0066 02       		.uleb128 0x2
  211 0067 04       		.byte	0x4
  212 0068 05       		.byte	0x5
- 213 0069 B5010000 		.4byte	.LASF7
+ 213 0069 AD010000 		.4byte	.LASF7
  214 006d 02       		.uleb128 0x2
  215 006e 04       		.byte	0x4
  216 006f 07       		.byte	0x7
- 217 0070 B3000000 		.4byte	.LASF8
+ 217 0070 AB000000 		.4byte	.LASF8
  218 0074 02       		.uleb128 0x2
  219 0075 08       		.byte	0x8
  220 0076 05       		.byte	0x5
- 221 0077 6C010000 		.4byte	.LASF9
+ 221 0077 64010000 		.4byte	.LASF9
  222 007b 02       		.uleb128 0x2
  223 007c 08       		.byte	0x8
  224 007d 07       		.byte	0x7
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 6
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccHpWuzj.s 			page 6
 
 
- 225 007e 20010000 		.4byte	.LASF10
+ 225 007e 18010000 		.4byte	.LASF10
  226 0082 04       		.uleb128 0x4
  227 0083 04       		.byte	0x4
  228 0084 05       		.byte	0x5
@@ -309,65 +309,65 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 1
  230 0089 02       		.uleb128 0x2
  231 008a 04       		.byte	0x4
  232 008b 07       		.byte	0x7
- 233 008c 13010000 		.4byte	.LASF11
+ 233 008c 0B010000 		.4byte	.LASF11
  234 0090 03       		.uleb128 0x3
- 235 0091 84000000 		.4byte	.LASF12
+ 235 0091 7C000000 		.4byte	.LASF12
  236 0095 03       		.byte	0x3
  237 0096 5B       		.byte	0x5b
  238 0097 3B000000 		.4byte	0x3b
  239 009b 02       		.uleb128 0x2
  240 009c 04       		.byte	0x4
  241 009d 04       		.byte	0x4
- 242 009e 7E000000 		.4byte	.LASF13
+ 242 009e 76000000 		.4byte	.LASF13
  243 00a2 02       		.uleb128 0x2
  244 00a3 08       		.byte	0x8
  245 00a4 04       		.byte	0x4
- 246 00a5 CA010000 		.4byte	.LASF14
+ 246 00a5 C2010000 		.4byte	.LASF14
  247 00a9 02       		.uleb128 0x2
  248 00aa 01       		.byte	0x1
  249 00ab 08       		.byte	0x8
- 250 00ac 7A010000 		.4byte	.LASF15
+ 250 00ac 72010000 		.4byte	.LASF15
  251 00b0 02       		.uleb128 0x2
  252 00b1 04       		.byte	0x4
  253 00b2 07       		.byte	0x7
- 254 00b3 63010000 		.4byte	.LASF16
+ 254 00b3 5B010000 		.4byte	.LASF16
  255 00b7 05       		.uleb128 0x5
- 256 00b8 1A020000 		.4byte	.LASF33
+ 256 00b8 12020000 		.4byte	.LASF33
  257 00bc 01       		.byte	0x1
  258 00bd 04       		.byte	0x4
  259 00be 22       		.byte	0x22
  260 00bf F4000000 		.4byte	0xf4
  261 00c3 06       		.uleb128 0x6
- 262 00c4 5A000000 		.4byte	.LASF17
+ 262 00c4 52000000 		.4byte	.LASF17
  263 00c8 00       		.sleb128 0
  264 00c9 06       		.uleb128 0x6
- 265 00ca 9D010000 		.4byte	.LASF18
+ 265 00ca 95010000 		.4byte	.LASF18
  266 00ce 01       		.sleb128 1
  267 00cf 06       		.uleb128 0x6
- 268 00d0 46010000 		.4byte	.LASF19
+ 268 00d0 3E010000 		.4byte	.LASF19
  269 00d4 02       		.sleb128 2
  270 00d5 06       		.uleb128 0x6
  271 00d6 00000000 		.4byte	.LASF20
  272 00da 03       		.sleb128 3
  273 00db 06       		.uleb128 0x6
- 274 00dc 52010000 		.4byte	.LASF21
+ 274 00dc 4A010000 		.4byte	.LASF21
  275 00e0 04       		.sleb128 4
  276 00e1 06       		.uleb128 0x6
- 277 00e2 F4000000 		.4byte	.LASF22
+ 277 00e2 EC000000 		.4byte	.LASF22
  278 00e6 05       		.sleb128 5
  279 00e7 06       		.uleb128 0x6
- 280 00e8 E5000000 		.4byte	.LASF23
+ 280 00e8 DD000000 		.4byte	.LASF23
  281 00ec 06       		.sleb128 6
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 7
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccHpWuzj.s 			page 7
 
 
  282 00ed 06       		.uleb128 0x6
- 283 00ee 3F010000 		.4byte	.LASF24
+ 283 00ee 37010000 		.4byte	.LASF24
  284 00f2 07       		.sleb128 7
  285 00f3 00       		.byte	0
  286 00f4 07       		.uleb128 0x7
  287 00f5 01       		.byte	0x1
- 288 00f6 A2000000 		.4byte	.LASF34
+ 288 00f6 9A000000 		.4byte	.LASF34
  289 00fa 01       		.byte	0x1
  290 00fb 1E       		.byte	0x1e
  291 00fc 00000000 		.4byte	.LFB56
@@ -376,7 +376,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 1
  294 0108 01       		.byte	0x1
  295 0109 08       		.uleb128 0x8
  296 010a 01       		.byte	0x1
- 297 010b 48000000 		.4byte	.LASF28
+ 297 010b 40000000 		.4byte	.LASF28
  298 010f 01       		.byte	0x1
  299 0110 26       		.byte	0x26
  300 0111 01       		.byte	0x1
@@ -386,7 +386,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 1
  304 011e 01       		.byte	0x1
  305 011f 4E010000 		.4byte	0x14e
  306 0123 09       		.uleb128 0x9
- 307 0124 A8010000 		.4byte	.LASF25
+ 307 0124 A0010000 		.4byte	.LASF25
  308 0128 01       		.byte	0x1
  309 0129 26       		.byte	0x26
  310 012a 30000000 		.4byte	0x30
@@ -394,7 +394,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 1
  312 012f 91       		.byte	0x91
  313 0130 77       		.sleb128 -9
  314 0131 09       		.uleb128 0x9
- 315 0132 92010000 		.4byte	.LASF26
+ 315 0132 8A010000 		.4byte	.LASF26
  316 0136 01       		.byte	0x1
  317 0137 26       		.byte	0x26
  318 0138 49000000 		.4byte	0x49
@@ -402,7 +402,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 1
  320 013d 91       		.byte	0x91
  321 013e 74       		.sleb128 -12
  322 013f 09       		.uleb128 0x9
- 323 0140 8A000000 		.4byte	.LASF27
+ 323 0140 82000000 		.4byte	.LASF27
  324 0144 01       		.byte	0x1
  325 0145 26       		.byte	0x26
  326 0146 49000000 		.4byte	0x49
@@ -412,20 +412,20 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 1
  330 014d 00       		.byte	0
  331 014e 08       		.uleb128 0x8
  332 014f 01       		.byte	0x1
- 333 0150 63000000 		.4byte	.LASF29
+ 333 0150 5B000000 		.4byte	.LASF29
  334 0154 01       		.byte	0x1
  335 0155 2E       		.byte	0x2e
  336 0156 01       		.byte	0x1
  337 0157 00000000 		.4byte	.LFB58
  338 015b 30000000 		.4byte	.LFE58
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 8
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccHpWuzj.s 			page 8
 
 
  339 015f 64000000 		.4byte	.LLST2
  340 0163 01       		.byte	0x1
  341 0164 88010000 		.4byte	0x188
  342 0168 09       		.uleb128 0x9
- 343 0169 A8010000 		.4byte	.LASF25
+ 343 0169 A0010000 		.4byte	.LASF25
  344 016d 01       		.byte	0x1
  345 016e 2E       		.byte	0x2e
  346 016f 30000000 		.4byte	0x30
@@ -433,7 +433,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 1
  348 0174 91       		.byte	0x91
  349 0175 77       		.sleb128 -9
  350 0176 0A       		.uleb128 0xa
- 351 0177 02010000 		.4byte	.LASF35
+ 351 0177 FA000000 		.4byte	.LASF35
  352 017b 01       		.byte	0x1
  353 017c 30       		.byte	0x30
  354 017d 88010000 		.4byte	0x188
@@ -449,7 +449,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 1
  364 0196 06       		.byte	0x6
  365 0197 00       		.byte	0
  366 0198 0D       		.uleb128 0xd
- 367 0199 D8000000 		.4byte	.LASF36
+ 367 0199 D0000000 		.4byte	.LASF36
  368 019d 05       		.byte	0x5
  369 019e 1606     		.2byte	0x616
  370 01a0 A6010000 		.4byte	0x1a6
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 1
  393 000f 52       		.uleb128 0x52
  394 0010 01       		.uleb128 0x1
  395 0011 10       		.uleb128 0x10
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 9
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccHpWuzj.s 			page 9
 
 
  396 0012 06       		.uleb128 0x6
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 1
  450 0048 28       		.uleb128 0x28
  451 0049 00       		.byte	0
  452 004a 03       		.uleb128 0x3
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 10
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccHpWuzj.s 			page 10
 
 
  453 004b 0E       		.uleb128 0xe
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 1
  507 0083 03       		.uleb128 0x3
  508 0084 0E       		.uleb128 0xe
  509 0085 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 11
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccHpWuzj.s 			page 11
 
 
  510 0086 0B       		.uleb128 0xb
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 1
  564 00bc 0C       		.uleb128 0xc
  565 00bd 3C       		.uleb128 0x3c
  566 00be 0C       		.uleb128 0xc
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 12
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccHpWuzj.s 			page 12
 
 
  567 00bf 00       		.byte	0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 1
  621 0064 00000000 		.4byte	.LFB58
  622 0068 02000000 		.4byte	.LCFI5
  623 006c 0200     		.2byte	0x2
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 13
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccHpWuzj.s 			page 13
 
 
  624 006e 7D       		.byte	0x7d
@@ -768,191 +768,190 @@ ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 1
  668 001c 00000000 		.4byte	0
  669              		.section	.debug_line,"",%progbits
  670              	.Ldebug_line0:
- 671 0000 67010000 		.section	.debug_str,"MS",%progbits,1
- 671      02002001 
+ 671 0000 64010000 		.section	.debug_str,"MS",%progbits,1
+ 671      02001D01 
  671      00000201 
  671      FB0E0D00 
  671      01010101 
  672              	.LASF20:
  673 0000 4D435F4C 		.ascii	"MC_LEFT\000"
  673      45465400 
- 674              	.LASF32:
- 675 0008 433A5C4B 		.ascii	"C:\\Kiln\\SRSPiBot\\PSoCCode\\BotPsoc\\BotPsoc.cyds"
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 14
+ 674              	.LASF31:
+ 675 0008 2E5C6261 		.ascii	".\\base_motion.c\000"
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccHpWuzj.s 			page 14
 
 
- 675      696C6E5C 
- 675      53525350 
- 675      69426F74 
- 675      5C50536F 
- 676 0036 6E00     		.ascii	"n\000"
- 677              	.LASF31:
- 678 0038 2E5C6261 		.ascii	".\\base_motion.c\000"
- 678      73655F6D 
- 678      6F74696F 
- 678      6E2E6300 
- 679              	.LASF28:
- 680 0048 62617365 		.ascii	"baseMotion_Update\000"
- 680      4D6F7469 
- 680      6F6E5F55 
- 680      70646174 
- 680      6500
- 681              	.LASF17:
- 682 005a 4D435F42 		.ascii	"MC_BRAKE\000"
- 682      52414B45 
- 682      00
- 683              	.LASF29:
- 684 0063 62617365 		.ascii	"baseMotion_SetMotorControl\000"
- 684      4D6F7469 
- 684      6F6E5F53 
- 684      65744D6F 
- 684      746F7243 
- 685              	.LASF13:
- 686 007e 666C6F61 		.ascii	"float\000"
- 686      7400
- 687              	.LASF12:
- 688 0084 75696E74 		.ascii	"uint8\000"
- 688      3800
- 689              	.LASF27:
- 690 008a 6C656674 		.ascii	"leftSpeed\000"
- 690      53706565 
- 690      6400
- 691              	.LASF1:
- 692 0094 756E7369 		.ascii	"unsigned char\000"
- 692      676E6564 
- 692      20636861 
- 692      7200
- 693              	.LASF34:
- 694 00a2 62617365 		.ascii	"baseMotion_Start\000"
- 694      4D6F7469 
- 694      6F6E5F53 
- 694      74617274 
- 694      00
- 695              	.LASF8:
- 696 00b3 6C6F6E67 		.ascii	"long unsigned int\000"
- 696      20756E73 
- 696      69676E65 
- 696      6420696E 
- 696      7400
- 697              	.LASF5:
- 698 00c5 73686F72 		.ascii	"short unsigned int\000"
- 698      7420756E 
- 698      7369676E 
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 15
+ 675      73655F6D 
+ 675      6F74696F 
+ 675      6E2E6300 
+ 676              	.LASF32:
+ 677 0018 433A5C47 		.ascii	"C:\\GitHub\\RPi-Dev\\BotPsoc\\BotPsoc.cydsn\000"
+ 677      69744875 
+ 677      625C5250 
+ 677      692D4465 
+ 677      765C426F 
+ 678              	.LASF28:
+ 679 0040 62617365 		.ascii	"baseMotion_Update\000"
+ 679      4D6F7469 
+ 679      6F6E5F55 
+ 679      70646174 
+ 679      6500
+ 680              	.LASF17:
+ 681 0052 4D435F42 		.ascii	"MC_BRAKE\000"
+ 681      52414B45 
+ 681      00
+ 682              	.LASF29:
+ 683 005b 62617365 		.ascii	"baseMotion_SetMotorControl\000"
+ 683      4D6F7469 
+ 683      6F6E5F53 
+ 683      65744D6F 
+ 683      746F7243 
+ 684              	.LASF13:
+ 685 0076 666C6F61 		.ascii	"float\000"
+ 685      7400
+ 686              	.LASF12:
+ 687 007c 75696E74 		.ascii	"uint8\000"
+ 687      3800
+ 688              	.LASF27:
+ 689 0082 6C656674 		.ascii	"leftSpeed\000"
+ 689      53706565 
+ 689      6400
+ 690              	.LASF1:
+ 691 008c 756E7369 		.ascii	"unsigned char\000"
+ 691      676E6564 
+ 691      20636861 
+ 691      7200
+ 692              	.LASF34:
+ 693 009a 62617365 		.ascii	"baseMotion_Start\000"
+ 693      4D6F7469 
+ 693      6F6E5F53 
+ 693      74617274 
+ 693      00
+ 694              	.LASF8:
+ 695 00ab 6C6F6E67 		.ascii	"long unsigned int\000"
+ 695      20756E73 
+ 695      69676E65 
+ 695      6420696E 
+ 695      7400
+ 696              	.LASF5:
+ 697 00bd 73686F72 		.ascii	"short unsigned int\000"
+ 697      7420756E 
+ 697      7369676E 
+ 697      65642069 
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccHpWuzj.s 			page 15
 
 
- 698      65642069 
- 698      6E7400
- 699              	.LASF36:
- 700 00d8 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 700      52784275 
- 700      66666572 
- 700      00
- 701              	.LASF23:
- 702 00e5 4D435F50 		.ascii	"MC_PIVOT_RIGHT\000"
- 702      49564F54 
- 702      5F524947 
- 702      485400
- 703              	.LASF22:
- 704 00f4 4D435F50 		.ascii	"MC_PIVOT_LEFT\000"
- 704      49564F54 
- 704      5F4C4546 
- 704      5400
- 705              	.LASF35:
- 706 0102 6D6F746F 		.ascii	"motorControlBits\000"
- 706      72436F6E 
- 706      74726F6C 
- 706      42697473 
- 706      00
- 707              	.LASF11:
- 708 0113 756E7369 		.ascii	"unsigned int\000"
- 708      676E6564 
- 708      20696E74 
- 708      00
- 709              	.LASF10:
- 710 0120 6C6F6E67 		.ascii	"long long unsigned int\000"
- 710      206C6F6E 
- 710      6720756E 
- 710      7369676E 
- 710      65642069 
- 711              	.LASF3:
- 712 0137 75696E74 		.ascii	"uint8_t\000"
- 712      385F7400 
- 713              	.LASF24:
- 714 013f 4D435F45 		.ascii	"MC_END\000"
- 714      4E4400
- 715              	.LASF19:
- 716 0146 4D435F42 		.ascii	"MC_BACKWARD\000"
- 716      41434B57 
- 716      41524400 
- 717              	.LASF21:
- 718 0152 4D435F52 		.ascii	"MC_RIGHT\000"
- 718      49474854 
- 718      00
- 719              	.LASF6:
- 720 015b 696E7433 		.ascii	"int32_t\000"
- 720      325F7400 
- 721              	.LASF16:
- 722 0163 73697A65 		.ascii	"sizetype\000"
- 722      74797065 
- 722      00
- 723              	.LASF9:
- 724 016c 6C6F6E67 		.ascii	"long long int\000"
-ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccEl5tEh.s 			page 16
+ 697      6E7400
+ 698              	.LASF36:
+ 699 00d0 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 699      52784275 
+ 699      66666572 
+ 699      00
+ 700              	.LASF23:
+ 701 00dd 4D435F50 		.ascii	"MC_PIVOT_RIGHT\000"
+ 701      49564F54 
+ 701      5F524947 
+ 701      485400
+ 702              	.LASF22:
+ 703 00ec 4D435F50 		.ascii	"MC_PIVOT_LEFT\000"
+ 703      49564F54 
+ 703      5F4C4546 
+ 703      5400
+ 704              	.LASF35:
+ 705 00fa 6D6F746F 		.ascii	"motorControlBits\000"
+ 705      72436F6E 
+ 705      74726F6C 
+ 705      42697473 
+ 705      00
+ 706              	.LASF11:
+ 707 010b 756E7369 		.ascii	"unsigned int\000"
+ 707      676E6564 
+ 707      20696E74 
+ 707      00
+ 708              	.LASF10:
+ 709 0118 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 709      206C6F6E 
+ 709      6720756E 
+ 709      7369676E 
+ 709      65642069 
+ 710              	.LASF3:
+ 711 012f 75696E74 		.ascii	"uint8_t\000"
+ 711      385F7400 
+ 712              	.LASF24:
+ 713 0137 4D435F45 		.ascii	"MC_END\000"
+ 713      4E4400
+ 714              	.LASF19:
+ 715 013e 4D435F42 		.ascii	"MC_BACKWARD\000"
+ 715      41434B57 
+ 715      41524400 
+ 716              	.LASF21:
+ 717 014a 4D435F52 		.ascii	"MC_RIGHT\000"
+ 717      49474854 
+ 717      00
+ 718              	.LASF6:
+ 719 0153 696E7433 		.ascii	"int32_t\000"
+ 719      325F7400 
+ 720              	.LASF16:
+ 721 015b 73697A65 		.ascii	"sizetype\000"
+ 721      74797065 
+ 721      00
+ 722              	.LASF9:
+ 723 0164 6C6F6E67 		.ascii	"long long int\000"
+ 723      206C6F6E 
+ARM GAS  C:\Users\lloyd\AppData\Local\Temp\ccHpWuzj.s 			page 16
 
 
- 724      206C6F6E 
- 724      6720696E 
- 724      7400
- 725              	.LASF15:
- 726 017a 63686172 		.ascii	"char\000"
- 726      00
- 727              	.LASF2:
- 728 017f 73686F72 		.ascii	"short int\000"
- 728      7420696E 
- 728      7400
- 729              	.LASF4:
- 730 0189 75696E74 		.ascii	"uint16_t\000"
- 730      31365F74 
- 730      00
- 731              	.LASF26:
- 732 0192 72696768 		.ascii	"rightSpeed\000"
- 732      74537065 
- 732      656400
- 733              	.LASF18:
- 734 019d 4D435F46 		.ascii	"MC_FORWARD\000"
- 734      4F525741 
- 734      524400
- 735              	.LASF25:
- 736 01a8 6D6F746F 		.ascii	"motorCommand\000"
- 736      72436F6D 
- 736      6D616E64 
- 736      00
- 737              	.LASF7:
- 738 01b5 6C6F6E67 		.ascii	"long int\000"
- 738      20696E74 
- 738      00
- 739              	.LASF0:
- 740 01be 7369676E 		.ascii	"signed char\000"
- 740      65642063 
- 740      68617200 
- 741              	.LASF14:
- 742 01ca 646F7562 		.ascii	"double\000"
- 742      6C6500
- 743              	.LASF30:
- 744 01d1 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
- 744      4320342E 
- 744      372E3320 
- 744      32303133 
- 744      30333132 
- 745 0204 616E6368 		.ascii	"anch revision 196615]\000"
- 745      20726576 
- 745      6973696F 
- 745      6E203139 
- 745      36363135 
- 746              	.LASF33:
- 747 021a 4D4F544F 		.ascii	"MOTOR_COMMAND\000"
- 747      525F434F 
- 747      4D4D414E 
- 747      4400
- 748              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br
+ 723      6720696E 
+ 723      7400
+ 724              	.LASF15:
+ 725 0172 63686172 		.ascii	"char\000"
+ 725      00
+ 726              	.LASF2:
+ 727 0177 73686F72 		.ascii	"short int\000"
+ 727      7420696E 
+ 727      7400
+ 728              	.LASF4:
+ 729 0181 75696E74 		.ascii	"uint16_t\000"
+ 729      31365F74 
+ 729      00
+ 730              	.LASF26:
+ 731 018a 72696768 		.ascii	"rightSpeed\000"
+ 731      74537065 
+ 731      656400
+ 732              	.LASF18:
+ 733 0195 4D435F46 		.ascii	"MC_FORWARD\000"
+ 733      4F525741 
+ 733      524400
+ 734              	.LASF25:
+ 735 01a0 6D6F746F 		.ascii	"motorCommand\000"
+ 735      72436F6D 
+ 735      6D616E64 
+ 735      00
+ 736              	.LASF7:
+ 737 01ad 6C6F6E67 		.ascii	"long int\000"
+ 737      20696E74 
+ 737      00
+ 738              	.LASF0:
+ 739 01b6 7369676E 		.ascii	"signed char\000"
+ 739      65642063 
+ 739      68617200 
+ 740              	.LASF14:
+ 741 01c2 646F7562 		.ascii	"double\000"
+ 741      6C6500
+ 742              	.LASF30:
+ 743 01c9 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 743      4320342E 
+ 743      372E3320 
+ 743      32303133 
+ 743      30333132 
+ 744 01fc 616E6368 		.ascii	"anch revision 196615]\000"
+ 744      20726576 
+ 744      6973696F 
+ 744      6E203139 
+ 744      36363135 
+ 745              	.LASF33:
+ 746 0212 4D4F544F 		.ascii	"MOTOR_COMMAND\000"
+ 746      525F434F 
+ 746      4D4D414E 
+ 746      4400
+ 747              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br

@@ -2,7 +2,7 @@
 --	Conversion of BotPsoc.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon Jan 06 12:15:31 2014
+--	Wed Jan 08 15:56:06 2014
 --
 
 USE cypress.cypress.all;

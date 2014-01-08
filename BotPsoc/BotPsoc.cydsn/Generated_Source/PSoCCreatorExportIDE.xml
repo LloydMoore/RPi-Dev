@@ -18,7 +18,7 @@
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
   </Toolchains>
-  <Project Name="BotPsoc" Path="C:\Kiln\SRSPiBot\PSoCCode\BotPsoc\BotPsoc.cydsn" Version="4.0" Type="Normal">
+  <Project Name="BotPsoc" Path="C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn" Version="4.0" Type="Normal">
     <CMSIS_SVD_File>BotPsoc.svd</CMSIS_SVD_File>
     <Datasheet />
     <LinkerFiles>
@@ -27,8 +27,8 @@
       <LinkerFile Toolchain="IAR EWARM">.\Generated_Source\PSoC5\Cm3Iar.icf</LinkerFile>
     </LinkerFiles>
     <Folders>
-      <Folder BuildType="BUILD" Path="C:\Kiln\SRSPiBot\PSoCCode\BotPsoc\BotPsoc.cydsn">
-        <Files Root="C:\Kiln\SRSPiBot\PSoCCode\BotPsoc\BotPsoc.cydsn">
+      <Folder BuildType="BUILD" Path="C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn">
+        <Files Root="C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn">
           <File BuildType="BUILD" Toolchain="">.\main.c</File>
           <File BuildType="BUILD" Toolchain="">.\spi_ring.c</File>
           <File BuildType="BUILD" Toolchain="">.\base_motion.c</File>
@@ -37,8 +37,8 @@
           <File BuildType="BUILD" Toolchain="">.\base_motion.h</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Kiln\SRSPiBot\PSoCCode\BotPsoc\BotPsoc.cydsn\Generated_Source\PSoC5">
-        <Files Root="C:\Kiln\SRSPiBot\PSoCCode\BotPsoc\BotPsoc.cydsn">
+      <Folder BuildType="STRICT" Path="C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn\Generated_Source\PSoC5">
+        <Files Root="C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn">
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\cyfitter_cfg.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\cyfitter_cfg.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\cymetadata.c</File>
@@ -191,41 +191,41 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\libelf.dll</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Kiln\SRSPiBot\PSoCCode\BotPsoc\BotPsoc.cydsn\Generated_Source\PSoC5\ARM_GCC">
-        <Files Root="C:\Kiln\SRSPiBot\PSoCCode\BotPsoc\BotPsoc.cydsn">
+      <Folder BuildType="STRICT" Path="C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn\Generated_Source\PSoC5\ARM_GCC">
+        <Files Root="C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn">
           <File BuildType="BUILD" Toolchain="ARM GCC">.\Generated_Source\PSoC5\ARM_GCC\CyComponentLibrary.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Kiln\SRSPiBot\PSoCCode\BotPsoc\BotPsoc.cydsn\Generated_Source\PSoC5\ARM_Keil_MDK">
-        <Files Root="C:\Kiln\SRSPiBot\PSoCCode\BotPsoc\BotPsoc.cydsn">
+      <Folder BuildType="STRICT" Path="C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn\Generated_Source\PSoC5\ARM_Keil_MDK">
+        <Files Root="C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn">
           <File BuildType="BUILD" Toolchain="ARM Keil MDK">.\Generated_Source\PSoC5\ARM_Keil_MDK\CyComponentLibrary.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Kiln\SRSPiBot\PSoCCode\BotPsoc\BotPsoc.cydsn\Generated_Source\PSoC5\IAR">
-        <Files Root="C:\Kiln\SRSPiBot\PSoCCode\BotPsoc\BotPsoc.cydsn">
+      <Folder BuildType="STRICT" Path="C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn\Generated_Source\PSoC5\IAR">
+        <Files Root="C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn">
           <File BuildType="BUILD" Toolchain="IAR">.\Generated_Source\PSoC5\IAR\CyComponentLibrary.a</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">
-        <Files Root="C:\Kiln\SRSPiBot\PSoCCode\BotPsoc\BotPsoc.cydsn" />
+        <Files Root="C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_441">
-        <Files Root="C:\Kiln\SRSPiBot\PSoCCode\BotPsoc\BotPsoc.cydsn" />
+        <Files Root="C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_473">
-        <Files Root="C:\Kiln\SRSPiBot\PSoCCode\BotPsoc\BotPsoc.cydsn" />
+        <Files Root="C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051_Keil_951">
-        <Files Root="C:\Kiln\SRSPiBot\PSoCCode\BotPsoc\BotPsoc.cydsn" />
+        <Files Root="C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051">
-        <Files Root="C:\Kiln\SRSPiBot\PSoCCode\BotPsoc\BotPsoc.cydsn" />
+        <Files Root="C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0">
-        <Files Root="C:\Kiln\SRSPiBot\PSoCCode\BotPsoc\BotPsoc.cydsn" />
+        <Files Root="C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM3">
-        <Files Root="C:\Kiln\SRSPiBot\PSoCCode\BotPsoc\BotPsoc.cydsn" />
+        <Files Root="C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn" />
       </Folder>
     </Folders>
   </Project>
