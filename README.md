@@ -9,7 +9,7 @@ circuitry based on the target project. The board has 8
 high current drivers which form a configurable motor 
 controller, RS-232/485 driver, 3 Diligent PMOD connectors,
 and 18 additional I/O.
-=======
+
 
 Root Directory Map:
 =======
@@ -20,4 +20,3 @@ doc : Documentation for the project
 pcb : Schematics and PCB files for the project
 LICENSE : License file for the sample code
 README.md : This file
-=======
