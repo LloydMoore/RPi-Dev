@@ -37,7 +37,7 @@ Web site: http://www.CyberData-Robotics.com
 #include <sys/ioctl.h>
 #include <linux/types.h>
 #include <linux/spi/spidev.h>
-#include "../../Common/ringcoms.h"
+#include "../Common/ringcoms.h"
 #include "base_exception.h"
 
 #define INVALID_FILE_ID -1                                  //Key code for an invalid file id
