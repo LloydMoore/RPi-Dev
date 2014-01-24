@@ -387,6 +387,68 @@
 <VisibleNodeIds>
 <v>BotPsoc</v>
 <v>BotPsoc\BotPsoc</v>
+<v>BotPsoc\BotPsoc\CortexM3</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\base_motion.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\Cm3Start.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\CyDmac.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\CyFlash.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\CyLib.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\cymetadata.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\cyPm.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\CySpc.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\cyutils.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\Debug0.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\Debug1.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\Debug2.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\Debug3.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\Debug4.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\Debug5.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\Debug6.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\Debug7.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\LDG1.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\LDG2.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\LDV1.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\LDV2.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\LMotorPwm.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\LMotorPwm_PM.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\main.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\MotorControlReg.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\MotorPwmClock.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\PiComs.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\PiComs_BOOT.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\PiComs_INT.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\PiComs_PM.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\PiSPI_CLK.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\PiSPI_MISO.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\PiSPI_MOSI.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\PiSPI_SCLK.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\PiSPI_SS.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\PiUART_RXD.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\PiUART_TXD.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\RDG1.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\RDG2.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\RDV1.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\RDV2.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\RMotorPwm.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\RMotorPwm_PM.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\SerDrv_485Sel.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\SerDrv_DY.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\SerDrv_DZ.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\SerDrv_Enable.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\SerDrv_RA.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\SerDrv_RB.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\spi_ring.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\SpiRcvDma_dma.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\SpiXferDone.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\Listing Files\SpiXmitDma_dma.lst</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\BotPsoc.elf</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\BotPsoc.hex</v>
+<v>BotPsoc\BotPsoc\CortexM3\ARM_GCC_473\Debug\BotPsoc.map</v>
 <v>BotPsoc\BotPsoc\BotPsoc.rpt</v>
 <v>BotPsoc\BotPsoc\BotPsoc_timing.html</v>
 </VisibleNodeIds>
