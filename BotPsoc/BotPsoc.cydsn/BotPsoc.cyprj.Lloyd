@@ -901,13 +901,18 @@
 <dep name=".\Generated_Source\PSoC5\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC5\CyLib.h" />
 <dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\Debug0.h" />
+<dep name=".\Generated_Source\PSoC5\Debug0_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\SpiXferDone.h" />
 <dep name=".\Generated_Source\PSoC5\cyPm.h" />
 <dep name=".\Generated_Source\PSoC5\cydevice.h" />
 <dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
 <dep name=".\Generated_Source\PSoC5\SpiXferDone.c" />
+<dep name=".\bot_psoc.h" />
+<dep name="..\..\Common\ringcoms.h" />
 </file>
 <file name=".\Generated_Source\PSoC5\SpiXferDone.c" />
 <file name=".\CortexM3\ARM_GCC_473\Debug\SpiXmitDma_dma.o">
@@ -1014,11 +1019,18 @@
 <dep name=".\CortexM3\ARM_GCC_473\Debug\cymetadata.o" />
 <dep name=".\CortexM3\ARM_GCC_473\Debug\Debug0.o" />
 <dep name=".\CortexM3\ARM_GCC_473\Debug\Debug1.o" />
+<dep name=".\CortexM3\ARM_GCC_473\Debug\Cm3Start.o" />
+<dep name=".\CortexM3\ARM_GCC_473\Debug\CyBootAsmGnu.o" />
+<dep name=".\CortexM3\ARM_GCC_473\Debug\CyDmac.o" />
+<dep name=".\CortexM3\ARM_GCC_473\Debug\CyFlash.o" />
+<dep name=".\CortexM3\ARM_GCC_473\Debug\CyLib.o" />
+<dep name=".\CortexM3\ARM_GCC_473\Debug\cyPm.o" />
+<dep name=".\CortexM3\ARM_GCC_473\Debug\CySpc.o" />
+<dep name=".\CortexM3\ARM_GCC_473\Debug\cyutils.o" />
 <dep name=".\CortexM3\ARM_GCC_473\Debug\PiComs.o" />
 <dep name=".\CortexM3\ARM_GCC_473\Debug\PiComs_PM.o" />
 <dep name=".\CortexM3\ARM_GCC_473\Debug\PiComs_INT.o" />
 <dep name=".\CortexM3\ARM_GCC_473\Debug\PiComs_BOOT.o" />
-<dep name=".\CortexM3\ARM_GCC_473\Debug\SpiXmitDma_dma.o" />
 <dep name=".\CortexM3\ARM_GCC_473\Debug\PiSPI_MOSI.o" />
 <dep name=".\CortexM3\ARM_GCC_473\Debug\PiSPI_SCLK.o" />
 <dep name=".\CortexM3\ARM_GCC_473\Debug\PiSPI_SS.o" />
@@ -1030,6 +1042,7 @@
 <dep name=".\CortexM3\ARM_GCC_473\Debug\Debug5.o" />
 <dep name=".\CortexM3\ARM_GCC_473\Debug\Debug6.o" />
 <dep name=".\CortexM3\ARM_GCC_473\Debug\Debug7.o" />
+<dep name=".\CortexM3\ARM_GCC_473\Debug\SpiXmitDma_dma.o" />
 <dep name=".\CortexM3\ARM_GCC_473\Debug\SpiRcvDma_dma.o" />
 <dep name=".\CortexM3\ARM_GCC_473\Debug\SpiXferDone.o" />
 <dep name=".\CortexM3\ARM_GCC_473\Debug\RDV2.o" />
@@ -1054,14 +1067,6 @@
 <dep name=".\CortexM3\ARM_GCC_473\Debug\SerDrv_DZ.o" />
 <dep name=".\CortexM3\ARM_GCC_473\Debug\PiUART_RXD.o" />
 <dep name=".\CortexM3\ARM_GCC_473\Debug\PiUART_TXD.o" />
-<dep name=".\CortexM3\ARM_GCC_473\Debug\Cm3Start.o" />
-<dep name=".\CortexM3\ARM_GCC_473\Debug\CyBootAsmGnu.o" />
-<dep name=".\CortexM3\ARM_GCC_473\Debug\CyDmac.o" />
-<dep name=".\CortexM3\ARM_GCC_473\Debug\CyFlash.o" />
-<dep name=".\CortexM3\ARM_GCC_473\Debug\CyLib.o" />
-<dep name=".\CortexM3\ARM_GCC_473\Debug\cyPm.o" />
-<dep name=".\CortexM3\ARM_GCC_473\Debug\CySpc.o" />
-<dep name=".\CortexM3\ARM_GCC_473\Debug\cyutils.o" />
 <dep name=".\CortexM3\ARM_GCC_473\Debug\BotPsoc.a" />
 <dep name="${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_473\Debug\CyComponentLibrary.a" />
 </file>
@@ -1134,6 +1139,7 @@
 <name_val_pair name=".\Generated_Source\PSoC5\PiUART_RXD.c" v="&quot;-I. &quot;&quot;-I./Generated_Source/PSoC5 &quot;&quot;-Wno-main &quot;&quot;-mcpu=cortex-m3 &quot;&quot;-mthumb &quot;&quot;-Wall &quot;&quot;-g &quot;&quot;-D &quot;&quot;DEBUG &quot;&quot;-Wa,-alh=${OutputDir}\${CompileFile}.lst &quot;&quot;-ffunction-sections &quot;" />
 <name_val_pair name=".\Generated_Source\PSoC5\PiUART_TXD.c" v="&quot;-I. &quot;&quot;-I./Generated_Source/PSoC5 &quot;&quot;-Wno-main &quot;&quot;-mcpu=cortex-m3 &quot;&quot;-mthumb &quot;&quot;-Wall &quot;&quot;-g &quot;&quot;-D &quot;&quot;DEBUG &quot;&quot;-Wa,-alh=${OutputDir}\${CompileFile}.lst &quot;&quot;-ffunction-sections &quot;" />
 <name_val_pair name="C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn\CortexM3\ARM_GCC_473\Debug\BotPsoc.hex" v="&quot;-mthumb &quot;&quot;-march=armv7-m &quot;&quot;-mfix-cortex-m3-ldrd &quot;&quot;-T &quot;&quot;.\Generated_Source\PSoC5\cm3gcc.ld &quot;&quot;-g &quot;&quot;-Wl,-Map,${OutputDir}\${ProjectShortName}.map &quot;&quot;-specs=nano.specs &quot;&quot;-Wl,--gc-sections &quot;" />
+<name_val_pair name="K:\TempPi\BotPsoc\BotPsoc.cydsn\CortexM3\ARM_GCC_473\Debug\BotPsoc.hex" v="&quot;-mthumb &quot;&quot;-march=armv7-m &quot;&quot;-mfix-cortex-m3-ldrd &quot;&quot;-T &quot;&quot;.\Generated_Source\PSoC5\cm3gcc.ld &quot;&quot;-g &quot;&quot;-Wl,-Map,${OutputDir}\${ProjectShortName}.map &quot;&quot;-specs=nano.specs &quot;&quot;-Wl,--gc-sections &quot;" />
 </name>
 </genericCmdLineData>
 <codeGenCmdLineTag v="&quot;-.appdatapath&quot; &quot;C:\Users\Lloyd\AppData\Local\Cypress Semiconductor\PSoC Creator\3.0&quot; &quot;-.fdsnotice&quot; &quot;-.fdswarpdepfile=warp_dependencies.txt&quot; &quot;-.fdselabdepfile=elab_dependencies.txt&quot; &quot;-.fdsbldfile=generated_files.txt&quot; &quot;-p&quot; &quot;C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn\BotPsoc.cyprj&quot; &quot;-d&quot; &quot;CY8C5868AXI-LP032&quot; &quot;-s&quot; &quot;C:\GitHub\RPi-Dev\BotPsoc\BotPsoc.cydsn\Generated_Source\PSoC5&quot; &quot;--&quot; &quot;-yv2&quot; &quot;-v3&quot; &quot;-ygs&quot; &quot;-q10&quot; &quot;-o2&quot; &quot;-.fftcfgtype=LE&quot; " />
@@ -1216,28 +1222,6 @@
 <v>Cypress Component Catalog\Digital\Logic\SR Flip Flop [v1.0]</v>
 <v>Cypress Component Catalog\Digital\Logic\Toggle Flip Flop [v1.0]</v>
 <v>Cypress Component Catalog\Digital\Logic\Virtual Mux [v1.0]</v>
-<v>Cypress Component Catalog\Digital\Logic\Xnor [v1.0]</v>
-<v>Cypress Component Catalog\Digital\Logic\Xor [v1.0]</v>
-<v>Cypress Component Catalog\Digital\Registers</v>
-<v>Cypress Component Catalog\Digital\Registers\Control Register [v1.70]</v>
-<v>Cypress Component Catalog\Digital\Registers\Status Register [v1.80]</v>
-<v>Cypress Component Catalog\Digital\Utility</v>
-<v>Cypress Component Catalog\Display</v>
-<v>Cypress Component Catalog\Filters</v>
-<v>Cypress Component Catalog\Ports and Pins</v>
-<v>Cypress Component Catalog\Ports and Pins\Analog Pin [v1.90]</v>
-<v>Cypress Component Catalog\Ports and Pins\Digital Bidirectional Pin [v1.90]</v>
-<v>Cypress Component Catalog\Ports and Pins\Digital Input Pin [v1.90]</v>
-<v>Cypress Component Catalog\Ports and Pins\Digital Output Pin [v1.90]</v>
-<v>Cypress Component Catalog\Power Supervision</v>
-<v>Cypress Component Catalog\System</v>
-<v>Cypress Component Catalog\System\Boost Converter [v5.0]</v>
-<v>Cypress Component Catalog\System\Bootloadable [v1.20]</v>
-<v>Cypress Component Catalog\System\Bootloader [v1.20]</v>
-<v>Cypress Component Catalog\System\Clock [v2.10]</v>
-<v>Cypress Component Catalog\System\Die Temperature [v2.0]</v>
-<v>Cypress Component Catalog\System\DMA [v1.70]</v>
-<v>Cypress Component Catalog\System\EEPROM [v2.10]</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Off-Chip Component Catalog\Power\Battery [v1.0]">
@@ -1299,9 +1283,6 @@
 <v>Off-Chip Component Catalog\Transistors\NPN Transistor [v1.0]</v>
 <v>Off-Chip Component Catalog\Transistors\P-Channel FET (Depletion Mode) [v1.0]</v>
 <v>Off-Chip Component Catalog\Transistors\P-Channel JFET [v1.0]</v>
-<v>Off-Chip Component Catalog\Transistors\P-Channel MOSFET (Enhancement mode) [v1.0]</v>
-<v>Off-Chip Component Catalog\Transistors\Photo Transistor [v1.0]</v>
-<v>Off-Chip Component Catalog\Transistors\PNP Transistor [v1.0]</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </tree_states>
@@ -2701,14 +2682,41 @@
 <v>.\Generated_Source\PSoC5\Debug1_aliases.h</v>
 <v>.\Generated_Source\PSoC5\Debug1.c</v>
 <v>.\Generated_Source\PSoC5\Debug1.h</v>
+<v>.\Generated_Source\PSoC5\Clock_1.c</v>
+<v>.\Generated_Source\PSoC5\Clock_1.h</v>
+<v>.\Generated_Source\PSoC5\cm3gcc.ld</v>
+<v>.\Generated_Source\PSoC5\Cm3RealView.scat</v>
+<v>.\Generated_Source\PSoC5\Cm3Start.c</v>
+<v>.\Generated_Source\PSoC5\core_cm3_psoc5.h</v>
+<v>.\Generated_Source\PSoC5\core_cm3.h</v>
+<v>.\Generated_Source\PSoC5\CyBootAsmGnu.s</v>
+<v>.\Generated_Source\PSoC5\CyBootAsmRv.s</v>
+<v>.\Generated_Source\PSoC5\CyDmac.c</v>
+<v>.\Generated_Source\PSoC5\CyDmac.h</v>
+<v>.\Generated_Source\PSoC5\CyFlash.c</v>
+<v>.\Generated_Source\PSoC5\CyFlash.h</v>
+<v>.\Generated_Source\PSoC5\CyLib.c</v>
+<v>.\Generated_Source\PSoC5\CyLib.h</v>
+<v>.\Generated_Source\PSoC5\cypins.h</v>
+<v>.\Generated_Source\PSoC5\cyPm.c</v>
+<v>.\Generated_Source\PSoC5\cyPm.h</v>
+<v>.\Generated_Source\PSoC5\CySpc.c</v>
+<v>.\Generated_Source\PSoC5\CySpc.h</v>
+<v>.\Generated_Source\PSoC5\cytypes.h</v>
+<v>.\Generated_Source\PSoC5\cyutils.c</v>
+<v>.\Generated_Source\PSoC5\core_cmFunc.h</v>
+<v>.\Generated_Source\PSoC5\core_cmInstr.h</v>
+<v>.\Generated_Source\PSoC5\Cm3Iar.icf</v>
+<v>.\Generated_Source\PSoC5\CyBootAsmIar.s</v>
+<v>.\Generated_Source\PSoC5\project.h</v>
 <v>.\Generated_Source\PSoC5\PiComs.c</v>
 <v>.\Generated_Source\PSoC5\PiComs.h</v>
 <v>.\Generated_Source\PSoC5\PiComs_PM.c</v>
 <v>.\Generated_Source\PSoC5\PiComs_INT.c</v>
 <v>.\Generated_Source\PSoC5\PiComs_BOOT.c</v>
 <v>.\Generated_Source\PSoC5\PiComs_PVT.h</v>
-<v>.\Generated_Source\PSoC5\SpiXmitDma_dma.c</v>
-<v>.\Generated_Source\PSoC5\SpiXmitDma_dma.h</v>
+<v>.\Generated_Source\PSoC5\Debug.c</v>
+<v>.\Generated_Source\PSoC5\Debug.h</v>
 <v>.\Generated_Source\PSoC5\PiSPI_MOSI_aliases.h</v>
 <v>.\Generated_Source\PSoC5\PiSPI_MOSI.c</v>
 <v>.\Generated_Source\PSoC5\PiSPI_MOSI.h</v>
@@ -2741,6 +2749,8 @@
 <v>.\Generated_Source\PSoC5\Debug7_aliases.h</v>
 <v>.\Generated_Source\PSoC5\Debug7.c</v>
 <v>.\Generated_Source\PSoC5\Debug7.h</v>
+<v>.\Generated_Source\PSoC5\SpiXmitDma_dma.c</v>
+<v>.\Generated_Source\PSoC5\SpiXmitDma_dma.h</v>
 <v>.\Generated_Source\PSoC5\SpiRcvDma_dma.c</v>
 <v>.\Generated_Source\PSoC5\SpiRcvDma_dma.h</v>
 <v>.\Generated_Source\PSoC5\SpiXferDone.c</v>
@@ -2803,31 +2813,6 @@
 <v>.\Generated_Source\PSoC5\PiUART_TXD_aliases.h</v>
 <v>.\Generated_Source\PSoC5\PiUART_TXD.c</v>
 <v>.\Generated_Source\PSoC5\PiUART_TXD.h</v>
-<v>.\Generated_Source\PSoC5\cm3gcc.ld</v>
-<v>.\Generated_Source\PSoC5\Cm3RealView.scat</v>
-<v>.\Generated_Source\PSoC5\Cm3Start.c</v>
-<v>.\Generated_Source\PSoC5\core_cm3_psoc5.h</v>
-<v>.\Generated_Source\PSoC5\core_cm3.h</v>
-<v>.\Generated_Source\PSoC5\CyBootAsmGnu.s</v>
-<v>.\Generated_Source\PSoC5\CyBootAsmRv.s</v>
-<v>.\Generated_Source\PSoC5\CyDmac.c</v>
-<v>.\Generated_Source\PSoC5\CyDmac.h</v>
-<v>.\Generated_Source\PSoC5\CyFlash.c</v>
-<v>.\Generated_Source\PSoC5\CyFlash.h</v>
-<v>.\Generated_Source\PSoC5\CyLib.c</v>
-<v>.\Generated_Source\PSoC5\CyLib.h</v>
-<v>.\Generated_Source\PSoC5\cypins.h</v>
-<v>.\Generated_Source\PSoC5\cyPm.c</v>
-<v>.\Generated_Source\PSoC5\cyPm.h</v>
-<v>.\Generated_Source\PSoC5\CySpc.c</v>
-<v>.\Generated_Source\PSoC5\CySpc.h</v>
-<v>.\Generated_Source\PSoC5\cytypes.h</v>
-<v>.\Generated_Source\PSoC5\cyutils.c</v>
-<v>.\Generated_Source\PSoC5\core_cmFunc.h</v>
-<v>.\Generated_Source\PSoC5\core_cmInstr.h</v>
-<v>.\Generated_Source\PSoC5\Cm3Iar.icf</v>
-<v>.\Generated_Source\PSoC5\CyBootAsmIar.s</v>
-<v>.\Generated_Source\PSoC5\project.h</v>
 </gen_list>
 <warp_dep>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\ieee\work\stdlogic.vif</v>
@@ -2845,14 +2830,14 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 </warp_dep>
-<deps_time v="130350781820378535" />
+<deps_time v="130373053674250952" />
 <top_block v="TopDesign" />
 <last_generation v="0" />
 </CyGuid_925cc1e1-309e-4e08-b0a1-09a83c35b157>
 </dataGuid>
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
-<deps_time v="130350781889157269" />
+<deps_time v="130373053735834475" />
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>
 <dataGuid v="bf610382-39c6-441f-80b8-b04622ea7845">
