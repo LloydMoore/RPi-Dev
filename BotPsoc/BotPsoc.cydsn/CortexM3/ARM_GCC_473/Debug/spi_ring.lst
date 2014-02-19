@@ -1,0 +1,1645 @@
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"spi_ring.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.comm	spiDmaTransmitChannel,1,1
+  19              		.comm	spiDmaReceiveChannel,1,1
+  20              		.comm	spiDmaTransmitTD,1,4
+  21              		.comm	spiDmaReceiveTD,1,4
+  22              		.section	.text.ringComs_Start,"ax",%progbits
+  23              		.align	2
+  24              		.global	ringComs_Start
+  25              		.thumb
+  26              		.thumb_func
+  27              		.type	ringComs_Start, %function
+  28              	ringComs_Start:
+  29              	.LFB56:
+  30              		.file 1 ".\\spi_ring.c"
+   1:.\spi_ring.c  **** /*
+   2:.\spi_ring.c  **** BotPsoc - Low level logic and drivers for SRSPiBot Robot
+   3:.\spi_ring.c  **** Copyright (C) 2013  Lloyd Moore, CyberData Corporation
+   4:.\spi_ring.c  **** 
+   5:.\spi_ring.c  **** This program is free software: you can redistribute it and/or modify
+   6:.\spi_ring.c  **** it under the terms of the GNU General Public License as published by
+   7:.\spi_ring.c  **** the Free Software Foundation, either version 3 of the License, or
+   8:.\spi_ring.c  **** (at your option) any later version.
+   9:.\spi_ring.c  **** 
+  10:.\spi_ring.c  **** This program is distributed in the hope that it will be useful,
+  11:.\spi_ring.c  **** but WITHOUT ANY WARRANTY; without even the implied warranty of
+  12:.\spi_ring.c  **** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  13:.\spi_ring.c  **** GNU General Public License for more details.
+  14:.\spi_ring.c  **** 
+  15:.\spi_ring.c  **** You should have received a copy of the GNU General Public License
+  16:.\spi_ring.c  **** along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  17:.\spi_ring.c  **** 
+  18:.\spi_ring.c  **** This software has been developed and released by Lloyd Moore, owner of
+  19:.\spi_ring.c  **** CyberData Corporation as part of our R&D efforts. For
+  20:.\spi_ring.c  **** questions and comments on this code I can be reached at:
+  21:.\spi_ring.c  **** e-mail: Lloyd@CyberData-Robotics.com
+  22:.\spi_ring.c  **** Web site: http://www.CyberData-Robotics.com
+  23:.\spi_ring.c  **** */
+  24:.\spi_ring.c  **** 
+  25:.\spi_ring.c  **** #include "bot_psoc.h"
+  26:.\spi_ring.c  **** #include "spi_ring.h"
+  27:.\spi_ring.c  **** 
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 2
+
+
+  28:.\spi_ring.c  **** //Private function prototypes
+  29:.\spi_ring.c  **** void ringComs_ConfigureDMA();                               //Configure the DMA for the SPI transfe
+  30:.\spi_ring.c  **** 
+  31:.\spi_ring.c  **** //Private variables
+  32:.\spi_ring.c  **** uint8 spiDmaTransmitChannel;                                //DMA handle for the SPI transmit opera
+  33:.\spi_ring.c  **** uint8 spiDmaReceiveChannel;                                 //DMA handle for the SPI receive operat
+  34:.\spi_ring.c  **** 
+  35:.\spi_ring.c  **** uint8 spiDmaTransmitTD[1];                                  //Transfer descriptor array for spi tra
+  36:.\spi_ring.c  **** uint8 spiDmaReceiveTD[1];                                   //Transfer descriptor array for the spi
+  37:.\spi_ring.c  **** 
+  38:.\spi_ring.c  **** void ringComs_Start()
+  39:.\spi_ring.c  **** {
+  31              		.loc 1 39 0
+  32              		.cfi_startproc
+  33              		@ args = 0, pretend = 0, frame = 0
+  34              		@ frame_needed = 1, uses_anonymous_args = 0
+  35 0000 80B5     		push	{r7, lr}
+  36              	.LCFI0:
+  37              		.cfi_def_cfa_offset 8
+  38              		.cfi_offset 7, -8
+  39              		.cfi_offset 14, -4
+  40 0002 00AF     		add	r7, sp, #0
+  41              	.LCFI1:
+  42              		.cfi_def_cfa_register 7
+  40:.\spi_ring.c  ****     //Clear the global variables for the spi ring
+  41:.\spi_ring.c  ****     memset(&g_spiRing, 0x00, sizeof(g_spiRing));
+  43              		.loc 1 41 0
+  44 0004 40F20000 		movw	r0, #:lower16:g_spiRing
+  45 0008 C0F20000 		movt	r0, #:upper16:g_spiRing
+  46 000c 4FF00001 		mov	r1, #0
+  47 0010 4FF04002 		mov	r2, #64
+  48 0014 FFF7FEFF 		bl	memset
+  42:.\spi_ring.c  ****     g_spiReady = false;
+  49              		.loc 1 42 0
+  50 0018 40F20003 		movw	r3, #:lower16:g_spiReady
+  51 001c C0F20003 		movt	r3, #:upper16:g_spiReady
+  52 0020 4FF00002 		mov	r2, #0
+  53 0024 1A70     		strb	r2, [r3, #0]
+  43:.\spi_ring.c  ****     
+  44:.\spi_ring.c  ****     PiComs_Start();
+  54              		.loc 1 44 0
+  55 0026 FFF7FEFF 		bl	PiComs_Start
+  45:.\spi_ring.c  ****     SpiXferDone_Start();
+  56              		.loc 1 45 0
+  57 002a FFF7FEFF 		bl	SpiXferDone_Start
+  46:.\spi_ring.c  ****    
+  47:.\spi_ring.c  ****     //Load the header/footer data into the sensory side
+  48:.\spi_ring.c  ****     g_spiRing.sensory.sensoryHeader = HEADER_VALUE;
+  58              		.loc 1 48 0
+  59 002e 40F20003 		movw	r3, #:lower16:g_spiRing
+  60 0032 C0F20003 		movt	r3, #:upper16:g_spiRing
+  61 0036 45F65A22 		movw	r2, #23130
+  62 003a CAF2A552 		movt	r2, 42405
+  63 003e 1A60     		str	r2, [r3, #0]
+  49:.\spi_ring.c  ****     g_spiRing.sensory.sensoryFooter = FOOTER_VALUE;
+  64              		.loc 1 49 0
+  65 0040 40F20003 		movw	r3, #:lower16:g_spiRing
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 3
+
+
+  66 0044 C0F20003 		movt	r3, #:upper16:g_spiRing
+  67 0048 4FF0FF32 		mov	r2, #-1
+  68 004c DA61     		str	r2, [r3, #28]
+  50:.\spi_ring.c  ****     
+  51:.\spi_ring.c  ****     //Just load some temporary data right now for testing
+  52:.\spi_ring.c  ****     g_spiRing.sensory.irDistance = 0x0023;
+  69              		.loc 1 52 0
+  70 004e 40F20003 		movw	r3, #:lower16:g_spiRing
+  71 0052 C0F20003 		movt	r3, #:upper16:g_spiRing
+  72 0056 4FF02302 		mov	r2, #35
+  73 005a 9A80     		strh	r2, [r3, #4]	@ movhi
+  53:.\spi_ring.c  ****     g_spiRing.sensory.leftBumpForce = 0x0025;
+  74              		.loc 1 53 0
+  75 005c 40F20003 		movw	r3, #:lower16:g_spiRing
+  76 0060 C0F20003 		movt	r3, #:upper16:g_spiRing
+  77 0064 4FF02502 		mov	r2, #37
+  78 0068 DA80     		strh	r2, [r3, #6]	@ movhi
+  54:.\spi_ring.c  ****     g_spiRing.sensory.rightBumpForce = 0x00a5;
+  79              		.loc 1 54 0
+  80 006a 40F20003 		movw	r3, #:lower16:g_spiRing
+  81 006e C0F20003 		movt	r3, #:upper16:g_spiRing
+  82 0072 4FF0A502 		mov	r2, #165
+  83 0076 1A81     		strh	r2, [r3, #8]	@ movhi
+  55:.\spi_ring.c  ****     g_spiRing.sensory.leftBumpField = 0x00b4;
+  84              		.loc 1 55 0
+  85 0078 40F20003 		movw	r3, #:lower16:g_spiRing
+  86 007c C0F20003 		movt	r3, #:upper16:g_spiRing
+  87 0080 4FF0B402 		mov	r2, #180
+  88 0084 5A81     		strh	r2, [r3, #10]	@ movhi
+  56:.\spi_ring.c  ****  
+  57:.\spi_ring.c  ****     ringComs_ConfigureDMA();
+  89              		.loc 1 57 0
+  90 0086 FFF7FEFF 		bl	ringComs_ConfigureDMA
+  58:.\spi_ring.c  ****     ringComs_DoTransfer();   
+  91              		.loc 1 58 0
+  92 008a FFF7FEFF 		bl	ringComs_DoTransfer
+  59:.\spi_ring.c  **** }
+  93              		.loc 1 59 0
+  94 008e 80BD     		pop	{r7, pc}
+  95              		.cfi_endproc
+  96              	.LFE56:
+  97              		.size	ringComs_Start, .-ringComs_Start
+  98              		.section	.text.ringComs_ConfigureDMA,"ax",%progbits
+  99              		.align	2
+ 100              		.global	ringComs_ConfigureDMA
+ 101              		.thumb
+ 102              		.thumb_func
+ 103              		.type	ringComs_ConfigureDMA, %function
+ 104              	ringComs_ConfigureDMA:
+ 105              	.LFB57:
+  60:.\spi_ring.c  **** 
+  61:.\spi_ring.c  **** void ringComs_ConfigureDMA()
+  62:.\spi_ring.c  **** {
+ 106              		.loc 1 62 0
+ 107              		.cfi_startproc
+ 108              		@ args = 0, pretend = 0, frame = 8
+ 109              		@ frame_needed = 1, uses_anonymous_args = 0
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 4
+
+
+ 110 0000 80B5     		push	{r7, lr}
+ 111              	.LCFI2:
+ 112              		.cfi_def_cfa_offset 8
+ 113              		.cfi_offset 7, -8
+ 114              		.cfi_offset 14, -4
+ 115 0002 82B0     		sub	sp, sp, #8
+ 116              	.LCFI3:
+ 117              		.cfi_def_cfa_offset 16
+ 118 0004 00AF     		add	r7, sp, #0
+ 119              	.LCFI4:
+ 120              		.cfi_def_cfa_register 7
+  63:.\spi_ring.c  ****     //Configure the transmit DMA channel
+  64:.\spi_ring.c  ****     uint8 *pTransmitStartAddress = (uint8*)(&g_spiRing.sensory.sensoryHeader);     //Start one byte
+ 121              		.loc 1 64 0
+ 122 0006 40F20003 		movw	r3, #:lower16:g_spiRing
+ 123 000a C0F20003 		movt	r3, #:upper16:g_spiRing
+ 124 000e 7B60     		str	r3, [r7, #4]
+  65:.\spi_ring.c  ****     ++pTransmitStartAddress;
+ 125              		.loc 1 65 0
+ 126 0010 7B68     		ldr	r3, [r7, #4]
+ 127 0012 03F10103 		add	r3, r3, #1
+ 128 0016 7B60     		str	r3, [r7, #4]
+  66:.\spi_ring.c  ****     
+  67:.\spi_ring.c  ****     spiDmaTransmitChannel = SpiXmitDma_DmaInitialize(SPI_DMA_BYTES_PER_BURST, SPI_DMA_REQUEST_PER_B
+  68:.\spi_ring.c  ****         HI16(&g_spiRing.effectors), HI16(PiComs_TXDATA_PTR));
+ 129              		.loc 1 68 0
+ 130 0018 484B     		ldr	r3, .L3
+ 131 001a 4FEA1343 		lsr	r3, r3, #16
+  67:.\spi_ring.c  ****     spiDmaTransmitChannel = SpiXmitDma_DmaInitialize(SPI_DMA_BYTES_PER_BURST, SPI_DMA_REQUEST_PER_B
+ 132              		.loc 1 67 0
+ 133 001e 9BB2     		uxth	r3, r3
+ 134 0020 4FF00100 		mov	r0, #1
+ 135 0024 4FF00101 		mov	r1, #1
+ 136 0028 1A46     		mov	r2, r3
+ 137 002a 4FF48043 		mov	r3, #16384
+ 138 002e FFF7FEFF 		bl	SpiXmitDma_DmaInitialize
+ 139 0032 0346     		mov	r3, r0
+ 140 0034 1A46     		mov	r2, r3
+ 141 0036 40F20003 		movw	r3, #:lower16:spiDmaTransmitChannel
+ 142 003a C0F20003 		movt	r3, #:upper16:spiDmaTransmitChannel
+ 143 003e 1A70     		strb	r2, [r3, #0]
+  69:.\spi_ring.c  ****     spiDmaTransmitTD[0] = CyDmaTdAllocate();
+ 144              		.loc 1 69 0
+ 145 0040 FFF7FEFF 		bl	CyDmaTdAllocate
+ 146 0044 0346     		mov	r3, r0
+ 147 0046 1A46     		mov	r2, r3
+ 148 0048 40F20003 		movw	r3, #:lower16:spiDmaTransmitTD
+ 149 004c C0F20003 		movt	r3, #:upper16:spiDmaTransmitTD
+ 150 0050 1A70     		strb	r2, [r3, #0]
+  70:.\spi_ring.c  ****     CyDmaTdSetConfiguration(spiDmaTransmitTD[0], sizeof(SensoryMembers) - 1, DMA_DISABLE_TD, TD_INC
+ 151              		.loc 1 70 0
+ 152 0052 40F20003 		movw	r3, #:lower16:spiDmaTransmitTD
+ 153 0056 C0F20003 		movt	r3, #:upper16:spiDmaTransmitTD
+ 154 005a 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 155 005c 1846     		mov	r0, r3
+ 156 005e 4FF01F01 		mov	r1, #31
+ 157 0062 4FF0FE02 		mov	r2, #254
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 5
+
+
+ 158 0066 4FF00103 		mov	r3, #1
+ 159 006a FFF7FEFF 		bl	CyDmaTdSetConfiguration
+  71:.\spi_ring.c  ****     CyDmaTdSetAddress(spiDmaTransmitTD[0], LO16((uint32)(pTransmitStartAddress)), LO16((uint32)PiCo
+ 160              		.loc 1 71 0
+ 161 006e 40F20003 		movw	r3, #:lower16:spiDmaTransmitTD
+ 162 0072 C0F20003 		movt	r3, #:upper16:spiDmaTransmitTD
+ 163 0076 1A78     		ldrb	r2, [r3, #0]	@ zero_extendqisi2
+ 164 0078 7B68     		ldr	r3, [r7, #4]
+ 165 007a 9BB2     		uxth	r3, r3
+ 166 007c 1046     		mov	r0, r2
+ 167 007e 1946     		mov	r1, r3
+ 168 0080 46F24842 		movw	r2, #25672
+ 169 0084 FFF7FEFF 		bl	CyDmaTdSetAddress
+  72:.\spi_ring.c  ****     CyDmaChSetInitialTd(spiDmaTransmitChannel, spiDmaTransmitTD[0]);
+ 170              		.loc 1 72 0
+ 171 0088 40F20003 		movw	r3, #:lower16:spiDmaTransmitChannel
+ 172 008c C0F20003 		movt	r3, #:upper16:spiDmaTransmitChannel
+ 173 0090 1A78     		ldrb	r2, [r3, #0]	@ zero_extendqisi2
+ 174 0092 40F20003 		movw	r3, #:lower16:spiDmaTransmitTD
+ 175 0096 C0F20003 		movt	r3, #:upper16:spiDmaTransmitTD
+ 176 009a 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 177 009c 1046     		mov	r0, r2
+ 178 009e 1946     		mov	r1, r3
+ 179 00a0 FFF7FEFF 		bl	CyDmaChSetInitialTd
+  73:.\spi_ring.c  ****     
+  74:.\spi_ring.c  ****     //Configure the receive DMA channel
+  75:.\spi_ring.c  ****     spiDmaReceiveChannel = SpiRcvDma_DmaInitialize(SPI_DMA_BYTES_PER_BURST, SPI_DMA_REQUEST_PER_BUR
+  76:.\spi_ring.c  ****         HI16(PiComs_RXDATA_PTR), HI16(&g_spiRing.sensory));
+ 180              		.loc 1 76 0
+ 181 00a4 40F20003 		movw	r3, #:lower16:g_spiRing
+ 182 00a8 C0F20003 		movt	r3, #:upper16:g_spiRing
+ 183 00ac 4FEA1343 		lsr	r3, r3, #16
+  75:.\spi_ring.c  ****     spiDmaReceiveChannel = SpiRcvDma_DmaInitialize(SPI_DMA_BYTES_PER_BURST, SPI_DMA_REQUEST_PER_BUR
+ 184              		.loc 1 75 0
+ 185 00b0 9BB2     		uxth	r3, r3
+ 186 00b2 4FF00100 		mov	r0, #1
+ 187 00b6 4FF00101 		mov	r1, #1
+ 188 00ba 4FF48042 		mov	r2, #16384
+ 189 00be FFF7FEFF 		bl	SpiRcvDma_DmaInitialize
+ 190 00c2 0346     		mov	r3, r0
+ 191 00c4 1A46     		mov	r2, r3
+ 192 00c6 40F20003 		movw	r3, #:lower16:spiDmaReceiveChannel
+ 193 00ca C0F20003 		movt	r3, #:upper16:spiDmaReceiveChannel
+ 194 00ce 1A70     		strb	r2, [r3, #0]
+  77:.\spi_ring.c  ****     spiDmaReceiveTD[0] = CyDmaTdAllocate();
+ 195              		.loc 1 77 0
+ 196 00d0 FFF7FEFF 		bl	CyDmaTdAllocate
+ 197 00d4 0346     		mov	r3, r0
+ 198 00d6 1A46     		mov	r2, r3
+ 199 00d8 40F20003 		movw	r3, #:lower16:spiDmaReceiveTD
+ 200 00dc C0F20003 		movt	r3, #:upper16:spiDmaReceiveTD
+ 201 00e0 1A70     		strb	r2, [r3, #0]
+  78:.\spi_ring.c  ****     CyDmaTdSetConfiguration(spiDmaReceiveTD[0], sizeof(MotorMembers), DMA_DISABLE_TD, 
+ 202              		.loc 1 78 0
+ 203 00e2 40F20003 		movw	r3, #:lower16:spiDmaReceiveTD
+ 204 00e6 C0F20003 		movt	r3, #:upper16:spiDmaReceiveTD
+ 205 00ea 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 6
+
+
+ 206 00ec 1846     		mov	r0, r3
+ 207 00ee 4FF02001 		mov	r1, #32
+ 208 00f2 4FF0FE02 		mov	r2, #254
+ 209 00f6 4FF00603 		mov	r3, #6
+ 210 00fa FFF7FEFF 		bl	CyDmaTdSetConfiguration
+  79:.\spi_ring.c  ****         (TD_INC_DST_ADR | SpiRcvDma__TD_TERMOUT_EN));
+  80:.\spi_ring.c  ****     CyDmaTdSetAddress(spiDmaReceiveTD[0], LO16((uint32)PiComs_RXDATA_PTR), LO16((uint32)&g_spiRing.
+ 211              		.loc 1 80 0
+ 212 00fe 40F20003 		movw	r3, #:lower16:spiDmaReceiveTD
+ 213 0102 C0F20003 		movt	r3, #:upper16:spiDmaReceiveTD
+ 214 0106 1A78     		ldrb	r2, [r3, #0]	@ zero_extendqisi2
+ 215 0108 0C4B     		ldr	r3, .L3
+ 216 010a 9BB2     		uxth	r3, r3
+ 217 010c 1046     		mov	r0, r2
+ 218 010e 46F25841 		movw	r1, #25688
+ 219 0112 1A46     		mov	r2, r3
+ 220 0114 FFF7FEFF 		bl	CyDmaTdSetAddress
+  81:.\spi_ring.c  ****     CyDmaChSetInitialTd(spiDmaReceiveChannel, spiDmaReceiveTD[0]);
+ 221              		.loc 1 81 0
+ 222 0118 40F20003 		movw	r3, #:lower16:spiDmaReceiveChannel
+ 223 011c C0F20003 		movt	r3, #:upper16:spiDmaReceiveChannel
+ 224 0120 1A78     		ldrb	r2, [r3, #0]	@ zero_extendqisi2
+ 225 0122 40F20003 		movw	r3, #:lower16:spiDmaReceiveTD
+ 226 0126 C0F20003 		movt	r3, #:upper16:spiDmaReceiveTD
+ 227 012a 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 228 012c 1046     		mov	r0, r2
+ 229 012e 1946     		mov	r1, r3
+ 230 0130 FFF7FEFF 		bl	CyDmaChSetInitialTd
+  82:.\spi_ring.c  **** 
+  83:.\spi_ring.c  ****     //Note: The transfer descriptors allocated here will never be returned, they are reused for the
+  84:.\spi_ring.c  ****     //lifetime of the program.
+  85:.\spi_ring.c  **** }
+ 231              		.loc 1 85 0
+ 232 0134 07F10807 		add	r7, r7, #8
+ 233 0138 BD46     		mov	sp, r7
+ 234 013a 80BD     		pop	{r7, pc}
+ 235              	.L4:
+ 236              		.align	2
+ 237              	.L3:
+ 238 013c 20000000 		.word	g_spiRing+32
+ 239              		.cfi_endproc
+ 240              	.LFE57:
+ 241              		.size	ringComs_ConfigureDMA, .-ringComs_ConfigureDMA
+ 242              		.section	.text.ringComs_DoTransfer,"ax",%progbits
+ 243              		.align	2
+ 244              		.global	ringComs_DoTransfer
+ 245              		.thumb
+ 246              		.thumb_func
+ 247              		.type	ringComs_DoTransfer, %function
+ 248              	ringComs_DoTransfer:
+ 249              	.LFB58:
+  86:.\spi_ring.c  **** 
+  87:.\spi_ring.c  **** void ringComs_DoTransfer()
+  88:.\spi_ring.c  **** {
+ 250              		.loc 1 88 0
+ 251              		.cfi_startproc
+ 252              		@ args = 0, pretend = 0, frame = 8
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 7
+
+
+ 253              		@ frame_needed = 1, uses_anonymous_args = 0
+ 254 0000 80B5     		push	{r7, lr}
+ 255              	.LCFI5:
+ 256              		.cfi_def_cfa_offset 8
+ 257              		.cfi_offset 7, -8
+ 258              		.cfi_offset 14, -4
+ 259 0002 82B0     		sub	sp, sp, #8
+ 260              	.LCFI6:
+ 261              		.cfi_def_cfa_offset 16
+ 262 0004 00AF     		add	r7, sp, #0
+ 263              	.LCFI7:
+ 264              		.cfi_def_cfa_register 7
+  89:.\spi_ring.c  ****     uint8 *pFirstByte = (uint8*) &(g_spiRing.sensory.sensoryHeader);
+ 265              		.loc 1 89 0
+ 266 0006 40F20003 		movw	r3, #:lower16:g_spiRing
+ 267 000a C0F20003 		movt	r3, #:upper16:g_spiRing
+ 268 000e 7B60     		str	r3, [r7, #4]
+  90:.\spi_ring.c  ****     CyDmaChEnable(spiDmaTransmitChannel, true);
+ 269              		.loc 1 90 0
+ 270 0010 40F20003 		movw	r3, #:lower16:spiDmaTransmitChannel
+ 271 0014 C0F20003 		movt	r3, #:upper16:spiDmaTransmitChannel
+ 272 0018 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 273 001a 1846     		mov	r0, r3
+ 274 001c 4FF00101 		mov	r1, #1
+ 275 0020 FFF7FEFF 		bl	CyDmaChEnable
+  91:.\spi_ring.c  ****     CyDmaChEnable(spiDmaReceiveChannel, true);
+ 276              		.loc 1 91 0
+ 277 0024 40F20003 		movw	r3, #:lower16:spiDmaReceiveChannel
+ 278 0028 C0F20003 		movt	r3, #:upper16:spiDmaReceiveChannel
+ 279 002c 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 280 002e 1846     		mov	r0, r3
+ 281 0030 4FF00101 		mov	r1, #1
+ 282 0034 FFF7FEFF 		bl	CyDmaChEnable
+  92:.\spi_ring.c  ****     
+  93:.\spi_ring.c  ****     PiComs_WriteTxDataZero(*pFirstByte);
+ 283              		.loc 1 93 0
+ 284 0038 7B68     		ldr	r3, [r7, #4]
+ 285 003a 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 286 003c 1846     		mov	r0, r3
+ 287 003e FFF7FEFF 		bl	PiComs_WriteTxDataZero
+  94:.\spi_ring.c  **** }
+ 288              		.loc 1 94 0
+ 289 0042 07F10807 		add	r7, r7, #8
+ 290 0046 BD46     		mov	sp, r7
+ 291 0048 80BD     		pop	{r7, pc}
+ 292              		.cfi_endproc
+ 293              	.LFE58:
+ 294              		.size	ringComs_DoTransfer, .-ringComs_DoTransfer
+ 295 004a 00BF     		.text
+ 296              	.Letext0:
+ 297              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.0\\psoc creator\\import\\gnu_cs\\arm\\4
+ 298              		.file 3 ".\\../../Common/ringcoms.h"
+ 299              		.file 4 "./Generated_Source/PSoC5/cytypes.h"
+ 300              		.file 5 ".\\bot_psoc.h"
+ 301              		.file 6 "./Generated_Source/PSoC5/core_cm3.h"
+ 302              		.section	.debug_info,"",%progbits
+ 303              	.Ldebug_info0:
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 8
+
+
+ 304 0000 C1030000 		.4byte	0x3c1
+ 305 0004 0200     		.2byte	0x2
+ 306 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 307 000a 04       		.byte	0x4
+ 308 000b 01       		.uleb128 0x1
+ 309 000c 54010000 		.4byte	.LASF68
+ 310 0010 01       		.byte	0x1
+ 311 0011 4E020000 		.4byte	.LASF69
+ 312 0015 1E010000 		.4byte	.LASF70
+ 313 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 314 001d 00000000 		.4byte	0
+ 315 0021 00000000 		.4byte	0
+ 316 0025 00000000 		.4byte	.Ldebug_line0
+ 317 0029 02       		.uleb128 0x2
+ 318 002a 01       		.byte	0x1
+ 319 002b 06       		.byte	0x6
+ 320 002c BA010000 		.4byte	.LASF0
+ 321 0030 03       		.uleb128 0x3
+ 322 0031 95000000 		.4byte	.LASF3
+ 323 0035 02       		.byte	0x2
+ 324 0036 2A       		.byte	0x2a
+ 325 0037 3B000000 		.4byte	0x3b
+ 326 003b 02       		.uleb128 0x2
+ 327 003c 01       		.byte	0x1
+ 328 003d 08       		.byte	0x8
+ 329 003e AC010000 		.4byte	.LASF1
+ 330 0042 02       		.uleb128 0x2
+ 331 0043 02       		.byte	0x2
+ 332 0044 05       		.byte	0x5
+ 333 0045 4F000000 		.4byte	.LASF2
+ 334 0049 03       		.uleb128 0x3
+ 335 004a 20020000 		.4byte	.LASF4
+ 336 004e 02       		.byte	0x2
+ 337 004f 36       		.byte	0x36
+ 338 0050 54000000 		.4byte	0x54
+ 339 0054 02       		.uleb128 0x2
+ 340 0055 02       		.byte	0x2
+ 341 0056 07       		.byte	0x7
+ 342 0057 29020000 		.4byte	.LASF5
+ 343 005b 03       		.uleb128 0x3
+ 344 005c AA020000 		.4byte	.LASF6
+ 345 0060 02       		.byte	0x2
+ 346 0061 4F       		.byte	0x4f
+ 347 0062 66000000 		.4byte	0x66
+ 348 0066 02       		.uleb128 0x2
+ 349 0067 04       		.byte	0x4
+ 350 0068 05       		.byte	0x5
+ 351 0069 08010000 		.4byte	.LASF7
+ 352 006d 03       		.uleb128 0x3
+ 353 006e ED010000 		.4byte	.LASF8
+ 354 0072 02       		.byte	0x2
+ 355 0073 50       		.byte	0x50
+ 356 0074 78000000 		.4byte	0x78
+ 357 0078 02       		.uleb128 0x2
+ 358 0079 04       		.byte	0x4
+ 359 007a 07       		.byte	0x7
+ 360 007b E0020000 		.4byte	.LASF9
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 9
+
+
+ 361 007f 02       		.uleb128 0x2
+ 362 0080 08       		.byte	0x8
+ 363 0081 05       		.byte	0x5
+ 364 0082 D2000000 		.4byte	.LASF10
+ 365 0086 02       		.uleb128 0x2
+ 366 0087 08       		.byte	0x8
+ 367 0088 07       		.byte	0x7
+ 368 0089 C6010000 		.4byte	.LASF11
+ 369 008d 04       		.uleb128 0x4
+ 370 008e 04       		.byte	0x4
+ 371 008f 05       		.byte	0x5
+ 372 0090 696E7400 		.ascii	"int\000"
+ 373 0094 02       		.uleb128 0x2
+ 374 0095 04       		.byte	0x4
+ 375 0096 07       		.byte	0x7
+ 376 0097 13020000 		.4byte	.LASF12
+ 377 009b 05       		.uleb128 0x5
+ 378 009c DD010000 		.4byte	.LASF28
+ 379 00a0 20       		.byte	0x20
+ 380 00a1 03       		.byte	0x3
+ 381 00a2 2D       		.byte	0x2d
+ 382 00a3 6C010000 		.4byte	0x16c
+ 383 00a7 06       		.uleb128 0x6
+ 384 00a8 35000000 		.4byte	.LASF13
+ 385 00ac 03       		.byte	0x3
+ 386 00ad 2F       		.byte	0x2f
+ 387 00ae 6D000000 		.4byte	0x6d
+ 388 00b2 02       		.byte	0x2
+ 389 00b3 23       		.byte	0x23
+ 390 00b4 00       		.uleb128 0
+ 391 00b5 06       		.uleb128 0x6
+ 392 00b6 BF030000 		.4byte	.LASF14
+ 393 00ba 03       		.byte	0x3
+ 394 00bb 30       		.byte	0x30
+ 395 00bc 49000000 		.4byte	0x49
+ 396 00c0 02       		.byte	0x2
+ 397 00c1 23       		.byte	0x23
+ 398 00c2 04       		.uleb128 0x4
+ 399 00c3 06       		.uleb128 0x6
+ 400 00c4 27000000 		.4byte	.LASF15
+ 401 00c8 03       		.byte	0x3
+ 402 00c9 31       		.byte	0x31
+ 403 00ca 49000000 		.4byte	0x49
+ 404 00ce 02       		.byte	0x2
+ 405 00cf 23       		.byte	0x23
+ 406 00d0 06       		.uleb128 0x6
+ 407 00d1 06       		.uleb128 0x6
+ 408 00d2 9D010000 		.4byte	.LASF16
+ 409 00d6 03       		.byte	0x3
+ 410 00d7 32       		.byte	0x32
+ 411 00d8 49000000 		.4byte	0x49
+ 412 00dc 02       		.byte	0x2
+ 413 00dd 23       		.byte	0x23
+ 414 00de 08       		.uleb128 0x8
+ 415 00df 06       		.uleb128 0x6
+ 416 00e0 46010000 		.4byte	.LASF17
+ 417 00e4 03       		.byte	0x3
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 10
+
+
+ 418 00e5 33       		.byte	0x33
+ 419 00e6 49000000 		.4byte	0x49
+ 420 00ea 02       		.byte	0x2
+ 421 00eb 23       		.byte	0x23
+ 422 00ec 0A       		.uleb128 0xa
+ 423 00ed 06       		.uleb128 0x6
+ 424 00ee 6A030000 		.4byte	.LASF18
+ 425 00f2 03       		.byte	0x3
+ 426 00f3 34       		.byte	0x34
+ 427 00f4 49000000 		.4byte	0x49
+ 428 00f8 02       		.byte	0x2
+ 429 00f9 23       		.byte	0x23
+ 430 00fa 0C       		.uleb128 0xc
+ 431 00fb 06       		.uleb128 0x6
+ 432 00fc 5D030000 		.4byte	.LASF19
+ 433 0100 03       		.byte	0x3
+ 434 0101 35       		.byte	0x35
+ 435 0102 49000000 		.4byte	0x49
+ 436 0106 02       		.byte	0x2
+ 437 0107 23       		.byte	0x23
+ 438 0108 0E       		.uleb128 0xe
+ 439 0109 06       		.uleb128 0x6
+ 440 010a 79030000 		.4byte	.LASF20
+ 441 010e 03       		.byte	0x3
+ 442 010f 36       		.byte	0x36
+ 443 0110 49000000 		.4byte	0x49
+ 444 0114 02       		.byte	0x2
+ 445 0115 23       		.byte	0x23
+ 446 0116 10       		.uleb128 0x10
+ 447 0117 06       		.uleb128 0x6
+ 448 0118 C2020000 		.4byte	.LASF21
+ 449 011c 03       		.byte	0x3
+ 450 011d 37       		.byte	0x37
+ 451 011e 49000000 		.4byte	0x49
+ 452 0122 02       		.byte	0x2
+ 453 0123 23       		.byte	0x23
+ 454 0124 12       		.uleb128 0x12
+ 455 0125 06       		.uleb128 0x6
+ 456 0126 62000000 		.4byte	.LASF22
+ 457 012a 03       		.byte	0x3
+ 458 012b 38       		.byte	0x38
+ 459 012c 49000000 		.4byte	0x49
+ 460 0130 02       		.byte	0x2
+ 461 0131 23       		.byte	0x23
+ 462 0132 14       		.uleb128 0x14
+ 463 0133 06       		.uleb128 0x6
+ 464 0134 CA030000 		.4byte	.LASF23
+ 465 0138 03       		.byte	0x3
+ 466 0139 39       		.byte	0x39
+ 467 013a 49000000 		.4byte	0x49
+ 468 013e 02       		.byte	0x2
+ 469 013f 23       		.byte	0x23
+ 470 0140 16       		.uleb128 0x16
+ 471 0141 06       		.uleb128 0x6
+ 472 0142 A3000000 		.4byte	.LASF24
+ 473 0146 03       		.byte	0x3
+ 474 0147 3A       		.byte	0x3a
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 11
+
+
+ 475 0148 49000000 		.4byte	0x49
+ 476 014c 02       		.byte	0x2
+ 477 014d 23       		.byte	0x23
+ 478 014e 18       		.uleb128 0x18
+ 479 014f 06       		.uleb128 0x6
+ 480 0150 00000000 		.4byte	.LASF25
+ 481 0154 03       		.byte	0x3
+ 482 0155 3B       		.byte	0x3b
+ 483 0156 49000000 		.4byte	0x49
+ 484 015a 02       		.byte	0x2
+ 485 015b 23       		.byte	0x23
+ 486 015c 1A       		.uleb128 0x1a
+ 487 015d 06       		.uleb128 0x6
+ 488 015e F6010000 		.4byte	.LASF26
+ 489 0162 03       		.byte	0x3
+ 490 0163 3C       		.byte	0x3c
+ 491 0164 6D000000 		.4byte	0x6d
+ 492 0168 02       		.byte	0x2
+ 493 0169 23       		.byte	0x23
+ 494 016a 1C       		.uleb128 0x1c
+ 495 016b 00       		.byte	0
+ 496 016c 03       		.uleb128 0x3
+ 497 016d 04020000 		.4byte	.LASF27
+ 498 0171 03       		.byte	0x3
+ 499 0172 3D       		.byte	0x3d
+ 500 0173 9B000000 		.4byte	0x9b
+ 501 0177 05       		.uleb128 0x5
+ 502 0178 80000000 		.4byte	.LASF29
+ 503 017c 20       		.byte	0x20
+ 504 017d 03       		.byte	0x3
+ 505 017e 3F       		.byte	0x3f
+ 506 017f 48020000 		.4byte	0x248
+ 507 0183 06       		.uleb128 0x6
+ 508 0184 F9020000 		.4byte	.LASF30
+ 509 0188 03       		.byte	0x3
+ 510 0189 41       		.byte	0x41
+ 511 018a 6D000000 		.4byte	0x6d
+ 512 018e 02       		.byte	0x2
+ 513 018f 23       		.byte	0x23
+ 514 0190 00       		.uleb128 0
+ 515 0191 06       		.uleb128 0x6
+ 516 0192 F9000000 		.4byte	.LASF31
+ 517 0196 03       		.byte	0x3
+ 518 0197 42       		.byte	0x42
+ 519 0198 49000000 		.4byte	0x49
+ 520 019c 02       		.byte	0x2
+ 521 019d 23       		.byte	0x23
+ 522 019e 04       		.uleb128 0x4
+ 523 019f 06       		.uleb128 0x6
+ 524 01a0 70000000 		.4byte	.LASF32
+ 525 01a4 03       		.byte	0x3
+ 526 01a5 43       		.byte	0x43
+ 527 01a6 49000000 		.4byte	0x49
+ 528 01aa 02       		.byte	0x2
+ 529 01ab 23       		.byte	0x23
+ 530 01ac 06       		.uleb128 0x6
+ 531 01ad 06       		.uleb128 0x6
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 12
+
+
+ 532 01ae B3030000 		.4byte	.LASF33
+ 533 01b2 03       		.byte	0x3
+ 534 01b3 44       		.byte	0x44
+ 535 01b4 49000000 		.4byte	0x49
+ 536 01b8 02       		.byte	0x2
+ 537 01b9 23       		.byte	0x23
+ 538 01ba 08       		.uleb128 0x8
+ 539 01bb 06       		.uleb128 0x6
+ 540 01bc 5B020000 		.4byte	.LASF34
+ 541 01c0 03       		.byte	0x3
+ 542 01c1 45       		.byte	0x45
+ 543 01c2 49000000 		.4byte	0x49
+ 544 01c6 02       		.byte	0x2
+ 545 01c7 23       		.byte	0x23
+ 546 01c8 0A       		.uleb128 0xa
+ 547 01c9 06       		.uleb128 0x6
+ 548 01ca 3C020000 		.4byte	.LASF35
+ 549 01ce 03       		.byte	0x3
+ 550 01cf 46       		.byte	0x46
+ 551 01d0 49000000 		.4byte	0x49
+ 552 01d4 02       		.byte	0x2
+ 553 01d5 23       		.byte	0x23
+ 554 01d6 0C       		.uleb128 0xc
+ 555 01d7 06       		.uleb128 0x6
+ 556 01d8 05030000 		.4byte	.LASF36
+ 557 01dc 03       		.byte	0x3
+ 558 01dd 47       		.byte	0x47
+ 559 01de 49000000 		.4byte	0x49
+ 560 01e2 02       		.byte	0x2
+ 561 01e3 23       		.byte	0x23
+ 562 01e4 0E       		.uleb128 0xe
+ 563 01e5 06       		.uleb128 0x6
+ 564 01e6 0D030000 		.4byte	.LASF37
+ 565 01ea 03       		.byte	0x3
+ 566 01eb 48       		.byte	0x48
+ 567 01ec 49000000 		.4byte	0x49
+ 568 01f0 02       		.byte	0x2
+ 569 01f1 23       		.byte	0x23
+ 570 01f2 10       		.uleb128 0x10
+ 571 01f3 06       		.uleb128 0x6
+ 572 01f4 15030000 		.4byte	.LASF38
+ 573 01f8 03       		.byte	0x3
+ 574 01f9 49       		.byte	0x49
+ 575 01fa 49000000 		.4byte	0x49
+ 576 01fe 02       		.byte	0x2
+ 577 01ff 23       		.byte	0x23
+ 578 0200 12       		.uleb128 0x12
+ 579 0201 06       		.uleb128 0x6
+ 580 0202 1D030000 		.4byte	.LASF39
+ 581 0206 03       		.byte	0x3
+ 582 0207 4A       		.byte	0x4a
+ 583 0208 49000000 		.4byte	0x49
+ 584 020c 02       		.byte	0x2
+ 585 020d 23       		.byte	0x23
+ 586 020e 14       		.uleb128 0x14
+ 587 020f 06       		.uleb128 0x6
+ 588 0210 25030000 		.4byte	.LASF40
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 13
+
+
+ 589 0214 03       		.byte	0x3
+ 590 0215 4B       		.byte	0x4b
+ 591 0216 49000000 		.4byte	0x49
+ 592 021a 02       		.byte	0x2
+ 593 021b 23       		.byte	0x23
+ 594 021c 16       		.uleb128 0x16
+ 595 021d 06       		.uleb128 0x6
+ 596 021e 2D030000 		.4byte	.LASF41
+ 597 0222 03       		.byte	0x3
+ 598 0223 4C       		.byte	0x4c
+ 599 0224 49000000 		.4byte	0x49
+ 600 0228 02       		.byte	0x2
+ 601 0229 23       		.byte	0x23
+ 602 022a 18       		.uleb128 0x18
+ 603 022b 06       		.uleb128 0x6
+ 604 022c 35030000 		.4byte	.LASF42
+ 605 0230 03       		.byte	0x3
+ 606 0231 4D       		.byte	0x4d
+ 607 0232 49000000 		.4byte	0x49
+ 608 0236 02       		.byte	0x2
+ 609 0237 23       		.byte	0x23
+ 610 0238 1A       		.uleb128 0x1a
+ 611 0239 06       		.uleb128 0x6
+ 612 023a 43000000 		.4byte	.LASF43
+ 613 023e 03       		.byte	0x3
+ 614 023f 4E       		.byte	0x4e
+ 615 0240 6D000000 		.4byte	0x6d
+ 616 0244 02       		.byte	0x2
+ 617 0245 23       		.byte	0x23
+ 618 0246 1C       		.uleb128 0x1c
+ 619 0247 00       		.byte	0
+ 620 0248 03       		.uleb128 0x3
+ 621 0249 11010000 		.4byte	.LASF44
+ 622 024d 03       		.byte	0x3
+ 623 024e 4F       		.byte	0x4f
+ 624 024f 77010000 		.4byte	0x177
+ 625 0253 05       		.uleb128 0x5
+ 626 0254 A6030000 		.4byte	.LASF45
+ 627 0258 40       		.byte	0x40
+ 628 0259 03       		.byte	0x3
+ 629 025a 51       		.byte	0x51
+ 630 025b 7C020000 		.4byte	0x27c
+ 631 025f 06       		.uleb128 0x6
+ 632 0260 CC020000 		.4byte	.LASF46
+ 633 0264 03       		.byte	0x3
+ 634 0265 53       		.byte	0x53
+ 635 0266 6C010000 		.4byte	0x16c
+ 636 026a 02       		.byte	0x2
+ 637 026b 23       		.byte	0x23
+ 638 026c 00       		.uleb128 0
+ 639 026d 06       		.uleb128 0x6
+ 640 026e C2000000 		.4byte	.LASF47
+ 641 0272 03       		.byte	0x3
+ 642 0273 54       		.byte	0x54
+ 643 0274 48020000 		.4byte	0x248
+ 644 0278 02       		.byte	0x2
+ 645 0279 23       		.byte	0x23
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 14
+
+
+ 646 027a 20       		.uleb128 0x20
+ 647 027b 00       		.byte	0
+ 648 027c 03       		.uleb128 0x3
+ 649 027d 88020000 		.4byte	.LASF48
+ 650 0281 03       		.byte	0x3
+ 651 0282 55       		.byte	0x55
+ 652 0283 53020000 		.4byte	0x253
+ 653 0287 03       		.uleb128 0x3
+ 654 0288 9D000000 		.4byte	.LASF49
+ 655 028c 04       		.byte	0x4
+ 656 028d 5B       		.byte	0x5b
+ 657 028e 3B000000 		.4byte	0x3b
+ 658 0292 03       		.uleb128 0x3
+ 659 0293 8E000000 		.4byte	.LASF50
+ 660 0297 04       		.byte	0x4
+ 661 0298 5C       		.byte	0x5c
+ 662 0299 54000000 		.4byte	0x54
+ 663 029d 03       		.uleb128 0x3
+ 664 029e D4020000 		.4byte	.LASF51
+ 665 02a2 04       		.byte	0x4
+ 666 02a3 5D       		.byte	0x5d
+ 667 02a4 78000000 		.4byte	0x78
+ 668 02a8 02       		.uleb128 0x2
+ 669 02a9 04       		.byte	0x4
+ 670 02aa 04       		.byte	0x4
+ 671 02ab CC000000 		.4byte	.LASF52
+ 672 02af 02       		.uleb128 0x2
+ 673 02b0 08       		.byte	0x8
+ 674 02b1 04       		.byte	0x4
+ 675 02b2 F2020000 		.4byte	.LASF53
+ 676 02b6 02       		.uleb128 0x2
+ 677 02b7 01       		.byte	0x1
+ 678 02b8 08       		.byte	0x8
+ 679 02b9 F4000000 		.4byte	.LASF54
+ 680 02bd 03       		.uleb128 0x3
+ 681 02be DB020000 		.4byte	.LASF55
+ 682 02c2 04       		.byte	0x4
+ 683 02c3 F0       		.byte	0xf0
+ 684 02c4 C8020000 		.4byte	0x2c8
+ 685 02c8 07       		.uleb128 0x7
+ 686 02c9 87020000 		.4byte	0x287
+ 687 02cd 02       		.uleb128 0x2
+ 688 02ce 04       		.byte	0x4
+ 689 02cf 07       		.byte	0x7
+ 690 02d0 59000000 		.4byte	.LASF56
+ 691 02d4 08       		.uleb128 0x8
+ 692 02d5 01       		.byte	0x1
+ 693 02d6 B3000000 		.4byte	.LASF71
+ 694 02da 01       		.byte	0x1
+ 695 02db 26       		.byte	0x26
+ 696 02dc 00000000 		.4byte	.LFB56
+ 697 02e0 90000000 		.4byte	.LFE56
+ 698 02e4 00000000 		.4byte	.LLST0
+ 699 02e8 01       		.byte	0x1
+ 700 02e9 09       		.uleb128 0x9
+ 701 02ea 01       		.byte	0x1
+ 702 02eb 83030000 		.4byte	.LASF57
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 15
+
+
+ 703 02ef 01       		.byte	0x1
+ 704 02f0 3D       		.byte	0x3d
+ 705 02f1 00000000 		.4byte	.LFB57
+ 706 02f5 40010000 		.4byte	.LFE57
+ 707 02f9 2C000000 		.4byte	.LLST1
+ 708 02fd 01       		.byte	0x1
+ 709 02fe 11030000 		.4byte	0x311
+ 710 0302 0A       		.uleb128 0xa
+ 711 0303 94020000 		.4byte	.LASF59
+ 712 0307 01       		.byte	0x1
+ 713 0308 40       		.byte	0x40
+ 714 0309 11030000 		.4byte	0x311
+ 715 030d 02       		.byte	0x2
+ 716 030e 91       		.byte	0x91
+ 717 030f 74       		.sleb128 -12
+ 718 0310 00       		.byte	0
+ 719 0311 0B       		.uleb128 0xb
+ 720 0312 04       		.byte	0x4
+ 721 0313 87020000 		.4byte	0x287
+ 722 0317 09       		.uleb128 0x9
+ 723 0318 01       		.byte	0x1
+ 724 0319 E0000000 		.4byte	.LASF58
+ 725 031d 01       		.byte	0x1
+ 726 031e 57       		.byte	0x57
+ 727 031f 00000000 		.4byte	.LFB58
+ 728 0323 4A000000 		.4byte	.LFE58
+ 729 0327 64000000 		.4byte	.LLST2
+ 730 032b 01       		.byte	0x1
+ 731 032c 3F030000 		.4byte	0x33f
+ 732 0330 0A       		.uleb128 0xa
+ 733 0331 1C000000 		.4byte	.LASF60
+ 734 0335 01       		.byte	0x1
+ 735 0336 59       		.byte	0x59
+ 736 0337 11030000 		.4byte	0x311
+ 737 033b 02       		.byte	0x2
+ 738 033c 91       		.byte	0x91
+ 739 033d 74       		.sleb128 -12
+ 740 033e 00       		.byte	0
+ 741 033f 0C       		.uleb128 0xc
+ 742 0340 68020000 		.4byte	.LASF61
+ 743 0344 05       		.byte	0x5
+ 744 0345 24       		.byte	0x24
+ 745 0346 7C020000 		.4byte	0x27c
+ 746 034a 01       		.byte	0x1
+ 747 034b 01       		.byte	0x1
+ 748 034c 0C       		.uleb128 0xc
+ 749 034d 52030000 		.4byte	.LASF62
+ 750 0351 05       		.byte	0x5
+ 751 0352 25       		.byte	0x25
+ 752 0353 30000000 		.4byte	0x30
+ 753 0357 01       		.byte	0x1
+ 754 0358 01       		.byte	0x1
+ 755 0359 0D       		.uleb128 0xd
+ 756 035a 99030000 		.4byte	.LASF63
+ 757 035e 06       		.byte	0x6
+ 758 035f 1606     		.2byte	0x616
+ 759 0361 67030000 		.4byte	0x367
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 16
+
+
+ 760 0365 01       		.byte	0x1
+ 761 0366 01       		.byte	0x1
+ 762 0367 07       		.uleb128 0x7
+ 763 0368 5B000000 		.4byte	0x5b
+ 764 036c 0E       		.uleb128 0xe
+ 765 036d 72020000 		.4byte	.LASF64
+ 766 0371 01       		.byte	0x1
+ 767 0372 20       		.byte	0x20
+ 768 0373 87020000 		.4byte	0x287
+ 769 0377 01       		.byte	0x1
+ 770 0378 05       		.byte	0x5
+ 771 0379 03       		.byte	0x3
+ 772 037a 00000000 		.4byte	spiDmaTransmitChannel
+ 773 037e 0E       		.uleb128 0xe
+ 774 037f 3D030000 		.4byte	.LASF65
+ 775 0383 01       		.byte	0x1
+ 776 0384 21       		.byte	0x21
+ 777 0385 87020000 		.4byte	0x287
+ 778 0389 01       		.byte	0x1
+ 779 038a 05       		.byte	0x5
+ 780 038b 03       		.byte	0x3
+ 781 038c 00000000 		.4byte	spiDmaReceiveChannel
+ 782 0390 0F       		.uleb128 0xf
+ 783 0391 87020000 		.4byte	0x287
+ 784 0395 A0030000 		.4byte	0x3a0
+ 785 0399 10       		.uleb128 0x10
+ 786 039a CD020000 		.4byte	0x2cd
+ 787 039e 00       		.byte	0
+ 788 039f 00       		.byte	0
+ 789 03a0 0E       		.uleb128 0xe
+ 790 03a1 0B000000 		.4byte	.LASF66
+ 791 03a5 01       		.byte	0x1
+ 792 03a6 23       		.byte	0x23
+ 793 03a7 90030000 		.4byte	0x390
+ 794 03ab 01       		.byte	0x1
+ 795 03ac 05       		.byte	0x5
+ 796 03ad 03       		.byte	0x3
+ 797 03ae 00000000 		.4byte	spiDmaTransmitTD
+ 798 03b2 0E       		.uleb128 0xe
+ 799 03b3 B2020000 		.4byte	.LASF67
+ 800 03b7 01       		.byte	0x1
+ 801 03b8 24       		.byte	0x24
+ 802 03b9 90030000 		.4byte	0x390
+ 803 03bd 01       		.byte	0x1
+ 804 03be 05       		.byte	0x5
+ 805 03bf 03       		.byte	0x3
+ 806 03c0 00000000 		.4byte	spiDmaReceiveTD
+ 807 03c4 00       		.byte	0
+ 808              		.section	.debug_abbrev,"",%progbits
+ 809              	.Ldebug_abbrev0:
+ 810 0000 01       		.uleb128 0x1
+ 811 0001 11       		.uleb128 0x11
+ 812 0002 01       		.byte	0x1
+ 813 0003 25       		.uleb128 0x25
+ 814 0004 0E       		.uleb128 0xe
+ 815 0005 13       		.uleb128 0x13
+ 816 0006 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 17
+
+
+ 817 0007 03       		.uleb128 0x3
+ 818 0008 0E       		.uleb128 0xe
+ 819 0009 1B       		.uleb128 0x1b
+ 820 000a 0E       		.uleb128 0xe
+ 821 000b 55       		.uleb128 0x55
+ 822 000c 06       		.uleb128 0x6
+ 823 000d 11       		.uleb128 0x11
+ 824 000e 01       		.uleb128 0x1
+ 825 000f 52       		.uleb128 0x52
+ 826 0010 01       		.uleb128 0x1
+ 827 0011 10       		.uleb128 0x10
+ 828 0012 06       		.uleb128 0x6
+ 829 0013 00       		.byte	0
+ 830 0014 00       		.byte	0
+ 831 0015 02       		.uleb128 0x2
+ 832 0016 24       		.uleb128 0x24
+ 833 0017 00       		.byte	0
+ 834 0018 0B       		.uleb128 0xb
+ 835 0019 0B       		.uleb128 0xb
+ 836 001a 3E       		.uleb128 0x3e
+ 837 001b 0B       		.uleb128 0xb
+ 838 001c 03       		.uleb128 0x3
+ 839 001d 0E       		.uleb128 0xe
+ 840 001e 00       		.byte	0
+ 841 001f 00       		.byte	0
+ 842 0020 03       		.uleb128 0x3
+ 843 0021 16       		.uleb128 0x16
+ 844 0022 00       		.byte	0
+ 845 0023 03       		.uleb128 0x3
+ 846 0024 0E       		.uleb128 0xe
+ 847 0025 3A       		.uleb128 0x3a
+ 848 0026 0B       		.uleb128 0xb
+ 849 0027 3B       		.uleb128 0x3b
+ 850 0028 0B       		.uleb128 0xb
+ 851 0029 49       		.uleb128 0x49
+ 852 002a 13       		.uleb128 0x13
+ 853 002b 00       		.byte	0
+ 854 002c 00       		.byte	0
+ 855 002d 04       		.uleb128 0x4
+ 856 002e 24       		.uleb128 0x24
+ 857 002f 00       		.byte	0
+ 858 0030 0B       		.uleb128 0xb
+ 859 0031 0B       		.uleb128 0xb
+ 860 0032 3E       		.uleb128 0x3e
+ 861 0033 0B       		.uleb128 0xb
+ 862 0034 03       		.uleb128 0x3
+ 863 0035 08       		.uleb128 0x8
+ 864 0036 00       		.byte	0
+ 865 0037 00       		.byte	0
+ 866 0038 05       		.uleb128 0x5
+ 867 0039 13       		.uleb128 0x13
+ 868 003a 01       		.byte	0x1
+ 869 003b 03       		.uleb128 0x3
+ 870 003c 0E       		.uleb128 0xe
+ 871 003d 0B       		.uleb128 0xb
+ 872 003e 0B       		.uleb128 0xb
+ 873 003f 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 18
+
+
+ 874 0040 0B       		.uleb128 0xb
+ 875 0041 3B       		.uleb128 0x3b
+ 876 0042 0B       		.uleb128 0xb
+ 877 0043 01       		.uleb128 0x1
+ 878 0044 13       		.uleb128 0x13
+ 879 0045 00       		.byte	0
+ 880 0046 00       		.byte	0
+ 881 0047 06       		.uleb128 0x6
+ 882 0048 0D       		.uleb128 0xd
+ 883 0049 00       		.byte	0
+ 884 004a 03       		.uleb128 0x3
+ 885 004b 0E       		.uleb128 0xe
+ 886 004c 3A       		.uleb128 0x3a
+ 887 004d 0B       		.uleb128 0xb
+ 888 004e 3B       		.uleb128 0x3b
+ 889 004f 0B       		.uleb128 0xb
+ 890 0050 49       		.uleb128 0x49
+ 891 0051 13       		.uleb128 0x13
+ 892 0052 38       		.uleb128 0x38
+ 893 0053 0A       		.uleb128 0xa
+ 894 0054 00       		.byte	0
+ 895 0055 00       		.byte	0
+ 896 0056 07       		.uleb128 0x7
+ 897 0057 35       		.uleb128 0x35
+ 898 0058 00       		.byte	0
+ 899 0059 49       		.uleb128 0x49
+ 900 005a 13       		.uleb128 0x13
+ 901 005b 00       		.byte	0
+ 902 005c 00       		.byte	0
+ 903 005d 08       		.uleb128 0x8
+ 904 005e 2E       		.uleb128 0x2e
+ 905 005f 00       		.byte	0
+ 906 0060 3F       		.uleb128 0x3f
+ 907 0061 0C       		.uleb128 0xc
+ 908 0062 03       		.uleb128 0x3
+ 909 0063 0E       		.uleb128 0xe
+ 910 0064 3A       		.uleb128 0x3a
+ 911 0065 0B       		.uleb128 0xb
+ 912 0066 3B       		.uleb128 0x3b
+ 913 0067 0B       		.uleb128 0xb
+ 914 0068 11       		.uleb128 0x11
+ 915 0069 01       		.uleb128 0x1
+ 916 006a 12       		.uleb128 0x12
+ 917 006b 01       		.uleb128 0x1
+ 918 006c 40       		.uleb128 0x40
+ 919 006d 06       		.uleb128 0x6
+ 920 006e 9642     		.uleb128 0x2116
+ 921 0070 0C       		.uleb128 0xc
+ 922 0071 00       		.byte	0
+ 923 0072 00       		.byte	0
+ 924 0073 09       		.uleb128 0x9
+ 925 0074 2E       		.uleb128 0x2e
+ 926 0075 01       		.byte	0x1
+ 927 0076 3F       		.uleb128 0x3f
+ 928 0077 0C       		.uleb128 0xc
+ 929 0078 03       		.uleb128 0x3
+ 930 0079 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 19
+
+
+ 931 007a 3A       		.uleb128 0x3a
+ 932 007b 0B       		.uleb128 0xb
+ 933 007c 3B       		.uleb128 0x3b
+ 934 007d 0B       		.uleb128 0xb
+ 935 007e 11       		.uleb128 0x11
+ 936 007f 01       		.uleb128 0x1
+ 937 0080 12       		.uleb128 0x12
+ 938 0081 01       		.uleb128 0x1
+ 939 0082 40       		.uleb128 0x40
+ 940 0083 06       		.uleb128 0x6
+ 941 0084 9642     		.uleb128 0x2116
+ 942 0086 0C       		.uleb128 0xc
+ 943 0087 01       		.uleb128 0x1
+ 944 0088 13       		.uleb128 0x13
+ 945 0089 00       		.byte	0
+ 946 008a 00       		.byte	0
+ 947 008b 0A       		.uleb128 0xa
+ 948 008c 34       		.uleb128 0x34
+ 949 008d 00       		.byte	0
+ 950 008e 03       		.uleb128 0x3
+ 951 008f 0E       		.uleb128 0xe
+ 952 0090 3A       		.uleb128 0x3a
+ 953 0091 0B       		.uleb128 0xb
+ 954 0092 3B       		.uleb128 0x3b
+ 955 0093 0B       		.uleb128 0xb
+ 956 0094 49       		.uleb128 0x49
+ 957 0095 13       		.uleb128 0x13
+ 958 0096 02       		.uleb128 0x2
+ 959 0097 0A       		.uleb128 0xa
+ 960 0098 00       		.byte	0
+ 961 0099 00       		.byte	0
+ 962 009a 0B       		.uleb128 0xb
+ 963 009b 0F       		.uleb128 0xf
+ 964 009c 00       		.byte	0
+ 965 009d 0B       		.uleb128 0xb
+ 966 009e 0B       		.uleb128 0xb
+ 967 009f 49       		.uleb128 0x49
+ 968 00a0 13       		.uleb128 0x13
+ 969 00a1 00       		.byte	0
+ 970 00a2 00       		.byte	0
+ 971 00a3 0C       		.uleb128 0xc
+ 972 00a4 34       		.uleb128 0x34
+ 973 00a5 00       		.byte	0
+ 974 00a6 03       		.uleb128 0x3
+ 975 00a7 0E       		.uleb128 0xe
+ 976 00a8 3A       		.uleb128 0x3a
+ 977 00a9 0B       		.uleb128 0xb
+ 978 00aa 3B       		.uleb128 0x3b
+ 979 00ab 0B       		.uleb128 0xb
+ 980 00ac 49       		.uleb128 0x49
+ 981 00ad 13       		.uleb128 0x13
+ 982 00ae 3F       		.uleb128 0x3f
+ 983 00af 0C       		.uleb128 0xc
+ 984 00b0 3C       		.uleb128 0x3c
+ 985 00b1 0C       		.uleb128 0xc
+ 986 00b2 00       		.byte	0
+ 987 00b3 00       		.byte	0
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 20
+
+
+ 988 00b4 0D       		.uleb128 0xd
+ 989 00b5 34       		.uleb128 0x34
+ 990 00b6 00       		.byte	0
+ 991 00b7 03       		.uleb128 0x3
+ 992 00b8 0E       		.uleb128 0xe
+ 993 00b9 3A       		.uleb128 0x3a
+ 994 00ba 0B       		.uleb128 0xb
+ 995 00bb 3B       		.uleb128 0x3b
+ 996 00bc 05       		.uleb128 0x5
+ 997 00bd 49       		.uleb128 0x49
+ 998 00be 13       		.uleb128 0x13
+ 999 00bf 3F       		.uleb128 0x3f
+ 1000 00c0 0C       		.uleb128 0xc
+ 1001 00c1 3C       		.uleb128 0x3c
+ 1002 00c2 0C       		.uleb128 0xc
+ 1003 00c3 00       		.byte	0
+ 1004 00c4 00       		.byte	0
+ 1005 00c5 0E       		.uleb128 0xe
+ 1006 00c6 34       		.uleb128 0x34
+ 1007 00c7 00       		.byte	0
+ 1008 00c8 03       		.uleb128 0x3
+ 1009 00c9 0E       		.uleb128 0xe
+ 1010 00ca 3A       		.uleb128 0x3a
+ 1011 00cb 0B       		.uleb128 0xb
+ 1012 00cc 3B       		.uleb128 0x3b
+ 1013 00cd 0B       		.uleb128 0xb
+ 1014 00ce 49       		.uleb128 0x49
+ 1015 00cf 13       		.uleb128 0x13
+ 1016 00d0 3F       		.uleb128 0x3f
+ 1017 00d1 0C       		.uleb128 0xc
+ 1018 00d2 02       		.uleb128 0x2
+ 1019 00d3 0A       		.uleb128 0xa
+ 1020 00d4 00       		.byte	0
+ 1021 00d5 00       		.byte	0
+ 1022 00d6 0F       		.uleb128 0xf
+ 1023 00d7 01       		.uleb128 0x1
+ 1024 00d8 01       		.byte	0x1
+ 1025 00d9 49       		.uleb128 0x49
+ 1026 00da 13       		.uleb128 0x13
+ 1027 00db 01       		.uleb128 0x1
+ 1028 00dc 13       		.uleb128 0x13
+ 1029 00dd 00       		.byte	0
+ 1030 00de 00       		.byte	0
+ 1031 00df 10       		.uleb128 0x10
+ 1032 00e0 21       		.uleb128 0x21
+ 1033 00e1 00       		.byte	0
+ 1034 00e2 49       		.uleb128 0x49
+ 1035 00e3 13       		.uleb128 0x13
+ 1036 00e4 2F       		.uleb128 0x2f
+ 1037 00e5 0B       		.uleb128 0xb
+ 1038 00e6 00       		.byte	0
+ 1039 00e7 00       		.byte	0
+ 1040 00e8 00       		.byte	0
+ 1041              		.section	.debug_loc,"",%progbits
+ 1042              	.Ldebug_loc0:
+ 1043              	.LLST0:
+ 1044 0000 00000000 		.4byte	.LFB56
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 21
+
+
+ 1045 0004 02000000 		.4byte	.LCFI0
+ 1046 0008 0200     		.2byte	0x2
+ 1047 000a 7D       		.byte	0x7d
+ 1048 000b 00       		.sleb128 0
+ 1049 000c 02000000 		.4byte	.LCFI0
+ 1050 0010 04000000 		.4byte	.LCFI1
+ 1051 0014 0200     		.2byte	0x2
+ 1052 0016 7D       		.byte	0x7d
+ 1053 0017 08       		.sleb128 8
+ 1054 0018 04000000 		.4byte	.LCFI1
+ 1055 001c 90000000 		.4byte	.LFE56
+ 1056 0020 0200     		.2byte	0x2
+ 1057 0022 77       		.byte	0x77
+ 1058 0023 08       		.sleb128 8
+ 1059 0024 00000000 		.4byte	0
+ 1060 0028 00000000 		.4byte	0
+ 1061              	.LLST1:
+ 1062 002c 00000000 		.4byte	.LFB57
+ 1063 0030 02000000 		.4byte	.LCFI2
+ 1064 0034 0200     		.2byte	0x2
+ 1065 0036 7D       		.byte	0x7d
+ 1066 0037 00       		.sleb128 0
+ 1067 0038 02000000 		.4byte	.LCFI2
+ 1068 003c 04000000 		.4byte	.LCFI3
+ 1069 0040 0200     		.2byte	0x2
+ 1070 0042 7D       		.byte	0x7d
+ 1071 0043 08       		.sleb128 8
+ 1072 0044 04000000 		.4byte	.LCFI3
+ 1073 0048 06000000 		.4byte	.LCFI4
+ 1074 004c 0200     		.2byte	0x2
+ 1075 004e 7D       		.byte	0x7d
+ 1076 004f 10       		.sleb128 16
+ 1077 0050 06000000 		.4byte	.LCFI4
+ 1078 0054 40010000 		.4byte	.LFE57
+ 1079 0058 0200     		.2byte	0x2
+ 1080 005a 77       		.byte	0x77
+ 1081 005b 10       		.sleb128 16
+ 1082 005c 00000000 		.4byte	0
+ 1083 0060 00000000 		.4byte	0
+ 1084              	.LLST2:
+ 1085 0064 00000000 		.4byte	.LFB58
+ 1086 0068 02000000 		.4byte	.LCFI5
+ 1087 006c 0200     		.2byte	0x2
+ 1088 006e 7D       		.byte	0x7d
+ 1089 006f 00       		.sleb128 0
+ 1090 0070 02000000 		.4byte	.LCFI5
+ 1091 0074 04000000 		.4byte	.LCFI6
+ 1092 0078 0200     		.2byte	0x2
+ 1093 007a 7D       		.byte	0x7d
+ 1094 007b 08       		.sleb128 8
+ 1095 007c 04000000 		.4byte	.LCFI6
+ 1096 0080 06000000 		.4byte	.LCFI7
+ 1097 0084 0200     		.2byte	0x2
+ 1098 0086 7D       		.byte	0x7d
+ 1099 0087 10       		.sleb128 16
+ 1100 0088 06000000 		.4byte	.LCFI7
+ 1101 008c 4A000000 		.4byte	.LFE58
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 22
+
+
+ 1102 0090 0200     		.2byte	0x2
+ 1103 0092 77       		.byte	0x77
+ 1104 0093 10       		.sleb128 16
+ 1105 0094 00000000 		.4byte	0
+ 1106 0098 00000000 		.4byte	0
+ 1107              		.section	.debug_aranges,"",%progbits
+ 1108 0000 2C000000 		.4byte	0x2c
+ 1109 0004 0200     		.2byte	0x2
+ 1110 0006 00000000 		.4byte	.Ldebug_info0
+ 1111 000a 04       		.byte	0x4
+ 1112 000b 00       		.byte	0
+ 1113 000c 0000     		.2byte	0
+ 1114 000e 0000     		.2byte	0
+ 1115 0010 00000000 		.4byte	.LFB56
+ 1116 0014 90000000 		.4byte	.LFE56-.LFB56
+ 1117 0018 00000000 		.4byte	.LFB57
+ 1118 001c 40010000 		.4byte	.LFE57-.LFB57
+ 1119 0020 00000000 		.4byte	.LFB58
+ 1120 0024 4A000000 		.4byte	.LFE58-.LFB58
+ 1121 0028 00000000 		.4byte	0
+ 1122 002c 00000000 		.4byte	0
+ 1123              		.section	.debug_ranges,"",%progbits
+ 1124              	.Ldebug_ranges0:
+ 1125 0000 00000000 		.4byte	.LFB56
+ 1126 0004 90000000 		.4byte	.LFE56
+ 1127 0008 00000000 		.4byte	.LFB57
+ 1128 000c 40010000 		.4byte	.LFE57
+ 1129 0010 00000000 		.4byte	.LFB58
+ 1130 0014 4A000000 		.4byte	.LFE58
+ 1131 0018 00000000 		.4byte	0
+ 1132 001c 00000000 		.4byte	0
+ 1133              		.section	.debug_line,"",%progbits
+ 1134              	.Ldebug_line0:
+ 1135 0000 80010000 		.section	.debug_str,"MS",%progbits,1
+ 1135      02002A01 
+ 1135      00000201 
+ 1135      FB0E0D00 
+ 1135      01010101 
+ 1136              	.LASF25:
+ 1137 0000 72634175 		.ascii	"rcAuxValue\000"
+ 1137      7856616C 
+ 1137      756500
+ 1138              	.LASF66:
+ 1139 000b 73706944 		.ascii	"spiDmaTransmitTD\000"
+ 1139      6D615472 
+ 1139      616E736D 
+ 1139      69745444 
+ 1139      00
+ 1140              	.LASF60:
+ 1141 001c 70466972 		.ascii	"pFirstByte\000"
+ 1141      73744279 
+ 1141      746500
+ 1142              	.LASF15:
+ 1143 0027 6C656674 		.ascii	"leftBumpForce\000"
+ 1143      42756D70 
+ 1143      466F7263 
+ 1143      6500
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 23
+
+
+ 1144              	.LASF13:
+ 1145 0035 73656E73 		.ascii	"sensoryHeader\000"
+ 1145      6F727948 
+ 1145      65616465 
+ 1145      7200
+ 1146              	.LASF43:
+ 1147 0043 6D6F746F 		.ascii	"motorFooter\000"
+ 1147      72466F6F 
+ 1147      74657200 
+ 1148              	.LASF2:
+ 1149 004f 73686F72 		.ascii	"short int\000"
+ 1149      7420696E 
+ 1149      7400
+ 1150              	.LASF56:
+ 1151 0059 73697A65 		.ascii	"sizetype\000"
+ 1151      74797065 
+ 1151      00
+ 1152              	.LASF22:
+ 1153 0062 72634361 		.ascii	"rcCamPanValue\000"
+ 1153      6D50616E 
+ 1153      56616C75 
+ 1153      6500
+ 1154              	.LASF32:
+ 1155 0070 72696768 		.ascii	"rightDriveMotor\000"
+ 1155      74447269 
+ 1155      76654D6F 
+ 1155      746F7200 
+ 1156              	.LASF29:
+ 1157 0080 5F6D6F74 		.ascii	"_motorMembers\000"
+ 1157      6F724D65 
+ 1157      6D626572 
+ 1157      7300
+ 1158              	.LASF50:
+ 1159 008e 75696E74 		.ascii	"uint16\000"
+ 1159      313600
+ 1160              	.LASF3:
+ 1161 0095 75696E74 		.ascii	"uint8_t\000"
+ 1161      385F7400 
+ 1162              	.LASF49:
+ 1163 009d 75696E74 		.ascii	"uint8\000"
+ 1163      3800
+ 1164              	.LASF24:
+ 1165 00a3 72634F76 		.ascii	"rcOverrideValue\000"
+ 1165      65727269 
+ 1165      64655661 
+ 1165      6C756500 
+ 1166              	.LASF71:
+ 1167 00b3 72696E67 		.ascii	"ringComs_Start\000"
+ 1167      436F6D73 
+ 1167      5F537461 
+ 1167      727400
+ 1168              	.LASF47:
+ 1169 00c2 65666665 		.ascii	"effectors\000"
+ 1169      63746F72 
+ 1169      7300
+ 1170              	.LASF52:
+ 1171 00cc 666C6F61 		.ascii	"float\000"
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 24
+
+
+ 1171      7400
+ 1172              	.LASF10:
+ 1173 00d2 6C6F6E67 		.ascii	"long long int\000"
+ 1173      206C6F6E 
+ 1173      6720696E 
+ 1173      7400
+ 1174              	.LASF58:
+ 1175 00e0 72696E67 		.ascii	"ringComs_DoTransfer\000"
+ 1175      436F6D73 
+ 1175      5F446F54 
+ 1175      72616E73 
+ 1175      66657200 
+ 1176              	.LASF54:
+ 1177 00f4 63686172 		.ascii	"char\000"
+ 1177      00
+ 1178              	.LASF31:
+ 1179 00f9 6C656674 		.ascii	"leftDriveMotor\000"
+ 1179      44726976 
+ 1179      654D6F74 
+ 1179      6F7200
+ 1180              	.LASF7:
+ 1181 0108 6C6F6E67 		.ascii	"long int\000"
+ 1181      20696E74 
+ 1181      00
+ 1182              	.LASF44:
+ 1183 0111 4D6F746F 		.ascii	"MotorMembers\000"
+ 1183      724D656D 
+ 1183      62657273 
+ 1183      00
+ 1184              	.LASF70:
+ 1185 011e 433A5C47 		.ascii	"C:\\GitHub\\RPi-Dev\\BotPsoc\\BotPsoc.cydsn\000"
+ 1185      69744875 
+ 1185      625C5250 
+ 1185      692D4465 
+ 1185      765C426F 
+ 1186              	.LASF17:
+ 1187 0146 6C656674 		.ascii	"leftBumpField\000"
+ 1187      42756D70 
+ 1187      4669656C 
+ 1187      6400
+ 1188              	.LASF68:
+ 1189 0154 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 1189      4320342E 
+ 1189      372E3320 
+ 1189      32303133 
+ 1189      30333132 
+ 1190 0187 616E6368 		.ascii	"anch revision 196615]\000"
+ 1190      20726576 
+ 1190      6973696F 
+ 1190      6E203139 
+ 1190      36363135 
+ 1191              	.LASF16:
+ 1192 019d 72696768 		.ascii	"rightBumpForce\000"
+ 1192      7442756D 
+ 1192      70466F72 
+ 1192      636500
+ 1193              	.LASF1:
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 25
+
+
+ 1194 01ac 756E7369 		.ascii	"unsigned char\000"
+ 1194      676E6564 
+ 1194      20636861 
+ 1194      7200
+ 1195              	.LASF0:
+ 1196 01ba 7369676E 		.ascii	"signed char\000"
+ 1196      65642063 
+ 1196      68617200 
+ 1197              	.LASF11:
+ 1198 01c6 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1198      206C6F6E 
+ 1198      6720756E 
+ 1198      7369676E 
+ 1198      65642069 
+ 1199              	.LASF28:
+ 1200 01dd 5F73656E 		.ascii	"_sensoryMembers\000"
+ 1200      736F7279 
+ 1200      4D656D62 
+ 1200      65727300 
+ 1201              	.LASF8:
+ 1202 01ed 75696E74 		.ascii	"uint32_t\000"
+ 1202      33325F74 
+ 1202      00
+ 1203              	.LASF26:
+ 1204 01f6 73656E73 		.ascii	"sensoryFooter\000"
+ 1204      6F727946 
+ 1204      6F6F7465 
+ 1204      7200
+ 1205              	.LASF27:
+ 1206 0204 53656E73 		.ascii	"SensoryMembers\000"
+ 1206      6F72794D 
+ 1206      656D6265 
+ 1206      727300
+ 1207              	.LASF12:
+ 1208 0213 756E7369 		.ascii	"unsigned int\000"
+ 1208      676E6564 
+ 1208      20696E74 
+ 1208      00
+ 1209              	.LASF4:
+ 1210 0220 75696E74 		.ascii	"uint16_t\000"
+ 1210      31365F74 
+ 1210      00
+ 1211              	.LASF5:
+ 1212 0229 73686F72 		.ascii	"short unsigned int\000"
+ 1212      7420756E 
+ 1212      7369676E 
+ 1212      65642069 
+ 1212      6E7400
+ 1213              	.LASF35:
+ 1214 023c 64726976 		.ascii	"driveMotorCommand\000"
+ 1214      654D6F74 
+ 1214      6F72436F 
+ 1214      6D6D616E 
+ 1214      6400
+ 1215              	.LASF69:
+ 1216 024e 2E5C7370 		.ascii	".\\spi_ring.c\000"
+ 1216      695F7269 
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 26
+
+
+ 1216      6E672E63 
+ 1216      00
+ 1217              	.LASF34:
+ 1218 025b 63616D54 		.ascii	"camTiltDrive\000"
+ 1218      696C7444 
+ 1218      72697665 
+ 1218      00
+ 1219              	.LASF61:
+ 1220 0268 675F7370 		.ascii	"g_spiRing\000"
+ 1220      6952696E 
+ 1220      6700
+ 1221              	.LASF64:
+ 1222 0272 73706944 		.ascii	"spiDmaTransmitChannel\000"
+ 1222      6D615472 
+ 1222      616E736D 
+ 1222      69744368 
+ 1222      616E6E65 
+ 1223              	.LASF48:
+ 1224 0288 53706952 		.ascii	"SpiRingData\000"
+ 1224      696E6744 
+ 1224      61746100 
+ 1225              	.LASF59:
+ 1226 0294 70547261 		.ascii	"pTransmitStartAddress\000"
+ 1226      6E736D69 
+ 1226      74537461 
+ 1226      72744164 
+ 1226      64726573 
+ 1227              	.LASF6:
+ 1228 02aa 696E7433 		.ascii	"int32_t\000"
+ 1228      325F7400 
+ 1229              	.LASF67:
+ 1230 02b2 73706944 		.ascii	"spiDmaReceiveTD\000"
+ 1230      6D615265 
+ 1230      63656976 
+ 1230      65544400 
+ 1231              	.LASF21:
+ 1232 02c2 72634642 		.ascii	"rcFBValue\000"
+ 1232      56616C75 
+ 1232      6500
+ 1233              	.LASF46:
+ 1234 02cc 73656E73 		.ascii	"sensory\000"
+ 1234      6F727900 
+ 1235              	.LASF51:
+ 1236 02d4 75696E74 		.ascii	"uint32\000"
+ 1236      333200
+ 1237              	.LASF55:
+ 1238 02db 72656738 		.ascii	"reg8\000"
+ 1238      00
+ 1239              	.LASF9:
+ 1240 02e0 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1240      20756E73 
+ 1240      69676E65 
+ 1240      6420696E 
+ 1240      7400
+ 1241              	.LASF53:
+ 1242 02f2 646F7562 		.ascii	"double\000"
+ 1242      6C6500
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 27
+
+
+ 1243              	.LASF30:
+ 1244 02f9 6D6F746F 		.ascii	"motorHeader\000"
+ 1244      72486561 
+ 1244      64657200 
+ 1245              	.LASF36:
+ 1246 0305 756E7573 		.ascii	"unused2\000"
+ 1246      65643200 
+ 1247              	.LASF37:
+ 1248 030d 756E7573 		.ascii	"unused3\000"
+ 1248      65643300 
+ 1249              	.LASF38:
+ 1250 0315 756E7573 		.ascii	"unused4\000"
+ 1250      65643400 
+ 1251              	.LASF39:
+ 1252 031d 756E7573 		.ascii	"unused5\000"
+ 1252      65643500 
+ 1253              	.LASF40:
+ 1254 0325 756E7573 		.ascii	"unused6\000"
+ 1254      65643600 
+ 1255              	.LASF41:
+ 1256 032d 756E7573 		.ascii	"unused7\000"
+ 1256      65643700 
+ 1257              	.LASF42:
+ 1258 0335 756E7573 		.ascii	"unused8\000"
+ 1258      65643800 
+ 1259              	.LASF65:
+ 1260 033d 73706944 		.ascii	"spiDmaReceiveChannel\000"
+ 1260      6D615265 
+ 1260      63656976 
+ 1260      65436861 
+ 1260      6E6E656C 
+ 1261              	.LASF62:
+ 1262 0352 675F7370 		.ascii	"g_spiReady\000"
+ 1262      69526561 
+ 1262      647900
+ 1263              	.LASF19:
+ 1264 035d 62617474 		.ascii	"batteryLevel\000"
+ 1264      6572794C 
+ 1264      6576656C 
+ 1264      00
+ 1265              	.LASF18:
+ 1266 036a 72696768 		.ascii	"rightBumpField\000"
+ 1266      7442756D 
+ 1266      70466965 
+ 1266      6C6400
+ 1267              	.LASF20:
+ 1268 0379 72634C52 		.ascii	"rcLRValue\000"
+ 1268      56616C75 
+ 1268      6500
+ 1269              	.LASF57:
+ 1270 0383 72696E67 		.ascii	"ringComs_ConfigureDMA\000"
+ 1270      436F6D73 
+ 1270      5F436F6E 
+ 1270      66696775 
+ 1270      7265444D 
+ 1271              	.LASF63:
+ 1272 0399 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ARM GAS  C:\Users\Lloyd\AppData\Local\Temp\ccHpQFRU.s 			page 28
+
+
+ 1272      52784275 
+ 1272      66666572 
+ 1272      00
+ 1273              	.LASF45:
+ 1274 03a6 5F737069 		.ascii	"_spiRingData\000"
+ 1274      52696E67 
+ 1274      44617461 
+ 1274      00
+ 1275              	.LASF33:
+ 1276 03b3 63616D50 		.ascii	"camPanDrive\000"
+ 1276      616E4472 
+ 1276      69766500 
+ 1277              	.LASF14:
+ 1278 03bf 69724469 		.ascii	"irDistance\000"
+ 1278      7374616E 
+ 1278      636500
+ 1279              	.LASF23:
+ 1280 03ca 72634361 		.ascii	"rcCamTiltValue\000"
+ 1280      6D54696C 
+ 1280      7456616C 
+ 1280      756500
+ 1281              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br
